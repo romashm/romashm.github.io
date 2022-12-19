@@ -68,8 +68,7 @@ nav {
 }
 
 section {
-
-    background-image:url('/images/drawing-paper.gif');
+    background-image:url('/images/giphy.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -242,7 +241,7 @@ li {
     height: 3.5vw;
 
     position: absolute;
-    margin: -38.5% 85.5%;
+    margin: -42.8% 85.5%;
 }
 
 .Date {
