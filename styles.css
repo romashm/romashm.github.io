@@ -1,0 +1,321 @@
+/* Imports */
+
+@font-face {
+    font-family: Santorini;
+    src: url(./fonts/Santorini/Santorini\ Eighty.ttf);
+}
+
+@font-face {
+    font-family: SeaAngel;
+    src: url(./fonts/SeaAngle/Sea\ Angle\ Reguler.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Abigail;
+    src: url(./fonts/Abigail/Abigail.ttf);
+}
+
+
+/* Imports */
+/* Index */
+
+html, body {
+    background-color: #fefefe;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    display: flex;
+}
+
+#container {
+    position: absolute;
+    margin: 2.5% -40%;
+    width: 100vw;
+    height: 80pt;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: Abigail;
+    font-size: 5vw;
+
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+nav {
+    width: 25%;
+    height: 85%;
+
+    background-color: #fefefe;
+}
+
+section {
+
+    background-image:url('/images/drawing-paper.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    height: 85%;
+    width: 100%;
+    animation: Enterence-main .8s ease-in;
+
+}
+
+.Structure {
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    animation: Enterence-main2 .4s ease-in;
+
+}
+
+ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin-bottom: 10%;
+}
+
+li {
+    font-size: 1.5vw;
+    font-family: Montserrat;
+    padding: .6vw;
+
+}
+
+.Inact {
+    opacity: 0.3;
+}
+
+.Block-enterence {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: #fefefe;
+    width: 55.5%;
+    height: 48.5%;
+}
+
+.Text {
+    font-size: 2vw;
+    font-family: Montserrat;
+
+    color: #101;
+    padding-left: 3.5vw;
+    margin-bottom: 0;
+}
+
+@keyframes Enterence {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 55.5%;
+    }
+}
+
+@keyframes Enterence-main {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 85%;
+    }
+}
+
+@keyframes Enterence-main2 {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.Flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+}
+
+@keyframes trand {
+    0%, 100% {
+        color: transparent;
+        display: flex;
+        visibility: hidden;
+    }
+}
+
+.Disappear {
+    animation: trand 1.6s ease-in;
+}
+
+.field-input {
+    width: 70%;
+    font-family: Montserrat;
+    height: 15%;
+    padding: 0px 1vw;
+    background: #F1F1F1;
+    border: none;
+    font-size: 1vw;
+
+    margin: .5vw;
+}
+
+.field-input1 {
+    width: 70%;
+    font-family: Montserrat;
+    height: 15%;
+    padding: 0px 1vw;
+    background: #F1F1F1;
+    border: none;
+    font-size: 1vw;
+
+    margin: .5vw;
+}
+
+.delay {
+    animation-delay: 4s;
+}
+
+.MoveEnv {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 2.5vw;
+}
+
+.Flex {
+    display: block;
+}
+
+.Icon {
+    width: 2.5vw;
+    height: auto;
+
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: .5vw;
+    
+    rotate: 45deg;
+}
+
+.ButtonEnter {
+    background-color: #101;
+    width: 3.5vw;
+    height: 3.5vw;
+
+    position: absolute;
+    margin: -38.5% 85.5%;
+}
+
+.Date {
+    font-family: SeaAngel;
+    color: #010101;
+    font-size: 1.2vw;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom:0;
+}
+
+.Time {
+    font-size: 1.2vw;
+    font-family: Santorini;
+    color: gray;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom:0;
+}
+
+a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    text-decoration: none;
+    color: #010101;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #010101;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+  
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+  
+  /* Slide in */
+li:nth-child(2) a {
+    overflow: hidden;
+}
+  
+li:nth-child(2) a::after {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+  
+li:nth-child(2) a:hover::after,
+li:nth-child(2) a:focus::after{
+    transform: translate3d(0, 0, 0);
+}
+  
+  /* Scale from center */
+li:nth-child(3) a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+  
+li:nth-child(3) a:hover::after,
+li:nth-child(3) a:focus::after{
+    transform: scale(1);
+}
+
+/* Index */

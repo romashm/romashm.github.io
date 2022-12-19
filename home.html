@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Finance inc.</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <nav>
+        <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+
+        <ul type="none">
+            <li class="Active"> Вход </li>
+            <li class="Inact"><a href="/sign-up.html"> Регистрация </a></li>
+        </ul>
+
+    </nav>
+    
+    <section>
+        <div class="Structure">
+            <div class="Block-enterence">
+                <div class="Flex-between Disappear">
+                    <p class="Date"> 12 Dec 2022 </p>
+                    <p class="Time"> Global Finance inc. </p>
+                </div>
+                <p class="Text Disappear"> Добрый день </p>
+                <br/>
+
+                <div class="MoveEnv Disappear">
+                    <input type="email" class="field-input" placeholder="Ваша@почта.com" name="email" required />
+                    <input type="password" class="field-input1" placeholder="Ваш пароль" name="password" required />
+                </div>
+
+                <div class="ButtonEnter Disappear">
+                    <img class="Icon" src="./images/ArrowRight.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script-for-home.js"></script>
+</body>
+</html>

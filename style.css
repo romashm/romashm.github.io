@@ -1,0 +1,124 @@
+/* Imports */
+
+@font-face {
+    font-family: Santorini;
+    src: url(./fonts/Santorini/Santorini\ Eighty.ttf);
+}
+
+@font-face {
+    font-family: SeaAngel;
+    src: url(./fonts/SeaAngle/Sea\ Angle\ Reguler.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Abigail;
+    src: url(./fonts/Abigail/Abigail.ttf);
+}
+
+
+/* Imports */
+/* Index */
+
+html, body {
+    background-color: #fefefe;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+#container {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18.5%;
+    width: 100vw;
+    height: 80pt;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: Abigail;
+    font-size: 8vw;
+
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+.GlobalFinance {
+    position: absolute;
+    margin: 37% 82.5%;
+
+    white-space: nowrap;
+    font-size: 1.5vw;
+    font-family: SeaAngel;
+}
+
+a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    text-decoration: none;
+    color: #010101;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #010101;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+  
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+  
+  /* Slide in */
+li:nth-child(2) a {
+    overflow: hidden;
+}
+  
+li:nth-child(2) a::after {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+  
+li:nth-child(2) a:hover::after,
+li:nth-child(2) a:focus::after{
+    transform: translate3d(0, 0, 0);
+}
+  
+  /* Scale from center */
+li:nth-child(3) a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+  
+li:nth-child(3) a:hover::after,
+li:nth-child(3) a:focus::after{
+    transform: scale(1);
+}
+
+/* Index */
