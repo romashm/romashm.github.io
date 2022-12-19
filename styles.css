@@ -81,8 +81,6 @@ section {
 
     height: 85%;
     width: 100%;
-    animation: Enterence-main .8s ease-in;
-
 }
 
 .Structure {
@@ -316,6 +314,22 @@ li:nth-child(3) a::after {
 li:nth-child(3) a:hover::after,
 li:nth-child(3) a:focus::after{
     transform: scale(1);
+}
+
+.image {
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: -2rem;
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+
+@keyframes image-in {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
 }
 
 /* Index */
