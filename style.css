@@ -1,0 +1,120 @@
+/* Imports */
+
+@font-face {
+    font-family: kawoszeh;
+    src: url(fonts/kawoszeh/kawoszeh.ttf);
+}
+
+@font-face {
+    font-family: playfair;
+    src: url(fonts/playfair/playfair-display-bold_[allfont.ru].ttf);
+}
+
+/* Imports */
+/* Landing */
+
+@keyframes image-in {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden; 
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
+    }
+
+    .upper-block {
+        width: 70%;
+        height: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0;
+
+    }
+
+    .Logo {
+        font-size: 10vw;
+        font-family: kawoszeh;
+    }
+
+    .Icons {
+        width: 10vw;
+        height: auto;
+    }  
+
+    section {
+        width: 100%;
+        height: 85%;
+
+        background: url(images/decorative-plant-inside-minimal-vase.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+    }
+
+    .center {
+        width: 85%;
+        height: auto;
+        margin-bottom: 30%;
+    }
+
+    .subText {
+        font-size: 5.5vw;
+        font-family: kawoszeh;
+        color: #101010;
+        text-decoration: underline solid #101010;
+        text-align: center;
+    }
+
+    .Text {
+        font-size: 6vw;
+        font-family: playfair;
+
+        color: #101010;
+        text-align: center;
+    }
+
+    .MakeOrder {
+        text-decoration: none;
+        font-family: playfair;
+
+        color: #101010;
+    }
+    .Order {
+        text-align: center;
+        font-size: 6.5vw;
+        margin-top: 50%;
+        text-decoration: underline solid #101010;
+    }
+}
+/* Landing */
+/* northernwhale.ru */
