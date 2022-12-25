@@ -171,7 +171,6 @@
     .Catalogy {
         width: 100%;
         height: 70%;
-        padding-top: 20%;
 
         background: url(images/annie-spratt-hX_hf2lPpUU-unsplash.jpg) no-repeat;
         background-size: cover;
@@ -188,7 +187,151 @@
 
     .blockExplain1 {
         background-color: #fefefe;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .center2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .center3 {
+        width: 85%;
+        height: auto;
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+        padding: 0;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+        width: 80%;
+        height: auto;
+
+        background-color: #480607;
+        text-align: center;
+
+        padding: 2.5%;
+        margin: 3%;
+    }
+
+    .link {
+        color: #fefefe;
+        font-size: 3vw;
+
+        text-decoration: none;
+        font-family: playfair;
+    }
+
+    .overlay:target .popup{
+        animation: popup 0.7s;
+    }
+
+    @keyframes popup {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.4);
+        }
+        60%{
+            transform: scale(1.1);
+        }
+        70%{
+            transform: scale(1.2);
+        }
+        80%{
+            transform: scale(1);
+        }
+        90%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .overlay:target {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #893F45;
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+
+      .overlay:target .popup {
+        animation: popup 0.7s;
+      }
+
+      .popup h2 {
+        margin-top: 0;
+        color: #fbfbfb;
+        font-size: 4vw;
+        font-family: playfair;
+        width: 90%;
+      }
+
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .popup .close:hover {
+        color: #06D85F;
+      }
+
+      .popup .content {
+        max-width: 100%;
+      }
+
+      .Service {
+        font-size: 4vw;
+        color: #fbfbfb;
+        font-family: playfair;
+      }
+
+      .popupList {
+        color: #fbfbfb;
+        font-family: playfair;
+        font-size: 3vw;
+
+        padding: 2%;
+        width: 60%;
+      }
 }
 /* Landing */
 /* northernwhale.ru */
