@@ -41,6 +41,19 @@
         justify-content: center;
         align-items: center;
         background-color: #fefefe;
+
+        position: fixed;
+        z-index: 4;
+    }
+
+    header {
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
     }
 
     .upper-block {
@@ -68,7 +81,8 @@
         width: 100%;
         height: 85%;
 
-        background: url(images/decorative-plant-inside-minimal-vase.jpg) no-repeat;
+        position: relative;
+        background: url(images/raychan-KGqif07slUY-unsplash.jpg) no-repeat rgba(0, 0, 0, 0.8);
         background-size: cover;
         background-position: center center;
         -webkit-background-size: cover;
@@ -81,22 +95,62 @@
         animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
     }
 
+    section:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 2;
+    }
+
     .center {
         width: 85%;
         height: auto;
         margin-bottom: 30%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .relativeObj {
+        display: flex;
+        margin-top: 25%;
+    }
+
+    .relativeObj1 {
+        display: flex;
+        margin-top: 5%;
+    }
+
+    .relativeObj2 {
+        display: flex;
+        margin-top: 10%;
+        margin-bottom: 10%;
+
     }
 
     .subText {
         font-size: 5.5vw;
         font-family: kawoszeh;
-        color: #101010;
-        text-decoration: underline solid #101010;
+        color: #fbfbfb;
+        text-decoration: underline solid #fbfbfb;
         text-align: center;
+
+        z-index: 1;
     }
 
     .Text {
         font-size: 6vw;
+        font-family: playfair;
+
+        color: #fbfbfb;
+        text-align: center;
+    }
+
+    .TextBlack {
+        font-size: 5vw;
         font-family: playfair;
 
         color: #101010;
@@ -107,13 +161,13 @@
         text-decoration: none;
         font-family: playfair;
 
-        color: #101010;
+        color: #fbfbfb;
     }
     .Order {
         text-align: center;
         font-size: 6.5vw;
         margin-top: 50%;
-        text-decoration: underline solid #101010;
+        text-decoration: underline solid #fbfbfb;
     }
 
     .Module {
@@ -186,7 +240,7 @@
     }
 
     .blockExplain1 {
-        background-color: #fefefe;
+        background-color: #8A795D;
 
         display: flex;
         justify-content: center;
@@ -196,6 +250,8 @@
     .center2 {
         width: 100%;
         height: auto;
+
+        
     }
 
     .center3 {
@@ -215,7 +271,7 @@
         width: 80%;
         height: auto;
 
-        background-color: #480607;
+        background-color: #8A795D;
         text-align: center;
 
         padding: 2.5%;
@@ -325,13 +381,13 @@
         font-size: 3vw;
         margin: auto;
 
-        margin-bottom: 10%;
+        margin-bottom: 7%;
     }
 
     .regs1g {
         padding: 3vw;
-        background-color: #C2A894;
-        border-radius: 5px;
+        background-color: #8A795D;
+        border-radius: 2px;
         cursor: pointer;
         font-size: 3.1vw;
         color: #fff;
@@ -340,7 +396,7 @@
         width: 80%;
         margin-bottom: 0;
         margin: auto;
-    
+        border: none;
     }
 
     .Block {
@@ -349,10 +405,44 @@
         height: 25%;
 
         text-align: center;
+        margin-top: 30%;
     }
 
     .regs1g2 {
-        display: none;
+        padding: 2vw;
+        background-color: #8A795D;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 4.5vw;
+        color: #fff;
+        font-family: playfair;
+
+        width: 65%;
+        border: none;
+
+        margin: auto;
+    }
+
+    .answer {
+        padding: 2vw;
+        background-color: #8A795D;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 4.5vw;
+        color: #fff;
+        font-family: playfair;
+
+        width: 85%;
+        border: none;
+
+        margin: auto;
+        white-space: nowrap;
+    }
+
+    a {
+        text-decoration: none;
+        color: #101010;
+
     }
 }
 
@@ -464,7 +554,7 @@
 
     .Module {
         font-family: playfair;
-        font-size: 7vw;
+        font-size: 3vw;
         text-align: center;
         text-decoration: underline solid #101010;
         margin: 0;
@@ -599,7 +689,7 @@
     }
 
     .vk-link {
-        font-size: 5vw;
+        font-size: 3vw;
         font-family: kawoszeh; 
     }
 
@@ -675,6 +765,18 @@
         margin-bottom: 10%;
     }
 
+    .check-input {
+
+        font-family: playfair;
+
+        background: #F1F1F1;
+        border: none;
+        font-size: 3vw;
+        margin: auto;
+
+        margin-bottom: 10%;
+    }
+
     .regs1g {
         padding: 3vw;
         background-color: #C2A894;
@@ -689,6 +791,7 @@
         margin: auto;
 
     }
+
 
     .Block {
         display: block;

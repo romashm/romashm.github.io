@@ -10,77 +10,71 @@
 <body>
     <nav>
         <div class="upper-block">
-            <p class="Logo"><a class="links" href="/">KUT</a></p>
-            <a class="link" href="menu.html"><img class="Icons" src='./images/MenuHamburger.svg'></a>
+            <p class="Logo"> KUT </p>
+            <a class="link" href="/menu.html"><img class="Icons" src='./images/MenuHamburger.svg'></a>
         </div>
     </nav>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="Module"> НЕСТАНДАРТНОЕ КРЕПЛЕНИЕ НАРУЖНОГО БЛОКА * </p>
-
-    
-        <table style="width:100%;" class="table ServiceLink">
-            <tr class="tr">
-                <td class="td">Наименование услуги</td>
-                <td class="td">Цена</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Демонтаж и монтаж стеклопакета до 180х80 см</td>
-
-                <td class="td">1 500</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Демонтаж и монтаж стеклопакета свыше 180х80 см
-                </td>
-
-                <td class="td">2 500</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Разборка и сборка вентилируемого фасада (2 плитки 60х60 см.)</td>
-
-                <td class="td">3 000</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Разборка и сборка 1 плитки вентилируемого фасада 60х60 см</td>
-
-                <td class="td">1 500</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Нестандартное крепление наружного блока (шпильки/траверса)
-                </td>
-
-                <td class="td">1 500</td>
-            </tr>
-            <tr class="tr">
-                <td class="td">Виброопоры с установкой (комплект 4 шт.)</td>
-
-                <td class="td">1 300</td>
-            </tr>
-        </table>
-        <br/>
-        <div class="flexCenter">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 9C8 7 6 7 6 7C3.23858 7 1 9.23858 1 12C1 14.7614 3.23858 17 6 17C6 17 10.5 17 12 12C13.5 7 18 7 18 7C20.7614 7 23 9.23858 23 12C23 14.7614 20.7614 17 18 17C18 17 16 17 14 15" stroke="#09090B" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>  
+    <header>
+        <div class="upper-block">
+            <p class="TextBlack"> Пройдите опрос и получите обратную связь </p>
         </div>
-        <br/>
-        <nav class="borderSide">
-            <div class="upper-block">
-                <p class="vk-link"> VK </p>
-    
-                <p class="Info">
-                    Почта: 9267130065@mail.ru <br/>
-                    Ольга 8 (977) 308-75-75
-                </p>
-            </div>
-        </nav>
+    </header>
+
+    <p class="TextBlack"> Что вас интересует? </p>
+    <form action="/remont.html">
+    <div class="relativeObj1">
+        <button type="submit" class="answer">
+            Ремонт кондиционера
+        </button>
+    </div>
+    </form>
+    <form action="/installconditioner.html">
+    <div class="relativeObj1">
+        <button type="submit" class="answer" value="Установка" name="buttons">
+            Установка кондиционера 
+        </button>
+    </div>
+    </form>
+
     <style>
         nav {
             border-bottom: 2px solid #101010;
+        }
+        @media (min-width: 200px) and (max-width: 600px) {
+        header {
+            margin-top: 30%;
+        }
+    }
+
+        label {
+            font-size: 5vw;
+            color: #101010;
+            font-family: playfair;
+    
+            padding: 3vw;
+            cursor: pointer;
+            margin: auto;
+            text-align: center;
+            width: 80%;
+            padding-top: 0;
+        }
+
+        .quest {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding-top: 0;
+            padding-left: 6%;
+        }
+
+        .quest1 {
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+            padding-left: 6%;
         }
 
         @media (min-width: 601px) and (max-width: 1600px) {
@@ -91,9 +85,80 @@
                 text-decoration: underline solid #101010;
                 margin: 0;
                 margin-bottom: 3%;
-                margin-top: 0%;
+                margin-top: 2%;
 
             }
+
+
+            .quest {
+                width: 100%;
+                height: auto;
+                display: block;
+                padding-top: 0;
+                padding-left: 1%;
+            }
+    
+            .quest1 {
+                width: 50%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0;
+                padding-left: 1%;
+            }
+            
+    .check-input {
+
+        font-family: playfair;
+
+        background: #F1F1F1;
+        border: none;
+        font-size: 1vw;
+        margin: auto;
+
+        margin-bottom: 5%;
+    }
+
+            
+    .relativeObj {
+        display: flex;
+        margin-top: 2%;
+    }
+
+    .relativeObj1 {
+        display: flex;
+        margin-top: 2%;
+    }
+
+    .answer {
+        padding: 1vw;
+        background-color: #8A795D;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 1.5vw;
+        color: #fff;
+        font-family: playfair;
+
+        width: 35%;
+        border: none;
+
+        margin: auto;
+    }
+
+    label {
+        font-size: 1.5vw;
+        color: #101010;
+        font-family: playfair;
+
+        padding: .5vw;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        width: 80%;
+        padding-top: 0;
+    }
+
 
             .Company {
                 text-align: center;
@@ -116,6 +181,8 @@
                 margin-bottom: 10%;
         
             }
+
+            
             .regs1g2 {
                 padding: 1vw;
                 background-color: #480607;
@@ -129,6 +196,13 @@
                 margin-bottom: 0;
                 margin: auto;
                 white-space: nowrap;
+            }
+            .TextBlack {
+                font-size: 2vw;
+                font-family: playfair;
+        
+                color: #101010;
+                text-align: center;
             }
 
             li {
@@ -218,12 +292,12 @@
         animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
     }
 
+
+
         }
 
 
-        .borderSide {
-            border-top: 2px solid #101010;
-        }
+        
     </style>
 </body>
 </html>

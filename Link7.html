@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>northernwhale.ru</title>
-    <link rel="stylesheet" href="style.css" />
+    <link type="text/css" href='style.css' rel="stylesheet" />
 </head>
 <body>
     <nav>
         <div class="upper-block">
             <p class="Logo"><a class="links" href="/">KUT</a></p>
-            <img class="Icons" src="./images/MenuHamburger.svg">
+            <a class="link" href="menu.html"><img class="Icons" src='./images/MenuHamburger.svg'></a>
         </div>
     </nav>
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <p class="Module"> ДЕМОНТАЖ КОНДИЦИОНЕРОВ (ОБА БЛОКА - БЕЗ ТРАССЫ) * </p>
 
     
@@ -220,12 +225,142 @@
             border-bottom: 2px solid #101010;
         }
 
-        .Module {
-            color: #480607;
-            text-decoration: underline 1px #480607;
-            font-size: 3vw;
-        }
+        @media (min-width: 601px) and (max-width: 1600px) {
+            .Module {
+                font-family: playfair;
+                font-size: 2vw;
+                text-align: center;
+                text-decoration: underline solid #101010;
+                margin: 0;
+                margin-bottom: 3%;
+                margin-top: 0%;
 
+            }
+
+            .Company {
+                text-align: center;
+                font-family: playfair;
+                font-size: 2vw;
+        
+                width: 50%;
+            }
+            .CompanyGray {
+                text-align: center;
+                font-family: playfair;
+                font-size: 1vw;
+        
+                color: grey;
+                width: 40%;
+            }
+            .relativeObj2 {
+                display: flex;
+                margin-top: 10%;
+                margin-bottom: 10%;
+        
+            }
+            .regs1g2 {
+                padding: 1vw;
+                background-color: #480607;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.5vw;
+                color: #fff;
+                font-family: playfair;
+        
+                width: 20%;
+                margin-bottom: 0;
+                margin: auto;
+                white-space: nowrap;
+            }
+
+            li {
+                width: 70%;
+                height: auto;
+        
+                background-color: #480607;
+                text-align: center;
+        
+                padding: 1%;
+                margin: auto;
+                margin-bottom: 3%;   
+        
+            }
+
+            
+            .link {
+                color: #fefefe;
+                font-size: 2vw;
+
+                text-decoration: none;
+                font-family: playfair;
+            }
+
+            
+    header {
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
+    }
+
+    
+    .vk-link {
+        font-size: 4vw;
+        font-family: kawoszeh; 
+    }
+
+    .linkvk {
+        font-size: 4vw;
+        text-decoration: none;
+        color: black;
+    }
+
+    ul {
+        margin-top: 1%;
+    }
+
+    .regs1g {
+        padding: 1vw;
+        background-color: #C2A894;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 2vw;
+        color: #fff;
+        font-family: playfair;
+
+        width: 30%;
+        margin-bottom: 0;
+        margin: auto;
+
+    }
+
+    
+    .field-input {
+        width: 70%;
+
+        font-family: playfair;
+        height: 25%;
+        padding: 1px 1vw;
+        background: #F1F1F1;
+        border: none;
+        font-size: 1.5vw;
+        margin: auto;
+
+        margin-bottom: 2%;
+    }
+
+    .table {
+        border-color: #101010;
+        text-align: center;
+        margin-top: 5%;
+
+        animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+    }
+
+        }
 
         .borderSide {
             border-top: 2px solid #101010;
