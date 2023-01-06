@@ -1,0 +1,72 @@
+/* Imports */
+
+@font-face {
+    font-family: 'CarlaSans';
+    src: url(fonts/CarlaSans\ Bold.otf);
+}
+
+/* Imports */
+/* DGC Architects 2023 ® */
+
+@media (min-width: 200px) and (max-width: 600px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden; 
+        width: 100%;
+        height: 100%;
+    }
+
+    section {
+        width: 100%;
+        height: 100vh;
+
+        background-image: url(images/r-architecture-wJAOeXvxudM-unsplash.jpg);
+        background-size: cover;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        border-bottom: .5px solid #fbfbfb;
+    }
+
+    aside {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;      
+        
+        margin-top: 1vw;
+        margin-bottom: 6.5vw;
+    }
+    
+    .DGC {
+        font-size: 4.5vw;
+        font-family: 'CarlaSans';
+
+        color: #fbfbfb;
+    }
+    
+    .blue {
+        color: #44576d;
+    }
+
+    .menu {
+        width: 5.5vw;
+    }
+
+}
+
+/* DGC Architects 2023 ® */
