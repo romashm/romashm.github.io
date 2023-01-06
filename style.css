@@ -5,6 +5,8 @@
     src: url(fonts/CarlaSans\ Bold.otf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 /* Imports */
 /* DGC Architects 2023 ® */
 
@@ -23,7 +25,7 @@
         width: 100%;
         height: 100vh;
 
-        background-image: url(images/r-architecture-wJAOeXvxudM-unsplash.jpg);
+        background-image: url(images/ian-keefe-OgcJIKRnRC8-unsplash.jpg);
         background-size: cover;
         background-position: center center;
         -webkit-background-size: cover;
@@ -37,7 +39,6 @@
         align-items: center;
 
         width: 100%;
-        border-bottom: .5px solid #fbfbfb;
     }
 
     aside {
@@ -49,11 +50,32 @@
         align-items: center;      
         
         margin-top: 1vw;
-        margin-bottom: 6.5vw;
+        margin-bottom: 5vw;
+
+        border-bottom: 2.5px solid #fbfbfb;
+
+    }
+
+    .Explore {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 80%;
+    }
+
+    .Abserve {
+        font-family: 'Raleway', sans-serif;
+        font-size: 4vw;
+
+        color: #fbfbfb;
     }
     
     .DGC {
-        font-size: 4.5vw;
+        font-size: 5.5vw;
         font-family: 'CarlaSans';
 
         color: #fbfbfb;
@@ -64,7 +86,7 @@
     }
 
     .menu {
-        width: 5.5vw;
+        width: 6.5vw;
     }
 
 }
