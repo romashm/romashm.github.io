@@ -1,0 +1,159 @@
+/* Imports */
+
+@font-face {
+    font-family: 'Carla';
+    src: url(fonts/Carla/CarlaSans\ Bold.otf);
+}
+
+/* Imports */
+/* DGC Architects 2023 ® */
+
+@media (min-width: 200px) and (max-width: 600px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden; 
+        width: 100%;
+        height: 100%;
+
+        background-color: #fbfbfb;
+        animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 85%;
+
+        border-bottom: 1px solid #101010;
+    }
+
+    aside {
+        height: 15%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-1, .section-2, .section-3, .section-4, .section-5 {
+        width: calc(100%/3);
+        height: 95%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-right: 1px solid #101010;
+    }
+
+    .section-4 {
+        border-right: 1px solid #101010;
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .section-3 {
+        border-left: 1px solid #101010;
+    }
+
+    .vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .Year {
+        font-family: 'Carla';
+        margin-top: 5%;
+        font-size: 10.5vw;
+    }
+
+    .Mark {
+        font-family: 'Carla';
+        font-size: 10.5vw;
+        rotate: 90deg;
+    }
+
+    .Arch {
+        font-family: 'Carla';
+        font-size: 10.5vw;
+
+        padding-top: 4%;
+        padding-bottom: 3%;
+        z-index: 1;
+    }
+
+    .Arch-1 {
+        font-family: 'Carla';
+        font-size: 10.5vw;
+        margin-top: 5%;
+
+        white-space: nowrap;
+    }
+
+    .blue {
+        color: #5d7599;
+    }
+
+    .Thin {
+        text-transform: uppercase;
+        font-family: 'Carla';
+
+        font-size: 3.5vw;
+        margin-left: 10%;
+    }
+
+    @keyframes image-in {
+        from {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       }
+        to {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+       }
+    }
+
+    .lds-dual-ring {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        margin: -13% 85%;
+    }
+    
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 7vw;
+        height: 7vw;
+        
+        border-radius: 50%;
+        border: 3px solid #101010;
+        border-color: #101010 transparent #101010 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+    
+    @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+}

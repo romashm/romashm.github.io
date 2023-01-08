@@ -2,10 +2,18 @@
 
 @font-face {
     font-family: 'CarlaSans';
-    src: url(fonts/CarlaSans\ Bold.otf);
+    src: url(fonts/Carla/CarlaSans\ Bold.otf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@font-face {
+    font-family: 'Bitter';
+    src: url(fonts/Bitter/Bitter-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Scriptina';
+    src: url(fonts/Scriptina/SCRIPTIN.ttf);
+}
 
 /* Imports */
 /* DGC Architects 2023 ® */
@@ -25,12 +33,7 @@
         width: 100%;
         height: 100vh;
 
-        background-image: url(images/ian-keefe-OgcJIKRnRC8-unsplash.jpg);
-        background-size: cover;
-        background-position: center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        position: relative;
     }
     
     nav {
@@ -39,6 +42,7 @@
         align-items: center;
 
         width: 100%;
+        position: relative;
     }
 
     aside {
@@ -50,35 +54,16 @@
         align-items: center;      
         
         margin-top: 1vw;
-        margin-bottom: 5vw;
+        margin-bottom: 1vw;
 
-        border-bottom: 2.5px solid #fbfbfb;
-
+        position: relative;
     }
 
-    .Explore {
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        width: 80%;
-    }
-
-    .Abserve {
-        font-family: 'Raleway', sans-serif;
-        font-size: 4vw;
-
-        color: #fbfbfb;
-    }
-    
     .DGC {
         font-size: 5.5vw;
         font-family: 'CarlaSans';
 
-        color: #fbfbfb;
+        color: #101010;
     }
     
     .blue {
@@ -86,7 +71,165 @@
     }
 
     .menu {
-        width: 6.5vw;
+        font-size: 4vw;
+        font-family: 'CarlaSans';
+
+        color: #101010;
+    }
+
+    .Main {
+        font-family: 'Bitter';
+        font-size: 12vw;
+
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 3.5%;
+        margin-bottom: 4%;
+
+        margin-top: 2%;
+    }
+
+    .Thick {
+        font-family: 'Bitter';
+        font-size: 4vw;
+
+        font-style: italic;
+        white-space: nowrap;
+        text-align: end;
+
+        margin-right: 3.5%;
+    }
+
+    .Present {
+        width: 85%;
+        height: auto;
+        animation: image-in 1.2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+
+        margin-top: 8%;
+    }
+
+    .num {
+        font-size: 12.5vw;
+        font-family: 'CarlaSans';
+
+        color: #101010;
+
+        margin-right: 7%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .text {
+        font-family: 'Bitter';
+        font-size: 4.5vw;
+
+        width: 50%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: justify;
+
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Curved {
+        font-family: 'Bitter';
+
+
+        color: #101010;
+    }
+
+    .List {
+        font-size: 8.5vw;
+        color: #101010;
+        font-family: 'Bitter';
+
+        white-space: nowrap;
+    }
+
+    .Resolution {
+        font-size: 12.5vw;
+        font-family: 'CarlaSans';
+
+        color: #101010;
+        position: absolute;
+
+        text-align: center;
+        z-index: 1;
+
+        margin: 0% 10%;
+    }
+
+    .NameofObj {
+        font-size: 5.5vw;
+        font-family: 'CarlaSans';
+
+        color: #101010;
+        margin-left: 10%;
+        margin-bottom: 0;
+    }
+
+    .Thick-1 {
+        font-family: 'Bitter';
+        font-size: 4vw;
+
+        font-style: italic;
+        text-align: justify;
+
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 0;
+    }
+
+    @keyframes image-in {
+        from {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       }
+        to {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+       }
+    }
+
+    .Main-en {
+        font-family: 'CarlaSans';
+
+        font-size: 12vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        margin-left: 8%;
+    }
+ 
+    .end {
+        display: flex;
+        justify-content: end;
+
+        margin-right:8%;
+    }
+
+    .Line {
+        width: 30%;
+        height: 2px;
+
+        background-color: #101010;
+        position: absolute;
+        margin: -8% 10%;
+    }
+
+    .Scrciptina {
+        font-family: 'Scriptina';
+        position: absolute;
+        font-size: 8.5vw;
     }
 
 }
