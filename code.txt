@@ -1,267 +1,472 @@
-let Identification = document.getElementById('Identification');
-let StatusBuro = document.getElementById('StatusBuro');
-let FormOtchet = document.getElementById('FormOtchet');
-let Static = document.getElementById('Static');
+/* Imports */
 
-let Noticifictaion = document.getElementById('Noticifictaion');
-let Currencyvalodation = document.getElementById('Currencyvalodation')
-let sub = document.getElementById('sub');
-let Gespat = document.getElementById('Gespat')
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
 
-let Power = document.getElementById('Power')
-
-// let TypeText = document.getElementById("Elem")
-// TypeText.addEventListener('focus', () => {
-//     var styleElem = document.head.appendChild(document.createElement("style"));
-//     styleElem.innerHTML = ".box::before {background: linear-gradient(90deg, rgba(242,245,247,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);animation: animated 3s linear infinite;}";
-// });
-
-// let TypeText1 = document.getElementById("Elem-1")
-// TypeText1.addEventListener('focus', () => {
-//     var styleElem = document.head.appendChild(document.createElement("style"));
-//     styleElem.innerHTML = ".box-1::before {background: linear-gradient(90deg, rgba(242,245,247,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);animation: animated 3s linear infinite;}";
-// });
-
-// let TypeText3 = document.getElementById("Elem-3")
-// TypeText3.addEventListener('focus', () => {
-//     var styleElem = document.head.appendChild(document.createElement("style"));
-//     styleElem.innerHTML = ".box-3::before {background: linear-gradient(90deg, rgba(242,245,247,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);animation: animated 3s linear infinite;}";
-// });
-
-
-function overDirection() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#FormOtchet {display: none;} #StatusBuro {animation: Identification-reverse 1s ease; width: 40%;} #Validation {display: flex;}";
+@font-face {
+    font-family: 'Abigail';
+    src: url(fonts/Abigail/Abigail.ttf);
 }
 
-function stopMovingAnimation() {
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".Disition::before {display: none;}";
+/* Media */
+
+
+/* globalfinanceinc.com 2023 ® */
+
+body, html {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #111;
 }
 
-Identification.addEventListener('click', () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#FormOtchet {display: none;} #StatusBuro {animation: Identification-center 1s ease; width: 30%;} #DataSetter {display: flex;}";  
+section {display: flex;align-items: center;}
+aside {display: block;}
 
-    FormOtchet.remove("#FormOtchet")
-})
-
-sub.addEventListener('mouseover', () => {
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".Disition::before {background: #111;animation: animated 3s linear infinite; display: flex;} ";
-});
-
-const elts = {
-    text1: document.getElementById("text1"),
-    text2: document.getElementById("text2")
-};
-
-const texts = [
-    "Global",
-    "Finance",
-    "Inc."
-];
-
-const morphTime = 2;
-const cooldownTime = 1;
-
-let textIndex = texts.length - 1;
-let time = new Date();
-let morph = 0;
-let cooldown = cooldownTime;
-
-elts.text1.textContent = texts[textIndex % texts.length];
-elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
-function doMorph() {
-    morph -= cooldown;
-    cooldown = 0;
-
-    let fraction = morph / morphTime;
-
-    if (fraction > 1) {
-        cooldown = cooldownTime;
-        fraction = 1;
-    }
-
-    setMorph(fraction);
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-function setMorph(fraction) {
-    elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+.InputField {
+    width: 8.5em;
+    height: 3em;
 
-    fraction = 1 - fraction;
-    elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-    elts.text1.textContent = texts[textIndex % texts.length];
-    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+    border: none;
+    font-family: 'Jost';
+    padding-left: 2em;
 }
 
-function doCooldown() {
-    morph = 0;
+.InputField-1 {
+    width: 2em;
+    height: 3em;
 
-    elts.text2.style.filter = "";
-    elts.text2.style.opacity = "100%";
-
-    elts.text1.style.filter = "";
-    elts.text1.style.opacity = "0%";
+    border: none;
+    font-family: 'Jost';
+    padding-left: 1.5em;
+    border-left: 3px solid #111;
 }
 
-function animate() {
-    requestAnimationFrame(animate);
+.Comma {
+    width: 12em;
+    height: 2.9em;
 
-    let newTime = new Date();
-    let shouldIncrementIndex = cooldown > 0;
-    let dt = (newTime - time) / 1000;
-    time = newTime;
-
-    cooldown -= dt;
-
-    if (cooldown <= 0) {
-        if (shouldIncrementIndex) {
-            textIndex++;
-        }
-
-        doMorph();
-    } else {
-        doCooldown();
-    }
+    border: none;
+    font-family: 'Jost';
+    padding-left: 2em;
 }
 
-animate();
+.Between {
+    width: 90%;
+    height: 100%;
 
-// Text
-(function () {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    const link = document.querySelectorAll('nav > .hover-this');
-    const cursor = document.querySelector('.cursor');
+.SelectField {
+    width: 11.5em;
+    height: 3em;
 
-    const animateit = function (e) {
-          const span = this.querySelector('span');
-          const { offsetX: x, offsetY: y } = e,
-          { offsetWidth: width, offsetHeight: height } = this,
+    border: none;
+    font-family: 'Jost';
+    padding-left: 1em;
+}
 
-          move = 25,
-          xMove = x / width * (move * 2) - move,
-          yMove = y / height * (move * 2) - move;
-
-          span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-          if (e.type === 'mouseleave') span.style.transform = '';
-    };
-
-    const editCursor = e => {
-          const { clientX: x, clientY: y } = e;
-          cursor.style.left = x + 'px';
-          cursor.style.top = y + 'px';
-    };
-
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
-
-})();
-const date = new Date();
-
-setTimeout(() => {
-    let first = document.getElementById('first');
-    first.remove();
-    Gespat.innerHTML = `<span class="Opacity" id="sec">Сегодня ${date.getDate()} число </span>`
+.Sidebar {
+    font-size: 1.5vw;
+    color: #111;
+    text-align: center;
     
-}, 5000)
-
-setTimeout(() => {
-    let sec = document.getElementById('sec');
-    let Weather = document.getElementById('Weather');
-
-    sec.remove();
-    Gespat.innerHTML = '<span class="Opacity">В Москве -1℃</span>'
-    Weather.innerHTML = `<img src='../static/images/Snow.svg' class="Opacity" style="margin-left: 1.5em; width: 1.2em;">`
-}, 10000)
-
-document.getElementById('current').oninput = function() {
-    let a = document.getElementById('current').value+'.'+document.getElementById('currencyVALUM').value;
-    let b = document.getElementById('selectedValue2').value+'.'+document.getElementById('selectedValue1').value
-    document.getElementById('answer').value =Math.round(parseFloat(a*b)* 100) / 100
+    font-family: 'Jost', sans-serif;
+    margin: 5%;
 }
 
-document.getElementById('currencyVALUM').oninput = function() {
-    let a = document.getElementById('current').value+'.'+document.getElementById('currencyVALUM').value;
-    let b = document.getElementById('selectedValue2').value+'.'+document.getElementById('selectedValue1').value
-    document.getElementById('answer').value =Math.round(parseFloat(a*b)* 100) / 100
+.Info {
+    font-size: 1.2em;
+    color: #fbfbfb;
+
+    font-family: 'Jost', sans-serif;
+    white-space: nowrap;
 }
 
-document.getElementById('selectedValue2').oninput = function() {
-    let a = document.getElementById('current').value+'.'+document.getElementById('currencyVALUM').value;
-    let b = document.getElementById('selectedValue2').value+'.'+document.getElementById('selectedValue1').value
-    document.getElementById('answer').value =Math.round(parseFloat(a*b)* 100) / 100
+.Opacity {
+    animation: Opacity 2s ease;
 }
 
-document.getElementById('selectedValue1').oninput = function() {
-    let a = document.getElementById('current').value+'.'+document.getElementById('currencyVALUM').value;
-    let b = document.getElementById('selectedValue2').value+'.'+document.getElementById('selectedValue1').value
-    document.getElementById('answer').value =Math.round(parseFloat(a*b)* 100) / 100
+.Versa {
+    animation: Opacity-Versa 2s ease;
 }
 
-let eye = document.getElementById('Eye');
-let rub = document.getElementById('Ruble');
-let Dollar = document.getElementById('Dollar');
-let Euro = document.getElementById('Euro');
-let Yan = document.getElementById('Yan');
-let pound = document.getElementById('pound');
-
-function rubClick() {
-    eye.style.display = "none"
-    rub.style.display = "flex";
-    Dollar.style.display = "none";
-    Euro.style.display = "none";
-    pound.style.display = "none";
-    Yan.style.display = "none";
+#FormOtchet {
+    display:none;
 }
 
-function dollClick() {
-    eye.style.display = "none"
-    rub.style.display = "none";
-    Dollar.style.display = "flex";
-    Euro.style.display = "none";
-    pound.style.display = "none";
-    Yan.style.display = "none";
+@keyframes Opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-function eurClick() {
-    eye.style.display = "none"
-    rub.style.display = "none";
-    Dollar.style.display = "none";
-    Euro.style.display = "flex";
-    pound.style.display = "none";
-    Yan.style.display = "none";
+@keyframes Opacity-Versa {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-function yanClick() {
-    eye.style.display = "none"
-    rub.style.display = "none";
-    Dollar.style.display = "none";
-    Euro.style.display = "none";
-    pound.style.display = "none";
-    Yan.style.display = "flex";
+#StatusBuro {
+    width: 40%;
 }
 
-function pounClick() {
-    eye.style.display = "none"
-    rub.style.display = "none";
-    Dollar.style.display = "none";
-    Euro.style.display = "none";
-    pound.style.display = "flex";
-    Yan.style.display = "none";
+#Currencyvalodation {
+    cursor: pointer;
 }
 
-function eyeClick() {
-    eye.style.display = "flex"
-    rub.style.display = "none";
-    Dollar.style.display = "none";
-    Euro.style.display = "none";
-    pound.style.display = "none";
-    Yan.style.display = "none";
+.Date {
+    background-color: transparent;
+
+    font-size: 1.2em;
+    color: #fbfbfb;
+
+    font-family: 'Jost', sans-serif;
+    white-space: nowrap;
+    border: none;
+    width: 90%;
+    text-align: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(images/Calendar.svg) no-repeat center;
+    border-width: thin;
+}
+
+.TextAlert {
+    font-size: 1.8em;
+    color: #fbfbfb;
+
+    font-family: 'Jost', sans-serif;
+    white-space: nowrap;
+}
+
+.box, .box-1, .box-3 {
+    position: relative;
+    width: 12.5em;
+    height: 3em;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+#DataSetter {
+    display: none;
+}
+
+.box::before, .box-1::before, .box-3::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 250px;
+}
+
+@keyframes animated {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(350deg);
+    }
+}
+
+.box, .box-1, .box-3,  .InputField, .InputField-1, .Submit, .Comma, .Kasten, .StockProfile {
+    position: relative;
+    z-index: 10;
+}
+
+.box::after, .box-1::after, .box-3::after {
+    content: '';
+    position: absolute;
+    background-color: #111;
+    inset: 4px;
+}
+
+@keyframes Identification {
+    0% {
+        width: 40%;
+    }
+    100% {
+        width: 25%;
+    }
+}
+
+@keyframes Identification-reverse {
+    0% {
+        width: 25%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes Identification-center {
+    0% {
+        width: 40%;
+    }
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes Identification-centerRe {
+    0% {
+        width: 30%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes Currency {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: -30deg;
+    }
+}
+
+.Obsorbe {
+    width: calc(100%/6);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border: none;
+}
+
+.Obsorbe-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
+}
+
+.textCurrency {
+    color: #fbfbfb;
+    text-align: center;
+
+    font-size: 1.25em;
+    font-family: 'Jost';
+    cursor: pointer;
+}
+
+
+.textCurrency-1 {
+    color: #fbfbfb;
+    text-align: center;
+
+    font-size: 1em;
+    font-family: 'Jost';
+}
+
+
+.textCurrency:hover{
+    animation: Currency 1.4s ease;
+    rotate: -30deg;
+
+}
+
+.rotation:hover {
+    animation: Currency 1.4s ease;
+    rotate: 360deg;
+}
+
+.Submit {
+    text-align: center;
+    font-size: 2em;
+
+    background: transparent;
+    border: none;
+    font-family: 'Jost';
+    cursor: pointer;
+}
+
+.Disition, .Disition-2 {
+    position: relative;
+    width: 100%;
+    height: 4em;
+
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Disition::before, .Disition-2::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 360px;
+}
+
+.Disition::after, .Disition-2::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    inset: 4px;
+}
+
+#container {
+    position: absolute;
+    width: 90%;
+    height: 4%;
+
+    filter: url(#threshold) blur(0.6px);
+    color: #fbfbfb;
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 10%;
+    display: inline-block;
+
+    font-family: Abigail;
+    font-size: 3.5em;
+
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    color: #fbfbfb;
+}
+
+.td {
+    font-family: 'Jost';
+    color: #fbfbfb;
+    text-align: center;
+    width: auto;
+    height: 30px;
+    font-size: 1vw;
+    border: .5px solid #fbfbfb;
+}
+
+.EndSession {
+    text-align: center;
+    font-size: 1.7em;
+
+    background: transparent;
+    border: none;
+    font-family: 'Jost';
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.Grous {
+    font-size: 2em;
+    font-family: 'Jost';
+
+    color: #fbfbfb;
+}
+
+.Thick {
+    font-size: 1em;
+    font-family: 'Jost';
+
+    color: #fbfbfb;
+}
+
+li {
+    margin: 1em;
+}
+
+.Object-Maker {
+    width: 50%;
+    height: 90%;
+}
+
+.Kasten {
+    position: relative;
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.Kasten::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 650px;
+}
+
+.Kasten::after {
+    content: '';
+    position: absolute;
+    background-color: #222;
+    inset: 4px;
+}
+
+.StockProfile {
+    position: relative;
+    width: auto;
+    height: auto;
+
+    overflow: hidden;
+}
+
+.StockProfile::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1000px;
+
+    background: #111;
+    animation: animated 3s linear infinite;
+}
+
+.StockProfile::after {
+    content: '';
+    position: absolute;
+    background-color: #222;
+    inset: 4px;
+}
+
+.Thicker {
+    font-size: 1em;
+    font-family: 'Jost';
+
+    color: #111;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
 }
