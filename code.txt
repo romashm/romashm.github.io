@@ -1,0 +1,452 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Global Finance inc. </title>
+    <link type="text/css" href="{% static 'styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <nav style="width: 100%; height: 10%;">
+        <div id="container" style="z-index: 0;">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters" style="
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        ">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+        <section style="height: 2.5em; background: #222; border-radius: 24px; justify-content: space-around; z-index: 10;" id="StatusBuro">
+            <section id="FormOtchet" style="width: 100%;">
+                <p class="Info Opacity" style="text-align: center; width: 80%;" id="Static"> Формировать отчет </p>
+                <img src="{% static 'images/BarGraph.svg' %}" class="Opacity" id="Image" />
+            </section>
+            <div id="DataSetter" style="width: 100%;">
+                <input type="date" class="Date Opacity" name="time" placeholder="Выберите дату" value="20" required />         
+            </div>
+            <nav style="width: 100%; z-index: 10;" id="Validation">
+                <p class="Info" id="Gespat"><span class="Opacity" id="first"> Добрый день, {{user}}. </span></p>
+                <div id="Weather"></div>
+            </nav>
+            <nav style="width: 100%; z-index: 10; display: none;" id="SessionIsDone">
+                <p class="Info"> Завершение сессии, вы уверены в этом действии ? </p>
+                <div style="width: 2em;"></div>
+                <button class="Obsorbe-1" id="close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18 18M18 6L6 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+            </nav>
+        </section>
+        <div style="width: 10.5em;"></div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Disappear Opacity" style="cursor: pointer; z-index: 10;" id="Noticifictaion" >
+            <path d="M15 18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18M15 18H9M15 18H21.5L18.0093 13.0155C18.0032 13.0054 18 12.9938 18 12.9819V9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9V12.9819C6 12.9938 5.99679 13.0054 5.99071 13.0155L3 18H9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        <div style="width: 1.5em;"></div>
+        <button class="Obsorbe-1">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer; z-index: 10;" class="Disappear Opacity" id="Power">
+                <path d="M9 5.67363C6.63505 6.7971 5 9.2076 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 9.2076 17.3649 6.7971 15 5.67363M12 4V9" stroke="white" stroke-linecap="round"/>
+                </svg>
+        </button>
+                
+        <div style="width: 2em;"></div>
+        <section style="width: auto; height: 2.5em; background: #222; border-radius: 24px;">
+            <section style="cursor: pointer;">
+                <div style="width: 1em;"></div>
+                <section style="width: 2em; height: 2em; background: #fbfbfb; border-radius: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Opacity">
+                    <path d="M17 16C17 17.6569 13.4183 19 9 19C4.58172 19 1 17.6569 1 16C1 14.3431 4.58172 13 9 13C13.4183 13 17 14.3431 17 16Z" stroke="#09090B"/>
+                    <path d="M13 5C13 7.20914 11.2091 9 9 9C6.79086 9 5 7.20914 5 5C5 2.79086 6.79086 1 9 1C11.2091 1 13 2.79086 13 5Z" stroke="#09090B"/>
+                    </svg>
+                </section>
+                <div style="width: 1em;"></div>
+                <p class="Info Opacity"> {{lastname}} </p>
+                <div style="width: 1em;"></div>
+                <div style="width: .5em; height: .5em; background: #26d701; border-radius: 50%;" class="Opacity"></div>
+                <div style="width: 1em;"></div>
+            </section>
+        </section>
+    </nav>
+    <nav style="width: 100%; height: 20%">
+        {% csrf_token %}
+        <form method="POST" style="width: 100%; height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ">
+        <select class="SelectField" placeholder="Выбрать должность" name="deal" required>
+            <option selected> Выбрать сделку </option>
+            <option value="Продажа"> Продажа </option>
+            <option value="Покупка"> Покупка </option>
+        </select>
+        <div style="width: 1.5em;"></div>
+        <select class="SelectField" placeholder="Выбрать должность" name="currn" required>
+            <option selected> Выберите валюту </option>
+            <option value="$"> $ (USD) </option>
+            <option value="₽"> ₽ (RUB) </option>
+            <option value="€"> € (EUR) </option>
+            <option value="£"> £ (GPB) </option>
+            <option value="¥"> ¥ (CNY) </option>
+        </select>
+        <div style="width: 1.5em;"></div>
+        <div class="box">
+            <input class="InputField" id="current" type="text" placeholder="Объём" name="currency" required />
+            <input class="InputField-1" id="currencyVALUM" type="text" placeholder=".00" value="00" name="currencyVAL" required />
+        </div>
+        <div style="width: 1.5em;"></div>
+        <div class="box-1">
+            <input class="InputField" id="selectedValue2"  type="text" placeholder="Курс" name="exchange" required />
+            <input class="InputField-1" id="selectedValue1"  type="text" placeholder=".00" value="00" name="valval" required />
+        </div>
+        <div style="width: 1.5em;"></div>
+        <input class="InputField"  style="width:10.5em;" type="text" placeholder="Стоимость в Тенге" name="result" id="answer" required readonly />
+        <div style="width: .5em;"></div>
+        <div class="box-3">
+            <input class="Comma" id="Elem-3" type="text" name="comment" placeholder="Комментарий" />
+        </div>
+    </nav>
+    <section style="width: 100%; height: 70%;" id="Contribution">
+        <aside style="width: 80%; height: 100%; background: #222;">
+            <nav style="width: 100%; height: 4em;">
+                <div class="Between">
+                    <section style="cursor: pointer;" id="Identification" onmouseout="overDirection()">
+                        <section style="width: 2.5em; height: 2.5em; background: #fbfbfb; border-radius: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="rotate: 90deg;" class="Opacity">
+                                <path d="M7 1H13C14.1046 1 15 1.89543 15 3V15C15 16.1046 14.1046 17 13 17H7M1 9H11M11 9L8 5M11 9L8 13" stroke="#09090B" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </section>
+                        <div style="width: 1em;"></div>
+                        <p class="Info Opacity"> Формировать отчет </p>
+                    </section>             
+                    <section style="width: 40%; height: 2.5em; background: #fbfbfb;">
+                        <div style="width: 7em; height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #777;" class="Opacity" id="Currencyvalodation" onmouseout="overDirection()">
+                            <p class="textCurrency-1" > Валюты </p>
+                        </div>
+                        <button class="Obsorbe Opacity" style="background: #666; border: none;" onclick="rubClick()">
+                            <p class="textCurrency"> ₽ </p>
+                        </button>
+                        <button class="Obsorbe Opacity" style="background: #555; border: none;" onclick="dollClick()">
+                            <p class="textCurrency"> $ </p>
+                        </button>
+                        <button class="Obsorbe Opacity" style="background: #444; border: none;" onclick="eurClick()">
+                            <p class="textCurrency"> € </p>
+                        </button>
+                        <button class="Obsorbe Opacity" style="background: #333; border: none;"  onclick="pounClick()">
+                            <p class="textCurrency"> £ </p>
+                        </button>
+                        <button class="Obsorbe Opacity" style="background: #222; border: none;" onclick="yanClick()">
+                            <p class="textCurrency"> ¥ </p>
+                        </button>
+                        <button class="Obsorbe Opacity" style="background: #111; border: none;" onclick="eyeClick()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotation">
+                                <path d="M3 12C3 12 3.2443 13.1401 4.02867 14.5M21 12C21 12 20.7557 13.1401 19.9713 14.5M12 19V21M12 19C13.1314 19 14.1262 18.8407 15 18.5702M12 19C10.8686 19 9.87376 18.8407 9 18.5702M15 18.5702L16 20.5M15 18.5702C16.1703 18.2078 17.1234 17.646 17.8963 17M17.8963 17L19.5 18.5702M17.8963 17C18.828 16.2214 19.498 15.3207 19.9713 14.5M19.9713 14.5L21 15M9 18.5702L8 20.5M9 18.5702C6.41911 17.7711 4.8947 16.0015 4.02867 14.5M6.10368 17L4.5 18.5M4.02867 14.5L3 15" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                            </button>
+                    </section>
+                </div>
+            </nav>
+            <div style="height: 2em;"></div>
+            <div style=" overflow-y:scroll; height: 75%; align-items: baseline; display: flex; justify-content: center; width:100%; padding-top: 1vw;" class="ScrollBar" id="Eye">
+                <table style="width:90%;" class="table">
+                    <tr class="tr">
+                        <td class="td">№</td>
+                        <td class="td">Дата</td>
+                        <td class="td">Валюта</td>
+                        <td class="td">Действие</td>
+                        <td class="td">Объем</td>
+                        <td class="td">Курс</td>
+                        <td class="td">Стоимость</td>
+                        <td class="td">Комментарий</td>
+                    </tr>
+                    {% for deals in StainableData %}
+                        <tr class="tr">
+                            <td class="td">{{deals.0}}</td>
+                            <td class="td">{{deals.10}}</td>
+                            <td class="td">{{deals.2}}</td>
+                            <td class="td">{{deals.1}}</td>
+                            <td class="td">{{deals.3}}</td>
+                            <td class="td">{{deals.4}}</td>
+                            <td class="td">{{deals.5}}</td>
+                            <td class="td">{{deals.6}}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+
+                <div style="overflow-y:scroll; height: 75%; align-items: baseline; justify-content: center; width:100%; padding-top: 1vw; display: none;" class="ScrollBar" id="Ruble">
+                    <table style="width:90%;" class="table">
+                        <tr class="tr">
+                            <td class="td">№</td>
+                            <td class="td">Дата</td>
+                            <td class="td">Валюта</td>
+                            <td class="td">Действие</td>
+                            <td class="td">Объем</td>
+                            <td class="td">Курс</td>
+                            <td class="td">Стоимость</td>
+                            <td class="td">Комментарий</td>
+                        </tr>
+                    {% for deals in StainableData %}
+                        {% if deals.2 == "₽" %}
+                            <tr class="tr">
+                                <td class="td">{{deals.0}}</td>
+                                <td class="td">{{deals.10}}</td>
+                                <td class="td">{{deals.2}}</td>
+                                <td class="td">{{deals.1}}</td>
+                                <td class="td">{{deals.3}}</td>
+                                <td class="td">{{deals.4}}</td>
+                                <td class="td">{{deals.5}}</td>
+                                <td class="td">{{deals.6}}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+            </div>
+
+            <div style=" overflow-y:scroll; height: 75%; align-items: baseline; display: flex; justify-content: center; width:100%; padding-top: 1vw; display: none;" class="ScrollBar" id="Dollar">
+                <table style="width:90%;" class="table">
+                    <tr class="tr">
+                        <td class="td">№</td>
+                        <td class="td">Дата</td>
+                        <td class="td">Валюта</td>
+                        <td class="td">Действие</td>
+                        <td class="td">Объем</td>
+                        <td class="td">Курс</td>
+                        <td class="td">Стоимость</td>
+                        <td class="td">Комментарий</td>
+                    </tr>
+                {% for deals in StainableData %}
+                    {% if deals.2 == "$" %}
+                        <tr class="tr">
+                            <td class="td">{{deals.0}}</td>
+                            <td class="td">{{deals.10}}</td>
+                            <td class="td">{{deals.2}}</td>
+                            <td class="td">{{deals.1}}</td>
+                            <td class="td">{{deals.3}}</td>
+                            <td class="td">{{deals.4}}</td>
+                            <td class="td">{{deals.5}}</td>
+                            <td class="td">{{deals.6}}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+
+        <div style=" overflow-y:scroll; height: 75%; align-items: baseline; display: flex; justify-content: center; width:100%; padding-top: 1vw; display: none;" class="ScrollBar" id="Euro">
+            <table style="width:90%;" class="table">
+                <tr class="tr">
+                    <td class="td">№</td>
+                    <td class="td">Дата</td>
+                    <td class="td">Валюта</td>
+                    <td class="td">Действие</td>
+                    <td class="td">Объем</td>
+                    <td class="td">Курс</td>
+                    <td class="td">Стоимость</td>
+                    <td class="td">Комментарий</td>
+                </tr>
+            {% for deals in StainableData %}
+                {% if deals.2 == "€" %}
+                    <tr class="tr">
+                        <td class="td">{{deals.0}}</td>
+                        <td class="td">{{deals.10}}</td>
+                        <td class="td">{{deals.2}}</td>
+                        <td class="td">{{deals.1}}</td>
+                        <td class="td">{{deals.3}}</td>
+                        <td class="td">{{deals.4}}</td>
+                        <td class="td">{{deals.5}}</td>
+                        <td class="td">{{deals.6}}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+
+    <div style=" overflow-y:scroll; height: 75%; align-items: baseline; display: flex; justify-content: center; width:100%; padding-top: 1vw; display: none;" class="ScrollBar" id="Yan">
+        <table style="width:90%;" class="table">
+            <tr class="tr">
+                <td class="td">№</td>
+                <td class="td">Дата</td>
+                <td class="td">Валюта</td>
+                <td class="td">Действие</td>
+                <td class="td">Объем</td>
+                <td class="td">Курс</td>
+                <td class="td">Стоимость</td>
+                <td class="td">Комментарий</td>
+            </tr>
+        {% for deals in StainableData %}
+            {% if deals.2 == "¥" %}
+                <tr class="tr" >
+                    <td class="td">{{deals.0}}</td>
+                    <td class="td">{{deals.10}}</td>
+                    <td class="td">{{deals.2}}</td>
+                    <td class="td">{{deals.1}}</td>
+                    <td class="td">{{deals.3}}</td>
+                    <td class="td">{{deals.4}}</td>
+                    <td class="td">{{deals.5}}</td>
+                    <td class="td">{{deals.6}}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</div>
+
+<div style=" overflow-y:scroll; height: 75%; align-items: baseline; display: flex; justify-content: center; width:100%; padding-top: 1vw; display: none;" class="ScrollBar" id="pound">
+    <table style="width:90%;" class="table">
+        <tr class="tr">
+            <td class="td">№</td>
+            <td class="td">Дата</td>
+            <td class="td">Валюта</td>
+            <td class="td">Действие</td>
+            <td class="td">Объем</td>
+            <td class="td">Курс</td>
+            <td class="td">Стоимость</td>
+            <td class="td">Комментарий</td>
+        </tr>
+    {% for deals in StainableData %}
+        {% if deals.2 == "£" %}
+            <tr class="tr" id="Dollar">
+                <td class="td">{{deals.0}}</td>
+                <td class="td">{{deals.10}}</td>
+                <td class="td">{{deals.2}}</td>
+                <td class="td">{{deals.1}}</td>
+                <td class="td">{{deals.3}}</td>
+                <td class="td">{{deals.4}}</td>
+                <td class="td">{{deals.5}}</td>
+                <td class="td">{{deals.6}}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+</div>
+
+        </aside>
+        <aside style="width: 20%; height: 100%; background: #fbfbfb;">
+            <nav style="width: 100%; height: 4em; border-bottom: 3px solid #111;" id="sub" onmouseout="stopMovingAnimation()">
+                <div class="Disition">
+                    <button type="submit" class="Submit Opacity"> Подтвердить </button>
+                </div>
+            </nav>
+        </form>
+
+        <nav style="width: 100%; height: 4em; border-bottom: 3px solid #111; display: none;" id="sub-2" onmouseout="stopMovingAnimation2()">
+            <div class="Disition-2">
+                <button type="submit" class="Submit Opacity"> Завершить сессию </button>
+            </div>
+        </nav>
+            <section style="width: 100%; height: 75%; border-bottom: 3px solid #111; z-index: 2;">
+                <div style="height: 100%; width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                cursor: pointer;
+                ">
+                    <aside>
+                        <svg width="150" height="150" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Opacity">
+                            <path d="M19 9V19M19 19C14 19 9 19 9 19M19 19L5 5" stroke="#09090B" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </aside>
+            </section>
+            <section style="width: 100%; height: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ">
+                <p class="Submit Opacity" style="font-size: 3.5em;"> {{timestamp}} </p>
+            </section>
+        </aside>
+    </section>
+    <script src="{% static 'script.js' %}"></script>
+    <script>
+        let Image = document.getElementById('Image')
+        
+        Noticifictaion.addEventListener('mouseover', () => {
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = "#FormOtchet {display: flex;} #StatusBuro {animation: Identification 1s ease; width: 25%;} #Validation {display: none;}";
+            Static.innerHTML = 'Уведомления'
+            Image.src = '../static/images/Bell.svg'
+        });
+
+        Power.addEventListener('mouseover', () => {
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = "#FormOtchet {display: flex;} #StatusBuro {animation: Identification 1s ease; width: 25%;} #Validation {display: none;}";
+            Static.innerHTML = 'Завершение сессии'
+            Image.src = '../static/images/Power.svg'
+
+        });
+
+        
+        Identification.addEventListener('mouseover', () => {
+            Static.innerHTML = 'Формировать отчет'
+
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = "#FormOtchet {display: flex;} #StatusBuro {animation: Identification 1s ease; width: 25%;} #Validation {display: none;}";
+            Image.src = '../static/images/BarGraph.svg'
+
+        });
+
+        Currencyvalodation.addEventListener('mouseover', () => {
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            Static.innerHTML = 'Валюты'
+            styleElem.innerHTML = "#FormOtchet {display: flex;} #StatusBuro {animation: Identification 1s ease; width: 25%;} #Validation {display: none;} #DataSetter {display: none;}";
+            Image.src = '../static/images/PieChart.svg'
+
+        });
+
+        let sub2 = document.getElementById('sub-2')
+        sub2.addEventListener('mouseover', () => {
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = ".Disition-2::before {background: #111;animation: animated 3s linear infinite; display: flex;} ";
+        });
+
+        
+        function stopMovingAnimation2() {
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = ".Disition-2::before {display: none;}";
+        }
+
+        Power.addEventListener('click', () => {
+            StatusBuro.style.width = "45%";
+            FormOtchet.style.display = "none";
+            Validation.style.display = "none";
+            sub.style.display = "none";
+            sub2.style.display = "flex";
+            document.getElementById('SessionIsDone').style.display = "flex";
+        })
+
+        let close = document.getElementById('close')
+        close.addEventListener('click', () => {
+            sub.style.display = "flex";
+            FormOtchet.style.display = "flex";
+            Validation.style.display = "flex";
+            sub2.style.display = "none";
+            StatusBuro.style.width = "40%";
+
+            document.getElementById('SessionIsDone').style.display = "none";
+        })
+
+    </script>
+</body>
+</html>
