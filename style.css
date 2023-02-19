@@ -6,14 +6,16 @@
 }
 
 @font-face {
-    font-family: 'Bitter';
-    src: url(fonts/Bitter/Bitter-VariableFont_wght.ttf);
+    font-family: 'Jura', sans-serif;
+    src: url(fonts/Bitter/Jura-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: 'Scriptina';
     src: url(fonts/Scriptina/SCRIPTIN.ttf);
 }
+
+
 
 /* Imports */
 /* DGC Architects 2023 ® */
@@ -78,7 +80,7 @@
     }
 
     .Main {
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
         font-size: 12vw;
 
         font-weight: bold;
@@ -90,7 +92,7 @@
     }
 
     .Thick {
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
         font-size: 4vw;
 
         font-style: italic;
@@ -120,7 +122,7 @@
     }
 
     .text {
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
         font-size: 4.5vw;
 
         width: 50%;
@@ -143,7 +145,7 @@
     }
 
     .Curved {
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
 
 
         color: #101010;
@@ -152,7 +154,7 @@
     .List {
         font-size: 8.5vw;
         color: #101010;
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
 
         white-space: nowrap;
     }
@@ -180,7 +182,7 @@
     }
 
     .Thick-1 {
-        font-family: 'Bitter';
+        font-family: 'Jura', sans-serif;
         font-size: 4vw;
 
         font-style: italic;
@@ -201,20 +203,14 @@
     }
 
     .Main-en {
-        font-family: 'CarlaSans';
+        font-family: 'Jura';
 
         font-size: 12vw;
         margin-top: 0;
         margin-bottom: 0;
         font-weight: bold;
         margin-left: 8%;
-    }
- 
-    .end {
-        display: flex;
-        justify-content: end;
-
-        margin-right:8%;
+        text-align: center;
     }
 
     .Line {
@@ -232,6 +228,24 @@
         font-size: 8.5vw;
     }
 
+    .Block {
+        width: 8em;
+        height: 8em;
+
+        background-color: #999;
+        border-radius: 7px;
+        color: #fbfbfb;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .blocks {
+        font-size: 2em;
+        font-family: 'Jura';
+        text-align: center;
+    }
 }
 
 /* DGC Architects 2023 ® */
