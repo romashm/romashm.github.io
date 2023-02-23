@@ -6,16 +6,14 @@
 }
 
 @font-face {
-    font-family: 'Jura', sans-serif;
-    src: url(fonts/Bitter/Jura-VariableFont_wght.ttf);
+    font-family: 'Jura';
+    src: url(fonts/Jura/JuraMedium.ttf);
 }
 
 @font-face {
     font-family: 'Scriptina';
     src: url(fonts/Scriptina/SCRIPTIN.ttf);
 }
-
-
 
 /* Imports */
 /* DGC Architects 2023 ® */
@@ -232,7 +230,7 @@
         width: 8em;
         height: 8em;
 
-        background-color: #999;
+        background-color: #d0caca;
         border-radius: 7px;
         color: #fbfbfb;
 
@@ -245,6 +243,8 @@
         font-size: 2em;
         font-family: 'Jura';
         text-align: center;
+        color: #fbfbfb;
+        font-weight: bold;
     }
 }
 
