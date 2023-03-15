@@ -1,251 +1,274 @@
 /* Imports */
 
 @font-face {
-    font-family: 'CarlaSans';
-    src: url(fonts/Carla/CarlaSans\ Bold.otf);
+    font-family: 'Carla';
+    src: url(./fonts/Carla/CarlaSans\ Bold.otf);
 }
 
 @font-face {
-    font-family: 'Jura';
-    src: url(fonts/Jura/JuraMedium.ttf);
+    font-family: 'Geometria';
+    src: url(./fonts/Geometria/Geometria.ttf);
 }
 
 @font-face {
-    font-family: 'Scriptina';
-    src: url(fonts/Scriptina/SCRIPTIN.ttf);
+    font-family: 'Din';
+    src: url(./fonts/Din/DINCondensed-Bold.ttf);
 }
 
-/* Imports */
-/* DGC Architects 2023 ® */
+/* Media */
 
-@media (min-width: 200px) and (max-width: 600px) {
 
-    html, body {
-        margin: 0;
-        padding: 0;
+/* DGC Architects 2023 */
 
-        overflow-x: hidden; 
-        width: 100%;
-        height: 100%;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
 
-    section {
-        width: 100%;
-        height: 100vh;
+    overflow-x: hidden; 
+    width: 100%;
+    height: 100%;
+    background-color: #fbfbfb;
+}
 
-        position: relative;
-    }
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+}
+
+aside {
+    display: block;
+}
+
+.Between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.SliderOfInter {
+    background: url(./images/Z1NftCn0_ao.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SliderOfExt {
+    background: url(./images/KolosHouse.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SliderOfExt2 {
+    background: url(./images/res1.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.IMG {
+    width: 3em;
+    height: 3em;
+}
+
+.Info {
+    font-size: 1.7em;
+    font-family: 'Din';
+
+    text-align: center;
+    margin: 0;
+}
+
+.Blue {
+    color: #44576d;
+}
+
+.Number {
+    background-color: #44576d;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    color: #fbfbfb;
+    font-family: 'Carla';
+    text-align: center;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.GrousText {
+    font-family: 'Geometria';
+    color: #fbfbfb;
+    margin: 0;
+    margin-left: 3em;
+}
+
+.GrousText-1 {
+    font-family: 'Geometria';
+    color: #fbfbfb;
+    margin: 0;
+    margin-left: 1.5em;
+}
+
+.GrousTextUml {
+    font-family: 'Geometria';
+    color: #fbfbfb;
+    margin: 0;
+}
+
+.Grous {
+    font-family: 'Geometria';
+    font-size: 3em;
+    margin: 0;
+
+    margin-left: 1em;
+    font-weight: bold;
+    color: #fbfbfb;
+}
+
+.End {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.Middle {
+    font-family: 'Geometria';
+    font-size: 1.5em;
+    margin: 0;
+
+    margin-left: 1em;
+    font-weight: bold;
+    color: #fbfbfb;
     
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        width: 100%;
-        position: relative;
-    }
+.Middle-1 {
+    font-family: 'Geometria';
+    font-size: 1.5em;
+    margin: 0;
 
-    aside {
-        width: 80%;
-        height: auto;
+    margin-left: 1em;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;      
-        
-        margin-top: 1vw;
-        margin-bottom: 1vw;
+    font-weight: bold;
+    color: #fbfbfb;
+}
 
-        position: relative;
-    }
+.Moving {
+    animation: Moving 2s infinite;
+    margin: 0 5%;
 
-    .DGC {
-        font-size: 5.5vw;
-        font-family: 'CarlaSans';
+}
 
-        color: #101010;
-    }
-    
-    .blue {
-        color: #44576d;
-    }
-
-    .menu {
-        font-size: 4vw;
-        font-family: 'CarlaSans';
-
-        color: #101010;
-    }
-
-    .Main {
-        font-family: 'Jura', sans-serif;
-        font-size: 12vw;
-
-        font-weight: bold;
-        white-space: nowrap;
-        margin-left: 3.5%;
-        margin-bottom: 4%;
-
-        margin-top: 2%;
-    }
-
-    .Thick {
-        font-family: 'Jura', sans-serif;
-        font-size: 4vw;
-
-        font-style: italic;
-        white-space: nowrap;
-        text-align: end;
-
-        margin-right: 3.5%;
-    }
-
-    .Present {
-        width: 85%;
-        height: auto;
-        animation: image-in 1.2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-
-        margin-top: 8%;
-    }
-
-    .num {
-        font-size: 12.5vw;
-        font-family: 'CarlaSans';
-
-        color: #101010;
-
-        margin-right: 7%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .text {
-        font-family: 'Jura', sans-serif;
-        font-size: 4.5vw;
-
-        width: 50%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        text-align: justify;
-
-    }
-
-    ul {
+@keyframes Moving {
+    0% {
+        position: absolute;
         margin: 0;
-        padding: 0;
     }
-
-    .Curved {
-        font-family: 'Jura', sans-serif;
-
-
-        color: #101010;
-    }
-
-    .List {
-        font-size: 8.5vw;
-        color: #101010;
-        font-family: 'Jura', sans-serif;
-
-        white-space: nowrap;
-    }
-
-    .Resolution {
-        font-size: 12.5vw;
-        font-family: 'CarlaSans';
-
-        color: #101010;
+    50% {
         position: absolute;
-
-        text-align: center;
-        z-index: 1;
-
-        margin: 0% 10%;
+        margin: 5% 0;
     }
-
-    .NameofObj {
-        font-size: 5.5vw;
-        font-family: 'CarlaSans';
-
-        color: #101010;
-        margin-left: 10%;
-        margin-bottom: 0;
-    }
-
-    .Thick-1 {
-        font-family: 'Jura', sans-serif;
-        font-size: 4vw;
-
-        font-style: italic;
-        text-align: justify;
-
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 0;
-    }
-
-    @keyframes image-in {
-        from {
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-       }
-        to {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-       }
-    }
-
-    .Main-en {
-        font-family: 'Jura';
-
-        font-size: 12vw;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-weight: bold;
-        margin-left: 8%;
-        text-align: center;
-    }
-
-    .Line {
-        width: 30%;
-        height: 2px;
-
-        background-color: #101010;
+    100% {
         position: absolute;
-        margin: -8% 10%;
-    }
-
-    .Scrciptina {
-        font-family: 'Scriptina';
-        position: absolute;
-        font-size: 8.5vw;
-    }
-
-    .Block {
-        width: 8em;
-        height: 8em;
-
-        background-color: #d0caca;
-        border-radius: 7px;
-        color: #fbfbfb;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-    }
-
-    .blocks {
-        font-size: 2em;
-        font-family: 'Jura';
-        text-align: center;
-        color: #fbfbfb;
-        font-weight: bold;
+        margin: 0;
     }
 }
 
-/* DGC Architects 2023 ® */
+.Arch {
+    width: 7em;
+    height: 7em;
+
+    background-color: #fbfbfb;
+    position: absolute;
+
+    border-bottom-left-radius: 10px;
+    top: 0;
+    right: 0;
+}
+
+.NumGrous {
+    font-family: 'Carla';
+
+    font-size: 5em;
+    margin: 0;
+
+    font-weight: bold;
+    color: #fbfbfb;
+}
+
+.Link {
+    font-size: .9em;
+    font-family: 'Geometria';
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #757575;
+    white-space: nowrap;
+}
+
+.SQR {
+    width: 8.5em;
+    height: 8.5em;
+    background-color: #44576d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.de {
+    font-family: 'Geometria';
+    font-size: 2em;
+    margin: 0;
+
+    font-weight: bold;
+    color: #fbfbfb;
+    text-align: center;
+}
+
+.Loading {
+    height: 1em;
+    width: 100%;
+    background: #F1F1F1;
+    border-radius: 112px;
+}
+
+.Loaded {
+    width: calc(100%/6);
+    height: 100%;
+    background: #44576d;
+    border-radius: 112px;
+}
+
+li {
+    font-size: 2vw;
+    font-family: 'Geometria';
+    color: #b3b3b3;
+}
+
+#Active {
+    font-weight: bold;
+    color: #111;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
