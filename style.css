@@ -1,33 +1,155 @@
-/* Imports */
+/* Import */
 
-@font-face {
-    font-family: 'Carla';
-    src: url(./fonts/Carla/CarlaSans\ Bold.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@200&display=swap');
 
-@font-face {
-    font-family: 'Geometria';
-    src: url(./fonts/Geometria/Geometria.ttf);
-}
+/* Workdrop.io by Romash Malcev 2023 ® */
 
-@font-face {
-    font-family: 'Din';
-    src: url(./fonts/Din/DINCondensed-Bold.ttf);
-}
-
-/* Media */
-
-
-/* DGC Architects 2023 */
-
-html, body {
-    margin: 0;
+body {
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
 
-    overflow-x: hidden; 
-    width: 100%;
-    height: 100%;
-    background-color: #fbfbfb;
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider .status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.slider .status .point {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    background-color: #ff0;
+    border-radius: 50%;
+    z-index: 15;
+    transition: left 500ms ease-in-out;
+}
+.slider .status .point[data-current='0'] {
+left: 4px;
+}
+.slider .status .point[data-current='1'] {
+left: 24px;
+}
+.slider .status .point[data-current='2'] {
+left: 44px;
+}
+.slider .status .point[data-current='3'] {
+left: 64px;
+}
+.slider .status .point[data-current='4'] {
+left: 84px;
+}
+.slider .status .point[data-current='5'] {
+left: 104px;
+}
+.slider .status .stat {
+width: 10px;
+height: 10px;
+background-color: transparent;
+border-radius: 50%;
+z-index: 20;
+margin: 0px 5px;
+border: 1px solid #fff;
+}
+.slider .status .stat.current {
+background-color: #fff;
+}
+.slider .text {
+position: absolute;
+color: #ff0;
+text-shadow: 0 0 5px #0003;
+z-index: 20;
+transform-origin: right top;
+transform: rotate(-90deg) translateY(calc(-90vh + 2vw));
+display: grid;
+grid-template-columns: 90vh;
+grid-template-rows: 1fr;
+font-size: 15vw;
+text-transform: uppercase;
+}
+@media (min-width: 70em) {
+.slider .text {
+    font-size: 10em;
+}
+}
+.slider .text div {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+opacity: 0;
+}
+.slider .text div.current {
+opacity: 0.7;
+}
+.slider img {
+object-fit: cover;
+object-position: center center;
+width: 100%;
+height: 100%;
+filter: sepia(1) hue-rotate(180deg);
+display: block;
+}
+.slider .image {
+width: 100%;
+margin-right: -100%;
+opacity: 0;
+overflow: hidden;
+transform: translateY(0) scale(1.2);
+z-index: 1;
+}
+.slider .image.current {
+z-index: 10;
+transform: translateY(0) scale(1);
+opacity: 1;
+}
+
+
+/* canvas {
+    width: 100vw;
+    height: 100vh;
+    background: url(media/Frame\ 4.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.canvas-0 {
+    width: 100vw;
+    height: 100vh;
+    background: #2f2f4f;
+}
+
+.canvas-1 {
+    width: 100vw;
+    height: 100vh;
+    background: url(media/Frame\ 4.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
@@ -44,231 +166,171 @@ aside {
     display: block;
 }
 
-.Between {
-    display: flex;
+.between {
     justify-content: space-between;
-    align-items: center;
 }
 
-.Around {
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.Info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    margin: 0;
+    color: #fbfbfb;
+}
+
+.unact {
+    color: #b3b3b3;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.start {
     display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.Poppins {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+
+    height: calc(100%/3);
+}
+
+.around {
     justify-content: space-around;
     align-items: center;
 }
 
-.SliderOfInter {
-    background: url(./images/Z1NftCn0_ao.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.SliderOfExt {
-    background: url(./images/KolosHouse.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.SliderOfExt2 {
-    background: url(./images/res1.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.IMG {
-    width: 3em;
-    height: 3em;
-}
-
-.Info {
-    font-size: 1.7em;
-    font-family: 'Din';
-
-    text-align: center;
-    margin: 0;
-}
-
-.Blue {
-    color: #44576d;
-}
-
-.Number {
-    background-color: #44576d;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-    color: #fbfbfb;
-    font-family: 'Carla';
-    text-align: center;
-
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding-right: 1em;
-}
-
-.GrousText {
-    font-family: 'Geometria';
-    color: #fbfbfb;
-    margin: 0;
-    margin-left: 3em;
-}
-
-.GrousText-1 {
-    font-family: 'Geometria';
-    color: #fbfbfb;
-    margin: 0;
-    margin-left: 1.5em;
-}
-
-.GrousTextUml {
-    font-family: 'Geometria';
-    color: #fbfbfb;
-    margin: 0;
-}
-
-.Grous {
-    font-family: 'Geometria';
-    font-size: 3em;
-    margin: 0;
-
-    margin-left: 1em;
-    font-weight: bold;
-    color: #fbfbfb;
-}
-
-.End {
-    display: flex;
+.End { 
+    justify-content: flex-end;
     align-items: end;
-    justify-content: end;
 }
 
-.Middle {
-    font-family: 'Geometria';
-    font-size: 1.5em;
-    margin: 0;
+.Img {
+    width: 5em;
+    height: auto;
+}
 
-    margin-left: 1em;
-    font-weight: bold;
+.Logo {
+    font-size: 2em;
     color: #fbfbfb;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2em;
+}
+  
+
+/* PART 2 */
+
+.PhotoProfile {
+    background-image: url(media/rayul-_M6gy9oHgII-unsplash.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.Middle-1 {
-    font-family: 'Geometria';
-    font-size: 1.5em;
-    margin: 0;
-
-    margin-left: 1em;
-
-    font-weight: bold;
-    color: #fbfbfb;
+.BigText {
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
 }
 
-.Moving {
-    animation: Moving 2s infinite;
-    margin: 0 5%;
-
+.Text {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
 }
 
-@keyframes Moving {
-    0% {
-        position: absolute;
-        margin: 0;
-    }
-    50% {
-        position: absolute;
-        margin: 5% 0;
-    }
-    100% {
-        position: absolute;
-        margin: 0;
-    }
+.Plashka {
+    width: 10em;
+    height: 10em;
+
+    background-color: #2f2f4f;
+    border-radius: 8px;
 }
 
-.Arch {
-    width: 7em;
-    height: 7em;
+.EndBlockc {
+    width: 100%;
+    height: 5%;
 
     background-color: #fbfbfb;
     position: absolute;
-
-    border-bottom-left-radius: 10px;
-    top: 0;
-    right: 0;
+    bottom: 0;
 }
 
-.NumGrous {
-    font-family: 'Carla';
-
-    font-size: 5em;
+.Alert {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2em;
     margin: 0;
-
-    font-weight: bold;
-    color: #fbfbfb;
+    color: #FFFFFF;
+}
+  
+form label {
+    position: relative;
+    display: block;
+}
+form label input {
+    font: 18px 'Raleway', Arial, sans-serif;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    padding: 20px;
+    width: 600px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+form label input::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 18px 'Raleway', Arial, sans-serif;
 }
 
-.Link {
-    font-size: .9em;
-    font-family: 'Geometria';
-
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    color: #757575;
-    white-space: nowrap;
+form label input:focus, form label input.populated {
+    padding-top: 28px;
+    padding-bottom: 12px;
 }
 
-.SQR {
-    width: 8.5em;
-    height: 8.5em;
-    background-color: #44576d;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+form label input:focus::placeholder, form label input.populated::placeholder {
+    color: transparent;
 }
-
-.de {
-    font-family: 'Geometria';
-    font-size: 2em;
-    margin: 0;
-
-    font-weight: bold;
-    color: #fbfbfb;
-    text-align: center;
+form label input:focus + span, form label input.populated + span {
+    opacity: 1;
+    top: 10px;
 }
-
-.Loading {
-    height: 1em;
-    width: 100%;
-    background: #F1F1F1;
-    border-radius: 112px;
+form label span {
+    color: #35dc9b;
+    font: 13px 'Raleway', Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
-
-.Loaded {
-    width: calc(100%/6);
-    height: 100%;
-    background: #44576d;
-    border-radius: 112px;
+form input[type="submit"] {
+    transition: all 0.2s ease-in-out;
+    font: 18px 'Raleway', Arial, sans-serif;
+    border: none;
+    background: #2f2f4f;
+    color: #fff;
+    padding: 16px 40px;
 }
-
-li {
-    font-size: 2vw;
-    font-family: 'Geometria';
-    color: #b3b3b3;
-}
-
-#Active {
-    font-weight: bold;
-    color: #111;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
+form input[type="submit"]:hover {
+    background: #2f2f4f;
 }

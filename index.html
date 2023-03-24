@@ -1,271 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architects</title>
-    <link rel="stylesheet" href="style.css" />
-    <link type="text/css" rel="stylesheet" href="./images/White.PNG" />
-    <link rel="stylesheet" href="slider.css">
+  <meta charset="UTF-8">
+  <title>Workdrop.io</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <nav style="width: 100%; height: 100%;" class="SliderOfInter">
-        <aside style="width: 55%; height: 100%;">
-            <div class="Between" style="width: 100%; height: 10%; background: #fbfbfb;">
-                <section style="align-items: center;">
-                  <div style="width: 2em;"></div>
-                    <img src="./images/Blue.PNG" class="IMG" />
-                    <p class="Info">
-                        DGC.Architects
-                    </p>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js" integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8=" crossorigin="anonymous"></script>
+
+<div class="slider" data-state="0">  
+  
+  <div class="text">
+    <div class="current" data-key="0"></div>
+    <div data-key="1"></div>
+    <div data-key="2"></div>
+    <div data-key="3"></div>
+    <div data-key="4">and</div>
+    <div data-key="5">down</div>
+  </div>
+  
+  
+  
+    <div class="image current" data-key="0" id="corporation1">
+        <canvas id="bg-canvas" style="position: absolute; z-index: -1;" class="canvas-0 cans"></canvas>
+        <nav style="width: 100%; height: 15%; padding-top: 2em; z-index: 10;" class="start">
+              
+          <section style="width: 100%;" class="between">
+              <section class="start center">
+                <p class="Logo" > Workdrop.io </p>                     
+              </section>
+              
+              <section style="width: auto; height:100%;">
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info">HOME</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">WORK</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">SERVICES</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 5em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">TEAM</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">CONTACT</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 15em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">                      
+                              <div style="width: 1em;"></div>
+                              <p class="Info" style="color: #fff;">04:00 AM</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 2.5em;"></div>
+              </section>
+          </section>
+      </nav>
+      
+      <nav style="width: 100%; height: auto; bottom: 30px; position: absolute;">
+          <section style="width: 90%; height: auto;" class="between">
+              <section style="height: 100%;" class="center">
+                  <img src="media/signature.png" class="Img4" style="width: 9em;" />
+              </section>
+      
+              <section class="around" style="width: 80%;">
+                  <aside>
+                      <p class="Info"> Основано в России </p>
+                      <p class="Info unact"> Меняет масштабы восприятия </p>
+                  </aside>
+                  <aside>
+                      <p class="Info"> Полностью рабочая модель </p>
+                      <p class="Info unact"> Легкость, воспроизведения </p>
+                  </aside>
+                  <aside>
+                      <p class="Info"> Ваше будущее уже решенно </p>
+                      <p class="Info unact"> Попробуйте сейчас, жмите на стрелку </p>
+                  </aside>
+              </section>
+      
+              <section style="margin-bottom: 2em;" class="End">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 21L12 3M12 21L19 14.25M12 21L5 14.25" stroke="#fbfbfb" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+              </section>
+      
+          </section>
+      </nav>
+    </div>
+
+
+
+
+
+    <div class="image" data-key="1">
+        <canvas id="bg-canvas2" style="position: absolute; z-index: -1;" class="canvas-1 cans"></canvas>
+        <nav style="width: 100%; height: 15%; padding-top: 2em; z-index: 10;" class="start">
+              
+          <section style="width: 100%;" class="between">
+              <section class="start center">
+                <p class="Logo" > Workdrop.io </p>                     
+              </section>
+              
+              <section style="width: auto; height:100%;">
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">HOME</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info">WORK</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">SERVICES</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 5em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">TEAM</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">CONTACT</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 15em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">                      
+                              <div style="width: 1em;"></div>
+                              <p class="Info" style="color: #fff;">04:00 AM</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 2.5em;"></div>
+              </section>
+          </section>
+      </nav>
+      
+      <nav style="width: 100%; height: 100%;">
+          <section style="width: 100%; height: 100%; padding-left: 4.5em; padding-top: 7em;" class="between">
+          <aside style="height: 100%; width: 100%;">
+              <p class="Alert"> Узнайте сейчас, какие перспективы<br/> вас ждут на работе </p>
+              <p class="Info unact" style="font-size: 1em;"> Это займет у вас не более 10 минут ! </p>
+              
+              <div style="height: 2em;"></div>
+      
+              <p class="Alert"> Узнаем же самый результативный метод<br/> пользования данным сервисом ! </p>
+              <div style="height: 1em;"></div>
+      
+              <p class="Text" style="width: 50%; color: #fbfbfb;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nobis accusamus quaerat libero eligendi id itaque ratione obcaecati dignissimos perferendis dolorem reiciendis dolor tempora, porro fugiat nam, cupiditate accusantium placeat ab doloribus minus ipsa quia! Eaque veritatis, ratione aperiam ullam adipisci ut aliquam, iure aut sapiente rem quidem cupiditate? Vel? </p>
+              <div style="height: 1em;"></div>
+      
+              <p class="Text" style="width: 50%; color: #fbfbfb;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nobis accusamus quaerat libero eligendi id itaque ratione obcaecati dignissimos perferendis dolorem reiciendis dolor tempora, porro fugiat nam, cupiditate accusantium placeat ab doloribus minus ipsa quia! Eaque veritatis, ratione aperiam ullam adipisci ut aliquam, iure aut sapiente rem quidem cupiditate? Vel? </p>
+              <div style="height: 2em;"></div>
+              <section class="between" style="width: 50%;">
+                  <p class="Info" style="color: #fff;"> Зачем это нужно ? </p>
+      
+                  <section class="between" style="width: 40%;">
+                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g filter="url(#filter0_d_736_5742)">
+                          <path d="M5 12H23M5 12L11.75 19M5 12L11.75 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                          <filter id="filter0_d_736_5742" x="-2" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                          <feOffset dy="4"/>
+                          <feGaussianBlur stdDeviation="2"/>
+                          <feComposite in2="hardAlpha" operator="out"/>
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_736_5742"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_736_5742" result="shape"/>
+                          </filter>
+                          </defs>
+                          </svg>
+                      <p class="Info" style="color: #fff;"> Этап 1 </p>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M21 12L3 12M21 12L14.25 5M21 12L14.25 19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>                                        
+                  </section>
+              </section>
+      
+          </aside>
+          </section>
+      </nav>
+    </div>
+    <div class="image" data-key="2" >
+        <nav style="width: 100%; height: 15%; padding-top: 2em;" class="start">
+        
+            <section style="width: 100%;" class="between">
+                <section class="start center">
+                    <p class="Logo" style="color: #111;"> Workdrop.io </p>                     
+                  </section>
+                
+                <section style="width: auto; height:100%;">
+                    <section class="start">
+                        <ul type="none" style="margin: 0; padding: 0;">
+                            <li style="display: flex;" class="between">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5L16 12L9 19" stroke="trancparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                        
+                                <div style="width: 1em;"></div>
+                                <p class="Info unact">HOME</p>                        
+                            </li>
+                            <li style="display: flex;" class="between">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5L16 12L9 19" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                        
+                                <div style="width: 1em;"></div>
+                                <p class="Info unact">WORK</p>                        
+                            </li>
+                            <li style="display: flex;" class="between">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5L16 12L9 19" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                        
+                                <div style="width: 1em;"></div>
+                                <p class="Info unact">SERVICES</p>                        
+                            </li>
+                        </ul>
+                    </section>
+                    <div style="width: 5em;"></div>
+                    <section class="start">
+                        <ul type="none" style="margin: 0; padding: 0;">
+                            <li style="display: flex;" class="between">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5L16 12L9 19" stroke="#111" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                        
+                                <div style="width: 1em;"></div>
+                                <p class="Info" style="color: #111;">TEAM</p>                        
+                            </li>
+                            <li style="display: flex;" class="between">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5L16 12L9 19" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                        
+                                <div style="width: 1em;"></div>
+                                <p class="Info unact">CONTACT</p>                        
+                            </li>
+                        </ul>
+                    </section>
+                    <div style="width: 15em;"></div>
+                    <section class="start">
+                        <ul type="none" style="margin: 0; padding: 0;">
+                            <li style="display: flex;" class="between">                      
+                                <div style="width: 1em;"></div>
+                                <p class="Info" style="color: #111;">04:00 AM</p>                        
+                            </li>
+                        </ul>
+                    </section>
+                    <div style="width: 2.5em;"></div>
                 </section>
-
-                <section style="align-items: center;">
-                    <p class="Info">
-                        Menu
-                    </p>
-                    <div style="width: 1em;"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 10H20M4 14H20M4 18H15" stroke="#09090B" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    <div style="width: 2em;"></div>    
-                </section>
-            </div>
-            <div style="width: 100%; height: 50%; padding-top: 10em;">
-                <aside style="width: 100%; height: 100%;">
-                    <div class="Number" style="width: 4em; height: 2.5em;">
-                        01.
-                    </div>
-                    <div style="height: 2em;"></div>    
-
-                    <p class="Grous">
-                        Дизайн & архитектура, <br/> cовременные постройки .
-                    </p>
-                    <p class="GrousText">
-                        Уникальное предложение для каждого клиента
-                    </p>
-                </aside>
-            </div>
-            <section style="width: 100%; height: auto; text-align: center;">
-                <div style="width: 3em;"></div>    
-
-                <svg width="68" height="69" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="Moving">
-                    <g filter="url(#filter0_d_736_5736)">
-                    <path d="M19 9L12 16L5 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_d_736_5736" x="-4" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_736_5736"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_736_5736" result="shape"/>
-                    </filter>
-                    </defs>
-                    </svg>
-
-                <!-- <p class="Middle">
-                    Продолжить просмотр
-                </p> -->
             </section>
-
-        </aside>
-        <aside style="width: 40%; height: 100%;">
-            <aside style="width: 100%; height: 45%;">
-                <div class="demo-cont">
-                    <!-- slider start -->
-                    <div class="fnc-slider example-slider">
-                      <div class="fnc-slider__slides">
-                        <!-- slide start -->
-                        <div class="fnc-slide m--blend-green m--active-slide">
-                          <div class="fnc-slide__inner">
-                            <div class="fnc-slide__mask">
-                              <div class="fnc-slide__mask-inner"></div>
-                            </div>
-                            <div class="fnc-slide__content">
-                              <h2 class="fnc-slide__heading">
-                                <div class="fnc-slide__heading-line">
-                                  <span>KolosHouse</span>
-                                </div>
-                                <div class="fnc-slide__heading-line1">
-                                  <span>Современный дом с элементами традиционной культуры</span>
-                                </div>
-                              </h2>
-                              <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fnc-slide m--blend-dark">
-                          <div class="fnc-slide__inner">
-                            <div class="fnc-slide__mask">
-                              <div class="fnc-slide__mask-inner"></div>
-                            </div>
-                            <div class="fnc-slide__content">
-                              <h2 class="fnc-slide__heading">
-                                <div class="fnc-slide__heading-line">
-                                  <span>DachaHouse</span>
-                                </div>
-                                <div class="fnc-slide__heading-line1">
-                                  <span>Современный дом, рассчитанный на круглогодичное проживание семьи из 2-5 человек</span>
-                                </div>
-                              </h2>
-                              <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- slide end -->
-                        <!-- slide start -->
-                        <div class="fnc-slide m--blend-red">
-                          <div class="fnc-slide__inner">
-                            <div class="fnc-slide__mask">
-                              <div class="fnc-slide__mask-inner"></div>
-                            </div>
-                            <div class="fnc-slide__content">
-                              <h2 class="fnc-slide__heading">
-                                <div class="fnc-slide__heading-line">
-                                  <span>PolyHouse</span>
-                                </div>
-                                <div class="fnc-slide__heading-line1">
-                                  <span>Компактный дом идеально подходящий для отдыха
-                                    1-2 человек.</span>
-                                </div>
-                              </h2>
-                              <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- slide end -->
-                        <!-- slide start -->
-                        <div class="fnc-slide m--blend-blue">
-                          <div class="fnc-slide__inner">
-                            <div class="fnc-slide__mask">
-                              <div class="fnc-slide__mask-inner"></div>
-                            </div>
-                            <div class="fnc-slide__content">
-                              <h2 class="fnc-slide__heading">
-                                <div class="fnc-slide__heading-line">
-                                  <span>GreyHouse</span>
-                                </div>
-                                <div class="fnc-slide__heading-line1">
-                                  <span>Компактный дом идеально подходящий для отдыха
-                                    1-2 человек.</span>
-                                </div>
-                              </h2>
-                              <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- slide end -->
-                      </div>
-                      <nav class="fnc-nav">
-                        <div class="fnc-nav__bgs">
-                          <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
-                          <div class="fnc-nav__bg m--navbg-dark"></div>
-                          <div class="fnc-nav__bg m--navbg-red"></div>
-                          <div class="fnc-nav__bg m--navbg-blue"></div>
-                        </div>
-                        <div class="fnc-nav__controls">
-                          <button class="fnc-nav__control" style="
-                    font-family: 'Carla';
-                    ">
-                            01
-                            <span class="fnc-nav__control-progress"></span>
-                          </button>
-                          <button class="fnc-nav__control" style="
-                          font-family: 'Carla';
-                          ">
-                            02
-                            <span class="fnc-nav__control-progress"></span>
-                          </button>
-                          <button class="fnc-nav__control" style="
-                          font-family: 'Carla';
-                          ">
-                            03
-                            <span class="fnc-nav__control-progress"></span>
-                          </button>
-                          <button class="fnc-nav__control" style="
-                          font-family: 'Carla';
-                          ">
-                            04
-                            <span class="fnc-nav__control-progress"></span>
-                          </button>
-                        </div>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
+        </nav>
+    
+        <section style="width: 100%; height: 100%;">
+            <div style="width: 5%;"></div>
+            <aside style="width: 30%; height: 100%;" class="PhotoProfile">
+                <section style="width: 100%; margin-top: 1em;">
+                            
+                </section>
             </aside>
-            <aside style="width: 100%; height: 55%; background-color: #44576d;">
-                <div style="height: 5.5em;"></div>
-                <div style="width: 100%; height: 17%;" class="End">
-                    <img src="./images/White.PNG" style="width: 4em; height: 4em;"/>
+            <div style="width: 2%;"></div>
+    
+            <aside style="width: 50%; height: 100%;">
+                <p class="BigText" style="margin: 0;"> Контактная информация </p>
+                <p class="Text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nobis accusamus quaerat libero eligendi id itaque ratione obcaecati dignissimos perferendis dolorem reiciendis dolor tempora, porro fugiat nam, cupiditate accusantium placeat ab doloribus minus ipsa quia! Eaque veritatis, ratione aperiam ullam adipisci ut aliquam, iure aut sapiente rem quidem cupiditate? Vel? </p>
+                <p class="Text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nobis accusamus quaerat libero eligendi id itaque ratione obcaecati dignissimos perferendis dolorem reiciendis dolor tempora, porro fugiat nam, cupiditate accusantium placeat ab doloribus minus ipsa quia! Eaque veritatis, ratione aperiam ullam adipisci ut aliquam, iure aut sapiente rem quidem cupiditate? Vel? </p>
+                <p class="Text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptas numquam. Totam minus corporis quos corrupti pariatur tempora at consequatur ipsa vero vitae, esse accusantium quae iusto cumque doloribus aperiam? </p>
+                <p class="BigText" style="margin: 0;"> Преимущество моего сервиса </p>
+                <div style="height: 1em;"></div>
+    
+                <section style="width: auto; height: 100%;">
+                    <aside style="height: 100%; background: #2f2f4f; width: 20%;">
+                        <div style="height: 1em;"></div>
+                        <nav style="width: 100%;">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13L11 15L15 11M10.4142 6.41421L8.58579 4.58579C8.21071 4.21071 7.70201 4 7.17157 4H5C3.89543 4 3 4.89543 3 6V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H11.8284C11.298 7 10.7893 6.78929 10.4142 6.41421Z" stroke="#fbfbfb" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </nav>
+                        <div style="height: 1em;"></div>
+                        <p class="Text" style="margin: 0; color: #fbfbfb; text-align: center;"> Анонимная передача<br/> данных </p>
+                    </aside>
                     <div style="width: 1em;"></div>
-                </div>
-                <div style="width: auto; height: auto; margin-left: 5em;">
-                    <p class="NumGrous">
-                        01.
-                    </p>
-                    <p class="GrousText" style="font-family: 'Carla'; margin: 0; font-size: .9em;">
-                        DESIGNED BY Timofey Melnichenko ™
-                    </p>
-                </div>
+                    <aside style="height: 100%; background: #2f2f4f; width: 20%;">
+                        <div style="height: 1em;"></div>
+                        <nav style="width: 100%;">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 11L11 13L15 9M10.8807 2.72516C8.95619 3.9258 7.32267 4.65117 4.99726 4.90128C3.89903 5.0194 2.98373 5.89508 3.03093 6.99864C3.19738 10.89 4.25961 16.2625 11.0385 20.4377C11.6269 20.8 12.3731 20.8 12.9615 20.4377C19.7404 16.2625 20.8026 10.89 20.9691 6.99864C21.0163 5.89508 20.101 5.0194 19.0027 4.90128C16.6773 4.65117 15.0438 3.9258 13.1193 2.72516C12.4342 2.2978 11.5658 2.2978 10.8807 2.72516Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
+                        </nav>
+                        <div style="height: 1em;"></div>
+                        <p class="Text" style="margin: 0; color: #fbfbfb; text-align: center;"> Графический вывод информации </p>
+                    </aside>
+                    <div style="width: 1em;"></div>
+                    <aside style="height: 100%; background: #2f2f4f; width: 20%;">
+                        <div style="height: 1em;"></div>
+                        <nav style="width: 100%;">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 18H20M6 18V3M6 18V21M6 18H3M18 6V21M18 6H3M18 6V3M18 6H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                    
+                        </nav>
+                        <div style="height: 1em;"></div>
+                        <p class="Text" style="margin: 0; color: #fbfbfb; text-align: center;"> Модульная система </p>
+                    </aside>
+                    <div style="width: 1em;"></div>
+                    <aside style="height: 100%; background: #2f2f4f; width: 20%;">
+                        <div style="height: 1em;"></div>
+                        <nav style="width: 100%;">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 12V12C7 10.8954 7.89543 10 9 10V10M7 12C5 12 3 10 3 8M7 12V14.5M17 12V12C17 10.8954 16.1046 10 15 10V10M17 12C19 12 21 10 21 8M17 12V14.5M17 14.5H21M17 14.5V17M7 14.5H3M7 14.5V17M7 17V17C7 18.1046 7.89543 19 9 19H15C16.1046 19 17 18.1046 17 17V17M7 17C5 17 4 18 4 20M17 17C19 17 20 18 20 20M15 10V7C15 5.89543 14.1046 5 13 5M15 10H9M9 10V7C9 5.89543 9.89543 5 11 5M11 5H13M11 5L9 3M13 5L15 3" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                                                                  
+                        </nav>
+                        <div style="height: 1em;"></div>
+                        <p class="Text" style="margin: 0; color: #fbfbfb; text-align: center;"> Минимальное количество задержек </p>
+                    </aside>
+                    <div style="width: 1em;"></div>
+    
+                    <aside style="height: 100%; background: #2f2f4f; width: 20%;">
+                        <div style="height: 1em;"></div>
+                        <nav style="width: 100%;">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 13L20 9V4H15L11 8M16 13V17L12 20L11 16M16 13L11 16M11 16L10 17H7V14L8 13M11 16L13 11L8 13M8 13L4 12L7 8H11M8 13L11 8M16 8H16.009M9 20L8 21M5 19L4 20M4 15L3 16" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                 
+                        </nav>
+                        <div style="height: 1em;"></div>
+                        <p class="Text" style="margin: 0; color: #fbfbfb; text-align: center;"> Лучший результат </p>
+                    </aside>
+                    <div style="width: 1em;"></div>
+                </section>
             </aside>
-        </aside>
-        <aside style="width: 5%; height: 100%; background-color:#E6E6E6;">
-            <div style="height: 10em;"></div>
-            <aside style="width: 90%;">
-                <nav style="width: 100%; height: calc(90%/7);" style="color: #757575;">
-                    <a href="" class="Link">
-                        Главная
-                    </a>
-                </nav>
-                <div style="height: 2em;"></div>
-                <nav style="width: 100%; height: calc(90%/7);" style="color: #757575;">
-                    <a href="" class="Link">
-                        Наши приоритеты
-                    </a>
-                </nav>
-                <div style="height: 2em;"></div>
-                <nav style="width: 100%; height: calc(90%/7);" style="color: #757575;">
-                    <a href="" class="Link">
-                        Каталог
-                    </a>
-                </nav>
-                <div style="height: 2em;"></div>
-                <nav style="width: 100%; height: calc(90%/7);" style="color: #757575;">
-                    <a href="" class="Link">
-                        О нас
-                    </a>
-                </nav>
-                <div style="height: 2em;"></div>
-                <nav style="width: 100%; height: calc(90%/7);" style="color: #757575;">
-                    <a href="" class="Link">
-                        Контакты
-                    </a>
-                </nav>
-            </aside>
-        </aside>
-    </nav>
-    <nav class="Arch">
-        <img src="./images/Blue.PNG" class="IMG" style="width: 3em; height: 3em;"/>
-    </nav>
-    <script src="script.js"></script>
-    <script src="slider.js"></script>
+    
+        </section>
+        <div class="EndBlockc"></div>
+    </div>
+    <div class="image" data-key="3"  id="corporation3">
+        <canvas id="bg-canvas1" style="position: absolute; z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background: url(media/Frame\ 5.png);
+      
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        " class="cans"></canvas>
+        <nav style="width: 100%; height: 15%; padding-top: 2em; z-index: 10;" class="start">
+              
+          <section style="width: 100%;" class="between">
+              <section class="start center">
+                <p class="Logo" style="color: #111;"> Workdrop.io </p>                     
+              </section>
+              
+              <section style="width: auto; height:100%;">
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">HOME</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">WORK</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">SERVICES</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 5em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#transparent" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info unact">TEAM</p>                        
+                          </li>
+                          <li style="display: flex;" class="between">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 5L16 12L9 19" stroke="#111" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                        
+                              <div style="width: 1em;"></div>
+                              <p class="Info" style="color: #111;">CONTACT</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 15em;"></div>
+                  <section class="start">
+                      <ul type="none" style="margin: 0; padding: 0;">
+                          <li style="display: flex;" class="between">                      
+                              <div style="width: 1em;"></div>
+                              <p class="Info" style="color: #111;">04:00 AM</p>                        
+                          </li>
+                      </ul>
+                  </section>
+                  <div style="width: 2.5em;"></div>
+              </section>
+          </section>
+      </nav>
+      
+      <nav style="width: 100%; height: 100%;">
+          <section style="width: 100%; height: 100%; padding-left: 4.5em; padding-top: 7em;" class="between">
+          <aside style="height: 100%; width: 100%;">
+              <p class="Alert" style="color: #111;"> Оставайтесь с нами всегда на связи </p>
+              <div style="height: 3em;"></div>
+              <form>
+                  <label>
+                    <input id="fname" type="text" placeholder="ФИО">
+                    <span>Ваша фамилия и имя</span>
+                  </label>
+                  
+                  <label>
+                    <input type="email" placeholder="Email">
+                    <span>Email</span>
+                  </label>
+      
+                  <label>
+                      <input type="email" placeholder="Телефон">
+                      <span>Телефон</span>
+                  </label>
+                 
+                  <input type="submit" value="Отправить">
+              </form>
+          </aside>
+          </section>
+      </nav>
+    </div>
+    <!-- <div class="image" data-key="4" >
+      <img src="https://images.unsplash.com/photo-1571489730822-0c7332fb10ab?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt=""/>
+    </div>
+    <div class="image" data-key="5">
+      <img src="https://images.unsplash.com/photo-1563112605-04054b77e22d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt=""/>
+    </div> -->
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script><script  src="./script.js"></script>
+  <script src="animation.js"></script>
+  <script src="animate.js"></script>
+  <script src="fold.js"></script>
 </body>
 </html>
