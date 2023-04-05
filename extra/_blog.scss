@@ -1,0 +1,56 @@
+  //
+// blog.scss
+//
+
+
+.blog-content{
+    position: relative;
+}
+
+
+.blog-link {
+    color: $dark;
+    transition: all .3s ease;
+    &:hover {
+        color: $custom;
+    }
+    
+}
+
+.blog-lable{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    background-color: $custom;
+    display: inline-block;
+    color: $white;
+    text-align: center;
+}
+
+.blog-lable{
+    .date{
+        line-height: 34px;
+    }
+    .month{
+        line-height: 10px;
+    }
+}
+
+.read-more{
+    color: $custom;
+    transition: all 0.5s;
+    font-size: 15px;
+    font-weight: 500;
+    &:hover{
+        color: $custom;
+    }
+    i{
+        font-size: 16px;
+        position: relative;
+        top: 2px;
+        color: $custom;
+    }
+}
+
+

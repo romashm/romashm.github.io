@@ -1,0 +1,85 @@
+
+
+//
+// client.scss
+//
+
+.bg-client {
+    background: url(../images/bg-client.png);
+    position: absolute;
+    background-position: center center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.client-img{
+    img{
+        width: 120px;
+    }
+}
+
+.client-icon{
+    i{
+        font-size: 180px;
+        opacity: 0.1;
+        line-height: 0px;
+        color: $muted;
+    }
+}
+
+.client-position{
+    position: relative;
+    top: -90px;
+}
+
+
+.client-img-icon{   
+    padding-left: 70px;
+    i{
+        width: 32px;
+        height: 32px;
+        background: $custom;
+        color: $white;
+        font-size: 18px;
+        border-radius: 50%;
+        line-height: 32px;
+        position: absolute;
+        top: 30px;
+        
+    }
+}
+
+.owl-theme {
+    .owl-controls {
+        margin-top: -40px;
+        .owl-page {
+            span {
+                background-color: $custom;
+                transition: all 0.5s;
+              }
+        }
+    }
+    
+}
+
+// client-logo
+
+.bg-client-logo{
+    // https://www.freepik.com/free-photo/closeup-business-woman-hand-typing-laptop-keyboard_1010142.htm
+    background-image: url(../images/bg-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 120px 0px 120px 0px;
+}
+
+.client-images {
+    img {
+        max-height: 90px;
+      }
+}

@@ -1,0 +1,31 @@
+//
+// video.scss
+//
+
+.bg-video {
+    // https://www.freepik.com/free-photo/male-executive-shaking-hands-with-female-coworker-teamwork-introduction_3938107.htm
+    background-image: url(../images/bg-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 120px 0px 120px 0px;
+}
+
+.play-btn-2 {
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    line-height: 78px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid $white;
+    margin-top: 30px;
+}
+
+.video-box{
+    P {
+        color: $white;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,59 @@
+
+
+//
+// footer.scss
+//
+
+
+.bg-footer {
+    padding: 80px 0px 40px 0px;
+    background: $dark;
+  }
+  
+  .footer-title {
+    color: $white;
+    letter-spacing: 1px;
+    font-size: 17px;
+  }
+  
+  .footer-link{
+    a {
+        color: $muted;
+        line-height: 36px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        &:hover {
+            color: $custom;
+          }
+      }
+  }
+
+  .footer-social{
+    a {
+        text-align: center;
+        color: $muted;
+        display: block;
+        width: 42px;
+        height: 42px;
+        border: 1px solid $muted;
+        line-height: 40px;
+        font-size: 18px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        margin-right: 10px;
+        &:hover {
+            color: $white;
+            background: $custom;
+            border: 1px solid $custom;
+          }
+      }
+  }
+
+.footer-spacing{
+      padding-left: 30px;
+  }
+
+  .footer-alt {
+    color: $muted;
+  }
+  
