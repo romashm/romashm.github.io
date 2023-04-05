@@ -1,0 +1,21 @@
+//
+// pricing.scss
+//
+
+.pricing-box{
+    box-shadow: $box-shadow;
+    padding: 36px 30px 36px 30px;
+}
+
+.pricing-box{
+    h3{
+        font-size: 26px;
+        color: $custom;
+        text-align: center;;
+    }
+}
+
+.dolar{
+    position: relative;
+    top: -20px;
+}

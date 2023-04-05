@@ -1,0 +1,219 @@
+//
+// home.scss
+//
+
+.bg-home {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+}
+
+.home-center {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.home-desc-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.home-title {
+    font-size: 48px;
+    color: $white;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.home-box{
+  p{
+      color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.play-icon-circle {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 26px;
+    position: relative;
+    top: 6px;
+  }
+
+  .home-contact{
+      span{
+    font-weight: 500;
+    color: $white;
+      }
+          
+         
+      
+  }
+
+//   mouse-down
+
+  .mouse_down  {
+    position: relative;
+    top: -70px;
+  }
+  
+  .scroll {
+    position: relative;
+  }
+
+
+//   HOME:2
+
+
+.home-desc-2{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.home-half{
+    background-image: url(../images/bg-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 250px 0px 230px 0px !important;
+}
+
+// home-3
+
+.bg-home-3 {
+  background-image: url(../images/bg-3.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 300px 0px 280px 0px !important;
+}
+
+
+
+
+
+// home-4 
+
+.bg-home-4 {
+  background-image: url(../images/bg-4.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 100vh;
+}
+
+
+.search-form {
+    input {
+        padding: 15px 20px;
+        width: 100%;
+        font-size: 17px;
+        color: $muted !important;
+        border: none;
+        outline: none !important;
+        padding-right: 160px;
+        padding-left: 30px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 30px;
+    }
+    button {
+        position: absolute;
+        top: 5px;
+        right: 6px;
+        outline: none !important;
+        border-radius: 30px;
+        font-size: 17px;
+        padding: 9px 30px;
+    }
+    form {
+        position: relative;
+        max-width: 600px;
+        margin: 0px auto;
+    }
+    
+}
+
+
+// home-5
+
+.bg-home-video {
+    height: 100vh;
+    background-color: $dark;
+}
+
+// home-6  
+
+.particels-slidero{
+    position: relative;
+    z-index: 1;
+}
+
+// home-7  
+
+
+.bg-home-gradient{
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+}
+
+
+// home-8  
+
+/* flexdemo */
+.flex-control-paging {
+    li {
+        a {
+            border-radius: 20px;
+            height: 12px;
+            width: 12px;
+            opacity: 1;
+            border: 2px solid $custom !important;
+            background: $custom;
+            &:hover {
+                background: $custom;
+              }
+          }
+    }
+}
+
+  .flex-control-paging li a.flex-active {
+    background-color: transparent;
+  }
+  
+  .flex-control-nav {
+    bottom: -70px;
+  }
+
+//   home-9  
+
+.home-title-9{
+    font-size: 48px;
+    color: $white;
+    max-width: 650px;
+}
+
+.home-desc-9 {
+    max-width: 650px;
+  }
+
+  .home-registration-form {
+    border-radius: 3px;
+    width: 600px;
+    .registration-input-box {
+        border: none;
+        border-radius: 5px;
+        color: $muted;
+        height: 45px;
+        border: 1px solid #e6e7e9;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+      }
+  }

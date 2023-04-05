@@ -1,0 +1,24 @@
+//
+// cta.scss
+//
+
+
+.bg-cta{
+    // https://www.freepik.com/free-photo/young-smiling-woman-working-laptop-coworking-office-space_3938127.htm
+    background-image: url(../images/bg-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 120px 0px 120px 0px;
+}
+
+.cta-box{
+    h3{
+        color: $white;
+    }
+    P{
+        color: $white;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
