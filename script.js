@@ -1,176 +1,59 @@
-(function() {
+const section = ["Head", "Mid", "Text1", "asanasub"];
+section.forEach(Attr);
+function Attr(value) {
+    document.getElementById(value).addEventListener('submit', (e) => {
+        e.preventDefault();
+        const Preview = document.getElementById("Preview")
+        const Asans = document.getElementById("Asans")
+        let i = 1
 
-    var $$ = function(selector, context) {
-      var context = context || document;
-      var elements = context.querySelectorAll(selector);
-      return [].slice.call(elements);
-    };
-  
-    function _fncSliderInit($slider, options) {
-      var prefix = ".fnc-";
-  
-      var $slider = $slider;
-      var $slidesCont = $slider.querySelector(prefix + "slider__slides");
-      var $slides = $$(prefix + "slide", $slider);
-      var $controls = $$(prefix + "nav__control", $slider);
-      var $controlsBgs = $$(prefix + "nav__bg", $slider);
-      var $progressAS = $$(prefix + "nav__control-progress", $slider);
-  
-      var numOfSlides = $slides.length;
-      var curSlide = 1;
-      var sliding = false;
-      var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
-      var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
-  
-      var autoSlidingActive = false;
-      var autoSlidingTO;
-      var autoSlidingDelay = 5000; // default autosliding delay value
-      var autoSlidingBlocked = false;
-  
-      var $activeSlide;
-      var $activeControlsBg;
-      var $prevControl;
-  
-      function setIDs() {
-        $slides.forEach(function($slide, index) {
-          $slide.classList.add("fnc-slide-" + (index + 1));
-        });
-  
-        $controls.forEach(function($control, index) {
-          $control.setAttribute("data-slide", index + 1);
-          $control.classList.add("fnc-nav__control-" + (index + 1));
-        });
-  
-        $controlsBgs.forEach(function($bg, index) {
-          $bg.classList.add("fnc-nav__bg-" + (index + 1));
-        });
-      };
-  
-      setIDs();
-  
-      function afterSlidingHandler() {
-        $slider.querySelector(".m--previous-slide").classList.remove("m--active-slide", "m--previous-slide");
-        $slider.querySelector(".m--previous-nav-bg").classList.remove("m--active-nav-bg", "m--previous-nav-bg");
-  
-        $activeSlide.classList.remove("m--before-sliding");
-        $activeControlsBg.classList.remove("m--nav-bg-before");
-        $prevControl.classList.remove("m--prev-control");
-        $prevControl.classList.add("m--reset-progress");
-        var triggerLayout = $prevControl.offsetTop;
-        $prevControl.classList.remove("m--reset-progress");
-  
-        sliding = false;
-        var layoutTrigger = $slider.offsetTop;
-  
-        if (autoSlidingActive && !autoSlidingBlocked) {
-          setAutoslidingTO();
-        }
-      };
-  
-      function performSliding(slideID) {
-        if (sliding) return;
-        sliding = true;
-        window.clearTimeout(autoSlidingTO);
-        curSlide = slideID;
-  
-        $prevControl = $slider.querySelector(".m--active-control");
-        $prevControl.classList.remove("m--active-control");
-        $prevControl.classList.add("m--prev-control");
-        $slider.querySelector(prefix + "nav__control-" + slideID).classList.add("m--active-control");
-  
-        $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
-        $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
-  
-        $slider.querySelector(".m--active-slide").classList.add("m--previous-slide");
-        $slider.querySelector(".m--active-nav-bg").classList.add("m--previous-nav-bg");
-  
-        $activeSlide.classList.add("m--before-sliding");
-        $activeControlsBg.classList.add("m--nav-bg-before");
-  
-        var layoutTrigger = $activeSlide.offsetTop;
-  
-        $activeSlide.classList.add("m--active-slide");
-        $activeControlsBg.classList.add("m--active-nav-bg");
-  
-        setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
-      };
-  
-  
-  
-      function controlClickHandler() {
-        if (sliding) return;
-        if (this.classList.contains("m--active-control")) return;
-        if (options.blockASafterClick) {
-          autoSlidingBlocked = true;
-          $slider.classList.add("m--autosliding-blocked");
-        }
-  
-        var slideID = +this.getAttribute("data-slide");
-  
-        performSliding(slideID);
-      };
-  
-      $controls.forEach(function($control) {
-        $control.addEventListener("click", controlClickHandler);
-      });
-  
-      function setAutoslidingTO() {
-        window.clearTimeout(autoSlidingTO);
-        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-        curSlide++;
-        if (curSlide > numOfSlides) curSlide = 1;
-  
-        autoSlidingTO = setTimeout(function() {
-          performSliding(curSlide);
-        }, delay);
-      };
-  
-      if (options.autoSliding || +options.autoSlidingDelay > 0) {
-        if (options.autoSliding === false) return;
-        
-        autoSlidingActive = true;
-        setAutoslidingTO();
-        
-        $slider.classList.add("m--with-autosliding");
-        var triggerLayout = $slider.offsetTop;
-        
-        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-        delay += slidingDelay + slidingAT;
-        
-        $progressAS.forEach(function($progress) {
-          $progress.style.transition = "transform " + (delay / 1000) + "s";
-        });
-      }
-      
-      $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
-  
-    };
-  
-    var fncSlider = function(sliderSelector, options) {
-      var $sliders = $$(sliderSelector);
-  
-      $sliders.forEach(function($slider) {
-        _fncSliderInit($slider, options);
-      });
-    };
-  
-    window.fncSlider = fncSlider;
-  }());
+        if (section[0] == value) {
+            const NewElement = document.createElement("p")
+            NewElement.classList.add("Header")
+            NewElement.innerText = document.getElementById("Header").value
+            Preview.append(NewElement)
+        } else if (section[1] == value) {
+            const NewElement = document.createElement("p")
+            NewElement.classList.add("Middle")
+            NewElement.innerText = document.getElementById("Review").value
+            Preview.append(NewElement)
+        } else if (section[2] == value) {
+            const NewElement = document.createElement("p")
+            NewElement.classList.add("Middle")
+            NewElement.innerText = document.getElementById("Text").value
+            Preview.append(NewElement)
+        } else if (section[3] == value) {
+            const NewElement = document.createElement("div")
+            NewElement.classList.add("swiper-slide-img-holder")
+            // NewElement.innerHTML = document.getElementById("asana").value
+            const img = document.createElement("img")
+            img.src = 'support/images/about_03.jpg'
+            NewElement.append(img)
 
-  fncSlider(".example-slider", {autoSlidingDelay: 4000});
-  
-  var $demoCont = document.querySelector(".demo-cont");
-  
-  [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function($btn) {
-    $btn.addEventListener("click", function() {
-      $demoCont.classList.toggle("credits-active");
+            const paragr = document.createElement("p");
+            paragr.classList.add("swiper-slide-number")
+            paragr.innerText = `0${i}`;
+            NewElement.append(paragr)
+
+            const paragr_2 = document.createElement("p");
+            paragr_2.classList.add("swiper-slide-caption-text")
+            paragr_2.innerText = document.getElementById("asana").value;
+            NewElement.append(paragr_2)
+
+            const paragr_3 = document.createElement("p");
+            paragr_3.classList.add("swiper-slide-caption-text")
+            paragr_3.style.paddingLeft = "2em";
+            paragr_3.innerText = document.getElementById("time").value;
+            NewElement.append(paragr_3)
+
+            Asans.append(NewElement)
+        }
     });
-  });
-  
-  document.querySelector(".demo-cont__credits-close").addEventListener("click", function() {
-    $demoCont.classList.remove("credits-active");
-  });
-  
-  document.querySelector(".js-activate-global-blending").addEventListener("click", function() {
-    document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
-  });
+}
+
+$(document).ready(function () {
+    $('a.close').click(function (event) {
+        event.preventDefault();
+        $('.popup').hide("slow");
+    });
+});
