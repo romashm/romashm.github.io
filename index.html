@@ -1,184 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Romeo">
-	<title>Yoga 365</title>
-	<link href="extra/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="extra/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="extra/Pe-icon-7-stroke.css">
-    <!--Slider-->
-    <link rel="stylesheet" href="extra/owl.carousel.css" />
-    <link rel="stylesheet" href="extra/owl.theme.css" />
-    <link rel="stylesheet" href="extra/owl.transitions.css" />
-    <link href="extra/style.css" rel="stylesheet" type="text/css" />
-	<link href="css/custom.css" rel="stylesheet">
+    <title>PHP File Uploads</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">    
 </head>
-<!-- START CONTACT -->
-<section style="margin-top: 2em;">
-    <div class="container">
+<body>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-heading text-center">
-                    <h3 class="Info">Регистрация на платформу</h3>
-                    <div class="title-border" style=" background: #00AFAD;"></div>
-                    <p class="text-muted">Йога – это не просто упражнение, это образ жизни.<br/>
+<h1>PHP File Uploads</h1>
 
-                        Присоединяйтесь к нам в путешествии к обретению баланса, внутреннего покоя и здоровой связи между разумом и телом с помощью йоги.</p>
-                </div>
-            </div>
-        </div>
+<form method="post" enctype="multipart/form-data" action="process-form.php">
 
-        <div class="row mt-5 pt-3">
-            <div class="col-lg-4">
+    <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1048576"> -->
 
-                <div class="contact-content mt-4">
-                    <div class="mt-4 pt-1">
-                        <div class="contact-icon float-left mt-1 pr-4">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color: #00AFAD;
-							width: 48px; height: 48px; border-radius: 50%;  padding: .5em;">
-								<path d="M10 3H8C6.89543 3 6 3.89543 6 5V19C6 20.1046 6.89543 21 8 21H16C17.1046 21 18 20.1046 18 19V5C18 3.89543 17.1046 3 16 3H14M10 3V4H14V3M10 3H14" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-								
-                        </div>
+    <label for="image">Image file</label>
+    <input type="file" id="image" name="image">
 
-                        <div class="contact-info">
-                            <p class="f-16 mb-0">Наш номер телефона</p>
-                            <p class="text-muted mb-0">+7 (915) 403-73-02 </p>
-                        </div>
-                    </div>
+    <label for="file2">Another file</label>
+    <input type="file" name="file2" id="file2">
 
-                    <div class="mt-4 pt-1">
-                        <div class="contact-icon float-left mt-1 pr-4">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color: #00AFAD;
-							width: 48px; height: 48px; border-radius: 50%; padding: .5em;">
-								<path d="M13 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V9M13 3V7C13 8.10457 13.8954 9 15 9H19M13 3H13.1716C13.702 3 14.2107 3.21071 14.5858 3.58579L18.4142 7.41421C18.7893 7.78929 19 8.29799 19 8.82843V9M9 15L11 17L15 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>								
-                        </div>
+    <button>Upload</button>
 
-                        <div class="contact-info">
-                            <p class="f-16 mb-0">Наш Email</p>
-                            <p class="text-muted mb-0">yoga.365@yandex.ru</p>
-                        </div>
-                    </div>
+</form>
 
-                </div>
-            </div>
-
-            <div class="col-lg-8">
-                <div class="custom-form mt-4">
-                    <div id="message"></div>
-                    <form method="post" action="./header.html" name="contact-form" id="contact-form">
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group mt-3">
-                                    <input name="name" id="name" type="text" class="form-control" placeholder="Ваше имя">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group mt-3">
-                                    <input name="email" id="email" type="text" class="form-control" placeholder="E-mail">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group mt-3">
-                                    <input name="subject" id="subject" type="password" class="form-control" placeholder="Пароль">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group mt-3">
-                                    <input name="subject" id="subject" type="password" class="form-control" placeholder="Повторить пароль">
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="./header.html">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="mt-3">
-                                    <input type="submit" id="submit" name="send" class="submitBnt btn btn-custom btn-round" value="Зарегистрироваться">
-                                    <div id="simple-msg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- END CONTECT -->
-
-<aside style="width: 100%; height: 30%;" class="asidy">
-	<footer style="width: 100%; height: auto; margin-top: 4em; padding-top: 1em;">
-		<nav style="width: 100%; height: 100%;" class="navi">
-			<aside style="width: 60%; height: 100%;" class="asidy">
-				<section class="Between sectiony" style="width: 100%;" >
-					<aside style="width: 100%;" class="asidy">
-					
-					<nav style="width: 100%; height: auto; margin-top: 1em; " class="navi">
-						<p class="Middle" style="color: #fbfbfb; font-weight: bold; margin-bottom: 0; text-align: center;">Возникли вопросы ?</p>
-					</nav>
-					<nav style="width: 100%; height: auto; margin-top: 1em;" class="navi">
-						<p class="Mini" style="color: #fbfbfb; text-align: center;">Напишите нам на почту: yoga.365@yandex.ru</p>
-					</nav>
-					</aside>
-				</section>
-				<nav style="width: 100%; height: 1%; margin-top: 1em;" class="navi">
-					<div style="width: 70%; height: 100%;" class="Line"></div>
-				</nav>
-				<nav style="width: 100%;" class="navi">
-					<p class="Mini mobiles" style="color: #fbfbfb; ">
-						Copyright © 2023. All Right Reserved
-					</p>
-				</nav>
-			</aside>
-		</nav>
-	</footer>
-
-</aside>
-<style>
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    section {
-        display: flex;
-    }
-    
-    aside {
-        display: block;
-    }
-</style>
-
-	<script src="extra/jquery.min.js"></script>
-	<script src="extra/bootstrap.bundle.min.js"></script>
-	<script src="extra/jquery.easing.min.js"></script>
-	<script src="extra/scrollspy.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="extra/jquery.magnific-popup.min.js"></script>
-	<script src="extra/owl.carousel.min.js"></script>
-	<!-- contact -->
-	<script src="extra/contact.init.js"></script>
-	<!-- Typed -->
-	<script src="extra/typed.js"></script>
-	<script src="extra/jquery.mb.YTPlayer.js"></script>
-	<!-- Main Js -->
-	<script src="extra/app.js"></script>
 </body>
 </html>
