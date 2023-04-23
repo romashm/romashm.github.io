@@ -1,0 +1,253 @@
+{% set page_title = 'Piroll - Portfolio HTML Template' %}
+{% set nav_opaque = false %}
+{% set nav_transparent = true %}
+{% set nav_white_text_on_top = true %}
+{% set header_title = 'Welcome to Piroll' %}
+{% set header_show = true %}
+{% set header_title_show = true %}
+{% set header_image = 'assets/images/portfolio-single-3-1.jpg' %}
+{% set header_text = '<div class="lead-sm">A high-performance MultiPurpose Portfolio HTML Template suitable for any kind of creators. <br> This is ideal for creating your creative professional portfolio, corporate website, or for creating <br> your client\'s website if you are an Agency or a Freelancer.</div>
+<div class="nk-gap-1"></div>
+<a href="https://themeforest.net/item/piroll-minimal-and-modern-portfolio-html-template/20372990?ref=_nK" class="nk-btn nk-btn-long" target="_top">Purchase Now $30</a>' %}
+{% set header_image_overlay = 'rgba(12, 12, 12, 0.7)' %}
+{% set header_text_color = 'text-white' %}
+{% set header_size = 'xmd' %}
+{% set footer = 3 %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <!-- START: Available Home Pages -->
+    <div class="container">
+        <div class="nk-gap-5"></div>
+        <h2 class="text-center">Awesome Home Pages</h2>
+        <div class="text-center"><em>Modern, Minimal &amp; Creative Design</em></div>
+        <div class="nk-gap-4"></div>
+        <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols nk-isotope-gap">
+            {% set available_home_pages = [
+                {
+                    href: 'home-1.html',
+                    img: 'promo-home-1.jpg',
+                    title: 'Minimal Portfolio'
+                }, {
+                    href: 'home-2.html',
+                    img: 'promo-home-2.jpg',
+                    title: 'Masonry Portfolio'
+                }, {
+                    href: 'home-3.html',
+                    img: 'promo-home-3.jpg',
+                    title: 'Classic Portfolio'
+                }, {
+                    href: 'home-4.html',
+                    img: 'promo-home-4.jpg',
+                    title: 'Freelancere Portfolio'
+                }, {
+                    href: 'home-5.html',
+                    img: 'promo-home-5.jpg',
+                    title: 'Slider Home'
+                }, {
+                    href: 'home-6.html',
+                    img: 'promo-home-6.jpg',
+                    title: 'Fullscreen Slider'
+                }, {
+                    href: 'home-7.html',
+                    img: 'promo-home-7.jpg',
+                    title: 'Agency Portfolio'
+                }, {
+                    href: 'home-8.html',
+                    img: 'promo-home-8.jpg',
+                    title: 'Video Home'
+                }, {
+                    href: 'home-9.html',
+                    img: 'promo-home-9.jpg',
+                    title: 'Creative Dark'
+                }
+            ] %}
+            {% for item in available_home_pages %}
+            <div class="nk-isotope-item">
+                <div class="nk-portfolio-item nk-portfolio-item-info-style-4">
+                    <a href="{{ item.href }}" class="nk-portfolio-item-link"></a>
+                    <img class="nk-portfolio-item-image" src="assets/images/{{ item.img }}" alt="{{ item.title }}">
+                    <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                        <div>
+                            <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="nk-gap-3"></div>
+    </div>
+    <!-- END: Available Home Pages -->
+
+    <!-- START: Creative Project Pages -->
+    <div class="bg-gray-4">
+        <div class="nk-gap-5"></div>
+        <h2 class="text-center">Creative Project Pages</h2>
+        <div class="text-center"><em>Showcase your Awesome Projects</em></div>
+        <div class="nk-gap-3"></div>
+        <div class="nk-carousel-2 nk-carousel-x1 nk-carousel-all-visible " data-autoplay="10000" data-dots="true" data-size="1">
+            {% set available_work_pages = [
+            {
+                href: 'work-single-1.html',
+                img: 'promo-work-1.png'
+            }, {
+                href: 'work-single-2.html',
+                img: 'promo-work-2.png'
+            }, {
+                href: 'work-single-3.html',
+                img: 'promo-work-3.png'
+            }, {
+                href: 'work-single-4.html',
+                img: 'promo-work-4.png'
+            }, {
+                href: 'work-single-5.html',
+                img: 'promo-work-5.png'
+            }, {
+                href: 'work-single-6.html',
+                img: 'promo-work-6.png'
+            }, {
+                href: 'work-single-7.html',
+                img: 'promo-work-7.png'
+            }, {
+                href: 'work-single-8.html',
+                img: 'promo-work-8.png'
+            }
+            ] %}
+            <div class="nk-carousel-inner">
+                {% for item in available_work_pages %}
+                    <div>
+                        <div>
+                            <a href="{{ item.href }}"><img src="assets/images/{{ item.img }}" alt="" class="nk-img-fit"></a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Creative Project Pages -->
+
+    <!-- START: Portfolio Layouts -->
+    <div class="nk-box">
+        <div class="bg-image bg-image-parallax" style="background-image: url('assets/images/promo-bg-1.jpg');"></div>
+        <div class="nk-gap-5"></div>
+        <h2 class="text-center text-white">20+ Different Portfolio Layouts</h2>
+        <div class="text-center text-white"><em>Beautiful Portfolio Styles to present your Work</em></div>
+        <div class="nk-gap-1"></div>
+        <img src="assets/images/promo-layouts.png" alt="" class="nk-img-stretch">
+    </div>
+    <!-- END: Portfolio Layouts -->
+
+    <!-- START: Inner Pages -->
+    <div class="container">
+        <div class="nk-gap-5"></div>
+        <h2 class="text-center">Functional Inner Pages</h2>
+        <div class="text-center"><em>Practical Inner Pages for all your needs</em></div>
+        <div class="nk-gap-4"></div>
+        <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols nk-isotope-gap">
+            {% set available_pages = [
+            {
+                href: 'blog-masonry-3.html',
+                img: 'promo-page-1.jpg',
+                title: 'Blog Masonry'
+            }, {
+                href: 'blog-single.html',
+                img: 'promo-page-2.jpg',
+                title: 'Single Post'
+            }, {
+                href: 'page-about-us.html',
+                img: 'promo-page-3.jpg',
+                title: 'About Us'
+            }, {
+                href: 'page-about-me.html',
+                img: 'promo-page-4.jpg',
+                title: 'About Me'
+            }, {
+                href: 'page-services.html',
+                img: 'promo-page-5.jpg',
+                title: 'Our Services'
+            }, {
+                href: 'page-contact-us.html',
+                img: 'promo-page-6.jpg',
+                title: 'Contact Page'
+            }
+            ] %}
+            {% for item in available_pages %}
+                <div class="nk-isotope-item">
+                    <div class="nk-portfolio-item nk-portfolio-item-info-style-4">
+                        <a href="{{ item.href }}" class="nk-portfolio-item-link"></a>
+                        <img class="nk-portfolio-item-image" src="assets/images/{{ item.img }}" alt="{{ item.title }}">
+                        <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                            <div>
+                                <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="nk-gap-3"></div>
+    </div>
+    <!-- END: Inner Pages -->
+
+    <!-- START: Header Styles -->
+    <div class="bg-gray-4">
+        <div class="container">
+            <div class="nk-gap-5"></div>
+            <h2 class="text-center">Modern Header Styles</h2>
+            <div class="text-center"><em>Choose the Modern Header for your website</em></div>
+            <div class="nk-gap-4"></div>
+            <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols nk-isotope-gap">
+                {% set available_pages = [
+                {
+                    href: 'home-4.html',
+                    img: 'promo-header-1.jpg',
+                    title: 'Left Logo'
+                }, {
+                    href: 'home-2.html',
+                    img: 'promo-header-2.jpg',
+                    title: 'Centered Logo'
+                }, {
+                    href: 'home-1.html',
+                    img: 'promo-header-3.jpg',
+                    title: 'Overlay Menu'
+                }
+                ] %}
+                {% for item in available_pages %}
+                    <div class="nk-isotope-item">
+                        <div class="nk-portfolio-item nk-portfolio-item-info-style-4">
+                            <a href="{{ item.href }}" class="nk-portfolio-item-link"></a>
+                            <img class="nk-portfolio-item-image" src="assets/images/{{ item.img }}" alt="{{ item.title }}">
+                            <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                                <div>
+                                    <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="nk-gap-3"></div>
+        </div>
+    </div>
+    <!-- END: Header Styles -->
+
+    <!-- START: Let's Create with Piroll -->
+    <div class="nk-box text-center text-white">
+        <div class="bg-image bg-image-parallax" style="background-image: url('assets/images/promo-bg-2.jpg');">
+            <div class="bg-image-overlay" style="background-color: rgba(0, 0, 0, 0.7);"></div>
+        </div>
+        <div class="nk-gap-6"></div>
+        <h2 class="h1 text-center text-white mb-30">Let's Create with Piroll</h2>
+        <div class="lead-sm">
+            Piroll is all that you need to create your creative website. <br> Start enjoying your creativity already today.
+        </div>
+        <div class="nk-gap-1"></div>
+        <a href="https://themeforest.net/item/piroll-minimal-and-modern-portfolio-html-template/20372990?ref=_nK" class="nk-btn nk-btn-long" target="_top">Purchase Now $30</a>
+        <div class="nk-gap-6"></div>
+    </div>
+    <!-- END: Let's Create with Piroll -->
+
+{% endblock %}

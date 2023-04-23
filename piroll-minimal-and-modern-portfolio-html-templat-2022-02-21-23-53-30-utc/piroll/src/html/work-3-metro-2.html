@@ -1,0 +1,45 @@
+{% set header_title = 'Portfolio 3 Columns Metro 2' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- START: Filter -->
+    <ul class="nk-isotope-filter nk-isotope-filter-active">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter="Branding">Branding</li>
+        <li data-filter="Print">Print</li>
+        <li data-filter="Design">Design</li>
+    </ul>
+    <!-- END: Filter -->
+
+    <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols">
+        {% for i in [4, 3, 8, 1, 7] %}
+        {% set item = portfolio[i] %}
+        {% set item_w = 'nk-portfolio-item-square' %}
+        {% if i == 3 or i == 7 %}{% set item_w = 'nk-portfolio-item-xs' %}{% endif %}
+        {% if i == 4 or i == 1 %}{% set item_w = 'nk-portfolio-item-xl' %}{% endif %}
+
+        <div class="nk-isotope-item{{ ' nk-isotope-item-x2' if i == 3 or i == 7 }}" data-filter="{{ item.category }}">
+            <div class="nk-portfolio-item nk-portfolio-item-info-style-1 {{ item_w }}">
+                <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb if i == 3 or i == 7 or i == 4 or i == 1 else item.thumb_sm }}');"></div></div>
+                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                    <div>
+                        <h2 class="portfolio-item-title h3">{{ item.title }}</h2>
+                        <div class="portfolio-item-category">{{ item.category }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="nk-gap-5"></div>
+</div>
+
+<!-- START: Pagination -->
+<div class="nk-pagination nk-pagination-center">
+    <a href="#">Load More Works</a>
+</div>
+<!-- END: Pagination -->
+{% endblock %}

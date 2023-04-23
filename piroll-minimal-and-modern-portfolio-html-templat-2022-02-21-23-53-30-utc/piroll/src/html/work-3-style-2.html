@@ -1,0 +1,41 @@
+{% set header_title = 'Portfolio 3 Columns Style 2' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- START: Filter -->
+    <ul class="nk-isotope-filter">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter="Branding">Branding</li>
+        <li data-filter="Print">Print</li>
+        <li data-filter="Photography">Photography</li>
+        <li data-filter="Design">Design</li>
+    </ul>
+    <!-- END: Filter -->
+
+    <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols nk-popup-gallery">
+        {% for i in [6, 3, 4, 8, 2, 7, 1, 5, 11] %}
+        {% set item = portfolio[i] %}
+        <div class="nk-isotope-item" data-filter="{{ item.category }}">
+            <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
+                <a href="{{ item.thumb }}" class="nk-portfolio-item-link nk-gallery-item" data-size="{{ item.thumb_size }}"></a>
+                <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}');"></div></div>
+                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                    <div>
+                        <div class="portfolio-item-icon"><span class="pe-7s-look"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="nk-gap-5"></div>
+</div>
+
+<!-- START: Pagination -->
+<div class="nk-pagination nk-pagination-center">
+    <a href="#">Load More Works</a>
+</div>
+<!-- END: Pagination -->
+{% endblock %}

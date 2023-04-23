@@ -1,0 +1,82 @@
+{% set page_title = 'Video Home' %}
+{% set nav = false %}
+{% set nav_full = true %}
+{% set nav_opaque = false %}
+{% set nav_transparent = true %}
+{% set nav_white_text_on_top = true %}
+{% set header_title = 'We’re a brand strategy and digital <br> design agency' %}
+{% set header_show = true %}
+{% set header_title_show = true %}
+{% set header_image = 'assets/images/home-8.jpg' %}
+{% set header_image_overlay = 'rgba(12, 12, 12, 0.6)' %}
+{% set header_video = 'https://vimeo.com/90621027' %}
+{% set header_text_color = 'text-white' %}
+{% set header_size = 'lg' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <!-- START: About Piroll -->
+    <div class="nk-box bg-black-3 text-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="nk-gap-2"></div>
+
+                    <div class="nk-box-3 text-center">
+                        <h2 class="text-white">About Piroll</h2>
+                        <div class="nk-gap mnt-5"></div>
+
+                        <p class="lead text-gray-5">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter.
+                        </p>
+
+                        <img src="assets/images/about-me-signature-light.png" alt="" class="nk-img-fit">
+                    </div>
+
+                    <div class="nk-gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: About Piroll -->
+
+    <!-- START: Portfolio -->
+    <div class="container-fluid">
+        <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols">
+            {% for i in [6, 3, 4, 8, 2, 7, 1, 5, 11] %}
+                {% set item = portfolio[i] %}
+                <div class="nk-isotope-item" data-filter="{{ item.category }}">
+                    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
+                        <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                        <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}');"></div></div>
+                        <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center bg-main">
+                            <div>
+                                <h2 class="portfolio-item-title h3">{{ item.title }}</h2>
+                                <div class="portfolio-item-category">{{ item.category }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- END: Portfolio -->
+
+    <!-- START: Need a Project? -->
+    <div class="bg-white text-center">
+        <div class="nk-gap-5 mnb-12"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2>Need a Project?</h2>
+                    <div class="nk-gap-1 mnt-15"></div>
+                    <p>Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
+                    <div class="nk-gap mnt-9"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Need a Project? -->
+
+{% endblock %}

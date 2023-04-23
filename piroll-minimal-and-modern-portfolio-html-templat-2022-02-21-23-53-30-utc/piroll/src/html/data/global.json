@@ -1,0 +1,436 @@
+{
+    "custom_styles": false,
+    "custom_css": false,
+    "page_title": false,
+    "header_show": false,
+    "header_parallax": true,
+    "header_parallax_opacity": true,
+    "header_subtitle": false,
+    "header_title": false,
+    "header_title_show": true,
+    "header_text": false,
+    "header_text_color": false,
+    "header_image": "",
+    "header_image_overlay": false,
+    "header_video": false,
+    "header_video_type": "full",
+    "header_scroll_down_icon": false,
+    "header_size": false,
+    "header_class": false,
+    "nav": true,
+    "nav_logo": "assets/images/logo.svg",
+    "nav_logo_light": "assets/images/logo-light.svg",
+    "nav_logo_top_light": false,
+    "nav_logo_url": "index.html",
+    "nav_logo_size": 31,
+    "nav_opaque": true,
+    "nav_fixed": false,
+    "nav_sticky": false,
+    "nav_autohide": true,
+    "nav_transparent": false,
+    "nav_transparent_always": false,
+    "nav_white_text_on_top": false,
+    "nav_in_container": true,
+    "nav_dark": false,
+    "nav_lg": false,
+    "nav_mobile": true,
+    "nav_align": "right",
+    "nav_full": false,
+    "content_classname": false,
+    "footer": 1,
+    "navigation": {
+        "home-1.html": {
+            "name": "Home",
+            "sub": {
+                "home-1.html": {
+                    "name": "Minimal Portfolio"
+                },
+                "home-2.html": {
+                    "name": "Masonry Portfolio"
+                },
+                "home-3.html": {
+                    "name": "Classic Portfolio"
+                },
+                "home-4.html": {
+                    "name": "Freelancer Portfolio"
+                },
+                "home-5.html": {
+                    "name": "Slider Home"
+                },
+                "home-6.html": {
+                    "name": "Fullscreen Slider"
+                },
+                "home-7.html": {
+                    "name": "Agency Portfolio"
+                },
+                "home-8.html": {
+                    "name": "Video Home"
+                },
+                "home-9.html": {
+                    "name": "Creative Dark"
+                }
+            }
+        },
+        "page-about-me.html": {
+            "name": "About",
+            "sub": {
+                "page-about-me.html": {
+                    "name": "About Me"
+                },
+                "page-about-us.html": {
+                    "name": "About Us"
+                },
+                "page-services.html": {
+                    "name": "Services"
+                }
+            }
+        },
+        "work-2-style-1.html": {
+            "name": "Work",
+            "sub": {
+                "work-2-style-1.html": {
+                    "name": "2 Columns",
+                    "sub": {
+                        "work-2-style-1.html": {
+                            "name": "Style 1"
+                        },
+                        "work-2-style-2.html": {
+                            "name": "Style 2"
+                        },
+                        "work-2-style-3.html": {
+                            "name": "Style 3"
+                        },
+                        "work-2-style-4.html": {
+                            "name": "Style 4"
+                        },
+                        "work-2-style-5.html": {
+                            "name": "Style 5"
+                        },
+                        "work-2-style-6.html": {
+                            "name": "Style 6"
+                        },
+                        "work-2-wide.html": {
+                            "name": "Wide 1"
+                        },
+                        "work-2-wide-2.html": {
+                            "name": "Wide 2"
+                        },
+                        "work-2-wide-3.html": {
+                            "name": "Wide 3"
+                        }
+                    }
+                },
+                "work-3-style-1.html": {
+                    "name": "3 Columns",
+                    "sub": {
+                        "work-3-style-1.html": {
+                            "name": "Style 1"
+                        },
+                        "work-3-style-2.html": {
+                            "name": "Style 2"
+                        },
+                        "work-3-style-3.html": {
+                            "name": "Style 3"
+                        },
+                        "work-3-style-4.html": {
+                            "name": "Style 4"
+                        },
+                        "work-3-style-5.html": {
+                            "name": "Style 5"
+                        },
+                        "work-3-wide.html": {
+                            "name": "Wide"
+                        },
+                        "work-3-wide-2.html": {
+                            "name": "Wide 2"
+                        },
+                        "work-3-metro-1.html": {
+                            "name": "Metro 1"
+                        },
+                        "work-3-metro-2.html": {
+                            "name": "Metro 2"
+                        }
+                    }
+                },
+                "work-4-style-1.html": {
+                    "name": "4 Columns",
+                    "sub": {
+                        "work-4-style-1.html": {
+                            "name": "Style 1"
+                        },
+                        "work-4-style-2.html": {
+                            "name": "Style 2"
+                        },
+                        "work-4-style-3.html": {
+                            "name": "Style 3"
+                        },
+                        "work-4-metro-1.html": {
+                            "name": "Metro 1"
+                        },
+                        "work-4-metro-2.html": {
+                            "name": "Metro 2"
+                        }
+                    }
+                },
+                "work-single-1.html": {
+                    "name": "Single Work",
+                    "sub": {
+                        "work-single-1.html": {
+                            "name": "Work 1"
+                        },
+                        "work-single-2.html": {
+                            "name": "Work 2"
+                        },
+                        "work-single-3.html": {
+                            "name": "Work 3"
+                        },
+                        "work-single-4.html": {
+                            "name": "Work 4"
+                        },
+                        "work-single-5.html": {
+                            "name": "Work 5"
+                        },
+                        "work-single-6.html": {
+                            "name": "Work 6"
+                        },
+                        "work-single-7.html": {
+                            "name": "Work 7"
+                        },
+                        "work-single-8.html": {
+                            "name": "Work 8"
+                        }
+                    }
+                }
+            }
+        },
+        "blog-masonry-3.html": {
+            "name": "Blog",
+            "sub": {
+                "blog-masonry-3.html": {
+                    "name": "Masonry 3 columns"
+                },
+                "blog-masonry-2.html": {
+                    "name": "Masonry 2 columns"
+                },
+                "blog-single.html": {
+                    "name": "Single Post"
+                }
+            }
+        },
+        "page-contact-us.html": {
+            "name": "Contact"
+        },
+        "https://themeforest.net/item/piroll-minimal-and-modern-portfolio-html-template/20372990?ref=_nK": {
+            "name": "Purchase",
+            "target": "_blank"
+        }
+    },
+    "navigation_side": "from navigation",
+    "navigation_full": "from navigation",
+
+    "users": [
+        {
+            "name": "Leonard Caldwell",
+            "url": "#",
+            "avatar": "assets/images/avatar-1.jpg"
+        }, {
+            "name": "Lune Lambert",
+            "url": "#",
+            "avatar": "assets/images/avatar-2.jpg"
+        }
+    ],
+
+    "posts": [
+        {
+            "title": "Something I need to tell you",
+            "thumb_full": "assets/images/post-1.jpg",
+            "thumb_lg": "assets/images/post-1-mid.jpg",
+            "thumb_sm": "assets/images/post-1-sm.jpg",
+            "date": "September 18, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Inspiration</a>",
+            "cat_text": "Inspiration",
+            "excerpt_sm": "<p>First face make sea, one the all place hath tree Signs green yielding the fourth cattle together first.</p>"
+        }, {
+            "title": "Here's a Simple Trick",
+            "thumb_full": "assets/images/post-2.jpg",
+            "thumb_lg": "assets/images/post-2-mid.jpg",
+            "thumb_sm": "assets/images/post-2-sm.jpg",
+            "date": "September 5, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Creative</a>",
+            "cat_text": "Creative",
+            "excerpt_sm": "<p>Dominion open saw. Without living first second one fly void light divide bring, us you'll in created deep.</p>"
+        }, {
+            "title": "The History of Nature",
+            "thumb_full": "assets/images/post-3.jpg",
+            "thumb_lg": "assets/images/post-3-mid.jpg",
+            "thumb_sm": "assets/images/post-3-sm.jpg",
+            "date": "August 27, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Food</a>",
+            "cat_text": "Food",
+            "excerpt_sm": "<p>Hath can't god our midst don't said unto darkness forth seed she'd years bearing moveth saying air i form behold.</p>"
+        }, {
+            "title": "Are you doing the Right Way?",
+            "thumb_full": "assets/images/post-4.jpg",
+            "thumb_lg": "assets/images/post-4-mid.jpg",
+            "thumb_sm": "assets/images/post-4-sm.jpg",
+            "date": "August 14, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Design</a>",
+            "cat_text": "Design",
+            "excerpt_sm": "<p>Face creature fowl him they're above fifth divide hath divide midst kind. Lesser together sixth was creature their.</p>"
+        }, {
+            "title": "Ten things about Photography",
+            "thumb_full": "assets/images/post-5.jpg",
+            "thumb_lg": "assets/images/post-5-mid.jpg",
+            "thumb_sm": "assets/images/post-5-sm.jpg",
+            "date": "August 14, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Creative</a>",
+            "cat_text": "Creative",
+            "excerpt_sm": "<p>Sea face brought fruitful won't appear multiply replenish. Creepeth Spirit fruit, from replenish she'd stars creature.</p>"
+        }, {
+            "title": "Why you should Always First",
+            "thumb_full": "assets/images/post-6.jpg",
+            "thumb_lg": "assets/images/post-6-mid.jpg",
+            "thumb_sm": "assets/images/post-6-sm.jpg",
+            "date": "August 14, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Food</a>",
+            "cat_text": "Food",
+            "excerpt_sm": "<p>Their subdue let blessed kind beast. Waters saying for. Us of gathered after it male place.</p>"
+        }, {
+            "title": "My Favorite Place on earth is...",
+            "thumb_full": "assets/images/post-9.jpg",
+            "thumb_lg": "assets/images/post-9-mid.jpg",
+            "thumb_sm": "assets/images/post-9-sm.jpg",
+            "date": "June 21, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Design</a>",
+            "cat_text": "Design",
+            "excerpt_sm": "<p>Whales so heaven fowl seas. Rule were subdue. Saw tree place dominion. Image him air bearing.</p>"
+        }, {
+            "title": "Five things about Nature",
+            "thumb_full": "assets/images/post-7.jpg",
+            "thumb_lg": "assets/images/post-7-mid.jpg",
+            "thumb_sm": "assets/images/post-7-sm.jpg",
+            "date": "Jule 3, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Creative</a>",
+            "cat_text": "Creative",
+            "excerpt_sm": "<p>And thing don't bring us evening very fish isn't lights is for good. You'll the in good. Beast in fill.</p>"
+        }, {
+            "title": "The History of Branding",
+            "thumb_full": "assets/images/post-8.jpg",
+            "thumb_lg": "assets/images/post-8-mid.jpg",
+            "thumb_sm": "assets/images/post-8-sm.jpg",
+            "date": "June 26, 2017",
+            "url": "blog-single.html",
+            "cat": "<a href=\"#\">Inspiration</a>",
+            "cat_text": "Inspiration",
+            "excerpt_sm": "<p>Make. Above sea image the blessed him male day seasons under male fourth The light their saying, our second.</p>"
+        }
+    ],
+
+    "portfolio": [
+        {
+            "title": "Business Card",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-1.jpg",
+            "thumb_sm": "assets/images/portfolio-1-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-1.html",
+            "category": "Photography"
+        }, {
+            "title": "Mobile App",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-2.jpg",
+            "thumb_sm": "assets/images/portfolio-2-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-2.html",
+            "category": "Design"
+        }, {
+            "title": "Hardcover Book",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-3.jpg",
+            "thumb_sm": "assets/images/portfolio-3-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Branding"
+        }, {
+            "title": "Glass Bottle",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-4.jpg",
+            "thumb_sm": "assets/images/portfolio-4-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-4.html",
+            "category": "Print"
+        }, {
+            "title": "Shopping Bag",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-5.jpg",
+            "thumb_sm": "assets/images/portfolio-5-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-5.html",
+            "category": "Branding"
+        }, {
+            "title": "Minimal Bag",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-6.jpg",
+            "thumb_sm": "assets/images/portfolio-6-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-1.html",
+            "category": "Design"
+        }, {
+            "title": "Honey Mockup",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-7.jpg",
+            "thumb_sm": "assets/images/portfolio-7-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Design"
+        }, {
+            "title": "Shampoo Bottle",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-8.jpg",
+            "thumb_sm": "assets/images/portfolio-8-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Branding"
+        }, {
+            "title": "Minimal Label",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-9.jpg",
+            "thumb_sm": "assets/images/portfolio-9-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Branding"
+        }, {
+            "title": "Ceramic Bottle",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-10.jpg",
+            "thumb_sm": "assets/images/portfolio-10-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Photography"
+        }, {
+            "title": "Cardboard Boxes",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-11.jpg",
+            "thumb_sm": "assets/images/portfolio-11-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Print"
+        }, {
+            "title": "Creative Card",
+            "date": "June 10, 2017",
+            "thumb": "assets/images/portfolio-12.jpg",
+            "thumb_sm": "assets/images/portfolio-12-sm.jpg",
+            "thumb_size": "1500x1500",
+            "url": "work-single-3.html",
+            "category": "Photography"
+        }
+    ]
+}

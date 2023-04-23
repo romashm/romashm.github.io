@@ -1,0 +1,63 @@
+{% set post = posts[4] %}
+{% set header_title = post.title %}
+{% set header_show = true %}
+{% set header_title_show = false %}
+{% set header_image = post.thumb_full %}
+{% set header_size = 'lg' %}
+{% set content_classname = 'bg-white' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="nk-gap-4"></div>
+
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <h1>{{ post.title }}</h1>
+
+                    <div class="nk-post-meta">
+                        {{ post.date }} / {{ post.cat | safe}} / 2 Comments
+                    </div>
+
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text">
+                        {% include "shared/blog-content.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Share -->
+                    <div class="nk-post-share">
+                        <strong>Share:</strong>
+                        <a href="#" title="Share page on Facebook" data-share="facebook">Facebook</a>,
+                        <a href="#" title="Share page on Twitter" data-share="twitter">Twitter</a>,
+                        <a href="#" title="Share page on Pinterest" data-share="pinterest">Pinterest</a>
+                        <!--
+                        <a href="#" title="Share page on Google Plus" data-share="google-plus">Google Plus</a>,
+                        <a href="#" title="Share page on LinkedIn" data-share="linkedin">LinkedIn</a>,
+                        <a href="#" title="Share page on Vkontakte" data-share="vk">Vkontakte</a>
+                        -->
+                    </div>
+                    <!-- END: Post Share -->
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-3"></div>
+            </div>
+        </div>
+    </div>
+
+    {% include "shared/blog-comments.html" %}
+    {% include "shared/blog-comments-reply.html" %}
+
+    <!-- START: Pagination -->
+    <div class="nk-pagination nk-pagination-center bg-gray-2">
+        <div class="container">
+            <a class="nk-pagination-prev" href="#"><span class="pe-7s-angle-left"></span> Previous Post</a>
+            <a class="nk-pagination-center" href="blog-masonry-2.html"><span class="nk-icon-squares"></span></a>
+            <a class="nk-pagination-next" href="#">Next Post <span class="pe-7s-angle-right"></span> </a>
+        </div>
+    </div>
+    <!-- END: Pagination -->
+{% endblock %}

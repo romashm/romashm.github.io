@@ -1,0 +1,116 @@
+.nk-pagination {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+
+    &.nk-pagination-nobg {
+        background-color: transparent;
+    }
+
+    // links
+    &,
+    .container {
+        display: flex;
+
+        > * {
+            flex: 1;
+        }
+
+        > a {
+            display: inline-block;
+            padding: 19px;
+            font-family: $font_additional;
+            font-size: .85rem;
+            font-weight: 500;
+            color: $color_titles;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            vertical-align: middle;
+            opacity: .6;
+            transition: .2s opacity;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+        > span {
+            display: inline-block;
+            padding: 19px;
+            font-size: .97rem;
+            color: $color_titles;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        // arrows
+        .nk-pagination-prev,
+        .nk-pagination-next {
+            min-width: 190px;
+            opacity: 1;
+
+            &:hover {
+                opacity: .6;
+            }
+
+            > span {
+                margin-top: -1px;
+                font-size: 1.6rem;
+                line-height: 1;
+                vertical-align: middle;
+            }
+        }
+        .nk-pagination-prev {
+            padding-left: 0;
+            text-align: left;
+
+            > span {
+                margin-left: -8px;
+            }
+        }
+        .nk-pagination-next {
+            padding-right: 0;
+            text-align: right;
+
+            > span {
+                margin-right: -8px;
+            }
+        }
+
+        .nk-pagination-center {
+            width: 100%;
+        }
+
+        // mobile
+        @media #{$media_smaller_sm} {
+            .nk-pagination-prev,
+            .nk-pagination-next {
+                min-width: 60px;
+                font-size: 0;
+
+                > span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .container {
+        flex: initial;
+
+        @media #{$media_xxs} {
+            width: 100%;
+        }
+    }
+
+    // position
+    &.nk-pagination-center {
+        text-align: center;
+    }
+    &.nk-pagination-left {
+        text-align: left;
+    }
+    &.nk-pagination-right {
+        text-align: right;
+    }
+}

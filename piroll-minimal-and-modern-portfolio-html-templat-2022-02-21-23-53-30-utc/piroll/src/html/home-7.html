@@ -1,0 +1,70 @@
+{% set page_title = 'Agency Portfolio' %}
+{% set content_classname = 'bg-white' %}
+{% set header_title = 'We Create Brand Strategy' %}
+{% set header_text = '<div class="lead-sm">We have over 20 years of combined experience, and know a thing or two <br> about designing websites and mobile apps.</div>
+<div class="nk-gap-1"></div>
+<a href="page-contact-us.html" class="nk-btn nk-btn-long">Contact Us</a>' %}
+{% set header_show = true %}
+{% set header_image = 'assets/images/home-7.jpg' %}
+{% set header_image_overlay = 'rgba(12, 12, 12, 0.6)' %}
+{% set header_size = 'xmd' %}
+{% set header_text_color = 'text-white' %}
+{% set nav = 2 %}
+{% set nav_dark = true %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <!-- START: Portfolio -->
+    <div class="container">
+        <!-- START: Filter -->
+        <ul class="nk-isotope-filter nk-isotope-filter-active">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter="Branding">Branding</li>
+            <li data-filter="Print">Print</li>
+            <li data-filter="Photography">Photography</li>
+            <li data-filter="Design">Design</li>
+        </ul>
+        <!-- END: Filter -->
+
+        <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols nk-isotope-gap">
+            {% for i in [6, 3, 4, 8, 2, 7, 1, 5, 11] %}
+                {% set item = portfolio[i] %}
+                <div class="nk-isotope-item" data-filter="{{ item.category }}">
+                    <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-4">
+                        <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                        <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}')"></div></div>
+                        <div class="nk-portfolio-item-info">
+                            <div>
+                                <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                                <div class="portfolio-item-category">{{ item.category }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Portfolio -->
+
+    <!-- START: Need a Project? -->
+    <div class="bg-gray-4 text-center">
+        <div class="nk-gap-5 mnb-12"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2>Need a Project?</h2>
+                    <div class="nk-gap-1 mnt-15"></div>
+                    <p>Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
+                    <div class="nk-gap mnt-9"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Need a Project? -->
+
+{% endblock %}

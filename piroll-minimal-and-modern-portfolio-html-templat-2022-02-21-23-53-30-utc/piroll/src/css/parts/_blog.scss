@@ -1,0 +1,373 @@
+/* Isotope Posts list */
+.nk-blog-isotope .nk-blog-post {
+    padding: 25px 30px;
+
+    .nk-post-thumb {
+        position: relative;
+        margin-top: -25px;
+        margin-right: -30px;
+        margin-bottom: 25px;
+        margin-left: -30px;
+
+        > a {
+            transition: .5s opacity;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+
+    .nk-post-category a {
+        display: inline-block;
+        bottom: 9px;
+        left: 10px;
+        min-width: 90px;
+        padding: 5.5px 15px;
+        margin-top: 25px;
+        margin-left: 30px;
+        font-size: .8rem;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $color_dark_1;
+        transition: .5s background-color;
+
+        &:hover {
+            background-color: $color_dark_3;
+        }
+    }
+
+    .nk-post-title {
+        margin-bottom: 15px;
+    }
+
+    .nk-post-text {
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+}
+
+/* Isotope Posts list Style 2 */
+.nk-blog-isotope-2 .nk-blog-post {
+    position: relative;
+    text-align: center;
+    background-color: #0c0c0c;
+    z-index: 1;
+
+    .nk-post-thumb {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        opacity: .5;
+        transition: .5s opacity;
+        z-index: -1;
+    }
+    &:hover .nk-post-thumb,
+    &.hover .nk-post-thumb {
+        opacity: .2;
+    }
+
+    .nk-post-content {
+        display: table;
+        width: 100%;
+        min-height: 400px;
+        padding: 40px;
+
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .nk-post-date {
+        margin-bottom: 17px;
+        font-size: .84rem;
+        font-weight: 500;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .nk-post-title {
+        margin-bottom: 19px;
+        color: #fff;
+    }
+
+    .nk-post-more {
+        position: relative;
+        display: inline-block;
+        font-size: .97rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            left: 50%;
+            width: 20px;
+            margin-left: -10px;
+            border-bottom: 1px solid;
+            transition: .5s transform, .5s width;
+        }
+
+        &:hover::after,
+        &.hover::after {
+            width: 30px;
+            transform: translateX(-5px);
+        }
+    }
+}
+
+
+/* Single Post */
+.nk-blog-post-single {
+    h1 {
+        margin-top: 8px;
+    }
+
+    .nk-post-date,
+    .nk-post-category,
+    .nk-post-comments-count {
+        font-size: .84rem;
+        font-weight: 500;
+        color: $color_titles;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: .5s opacity;
+        }
+        a:hover {
+            opacity: .6;
+        }
+    }
+
+    .nk-post-share {
+        margin-bottom: -6px;
+        color: $color_titles;
+
+        strong {
+            margin-right: 5px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: .5s opacity;
+        }
+        a:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.nk-post-title > a {
+    color: inherit;
+    text-decoration: none;
+    transition: .2s color;
+
+    &:hover,
+    &.hover {
+        color: $color_main;
+    }
+}
+
+.nk-post-meta {
+    font-family: $font_additional;
+    font-size: .76rem;
+    font-weight: 500;
+    color: $color_titles;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+
+    > a {
+        color: inherit;
+        transition: .2s color;
+
+        &:hover {
+            color: $color_main;
+            text-decoration: none;
+        }
+    }
+}
+
+.nk-post-text {
+    margin: 25px 0;
+    color: $color_text_blog;
+
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .pull-right,
+    .pull-left {
+        margin: 15px;
+    }
+    .pull-right {
+        margin-right: 0;
+    }
+    .pull-left {
+        margin-left: 0;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// comments
+$comments_avatar_width: 100px !default;
+$comments_avatar_width_sm: 50px !default;
+.nk-comments {
+    background-color: $color_gray_2;
+
+    h3:first-of-type {
+        margin-top: -6px;
+    }
+
+    .nk-comment {
+        margin-top: -5px;
+
+        &::after,
+        &::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .nk-comment {
+            margin-left: $comments_avatar_width;
+        }
+
+        .nk-comment,
+        + .nk-comment {
+            padding-top: 19px;
+            clear: both;
+        }
+
+        .nk-comment-avatar {
+            position: relative;
+            float: left;
+            margin-top: 4px;
+            margin-right: 30px;
+            z-index: 1;
+
+            img {
+                width: $comments_avatar_width;
+                height: auto;
+                border-radius: $comments_avatar_width / 2;
+                transition: .5s opacity;
+            }
+
+            a:hover img,
+            a.hover img{
+                opacity: .6;
+            }
+        }
+
+        // comment meta
+        .nk-comment-meta {
+            position: relative;
+            padding-bottom: 38px;
+            margin-right: -22px;
+            margin-bottom: 3px;
+            margin-left: -22px;
+            font-family: $font_additional;
+
+            .nk-comment-name,
+            .nk-comment-date,
+            .nk-comment-reply {
+                margin-right: 22px;
+                margin-left: 22px;
+                font-weight: 500;
+                color: $color_titles;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    transition: .2s color;
+                }
+                a:hover {
+                    color: $color_main;
+                }
+            }
+            .nk-comment-name {
+                float: left;
+                margin-left: 0;
+                line-height: 1;
+            }
+            .nk-comment-date,
+            .nk-comment-reply {
+                float: right;
+                font-size: .76rem;
+                text-transform: uppercase;
+                letter-spacing: .04em;
+            }
+        }
+
+        .nk-comment-text {
+            margin-left: $comments_avatar_width + 30px;
+            color: $color_text_blog;
+        }
+
+        // mobile
+        @media #{$media_smaller_md} {
+            .nk-comment {
+                margin-left: $comments_avatar_width_sm;
+            }
+            .nk-comment-meta {
+                padding-bottom: 20px;
+                margin-bottom: 15px;
+            }
+
+            .nk-comment-avatar {
+                margin-right: 20px;
+
+                img {
+                    width: $comments_avatar_width_sm;
+                    border-radius: $comments_avatar_width_sm / 2;
+                }
+            }
+            .nk-comment-text {
+                margin-left: $comments_avatar_width_sm + 20px;
+            }
+        }
+        @media #{$media_smaller_xs} {
+            .nk-comment {
+                margin-left: 20px;
+            }
+            .nk-comment-avatar {
+                margin-top: 0;
+            }
+            .nk-comment-meta {
+                padding-top: 13px;
+                padding-bottom: 0;
+            }
+            .nk-comment-text {
+                padding-top: 15px;
+                margin-left: 0;
+                clear: both;
+            }
+        }
+    }
+}
+
+// reply
+.nk-reply {
+    h3:first-of-type {
+        margin-top: -6px;
+    }
+}

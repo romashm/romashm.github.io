@@ -1,0 +1,36 @@
+.nk-widget {
+    overflow: hidden;
+
+    ~ .nk-widget {
+        margin-top: 65px;
+    }
+
+    .nk-widget-title {
+        margin-bottom: 2.1rem;
+        font-size: 1.4rem;
+    }
+}
+
+// Twitter
+.nk-twitter {
+    position: relative;
+    padding-left: 39px;
+
+    + .nk-twitter {
+        margin-top: 20px;
+    }
+
+    .nk-twitter-date {
+        margin-bottom: 10px;
+        font-size: .8rem;
+        line-height: 1.4;
+        opacity: .6;
+    }
+
+    .nk-twitter-icon {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        font-size: 1.3rem;
+    }
+}

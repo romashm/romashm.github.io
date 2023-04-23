@@ -1,0 +1,34 @@
+{% include "layouts/_head.html" %}
+
+<body>
+    {% if nav == 2 %}
+        {% include "shared/page-nav-2.html" %}
+    {% else %}
+        {% include "shared/page-nav.html" %}
+    {% endif %}
+    {% if nav_full %}
+        {% include "shared/page-nav-fullscreen.html" %}
+    {% endif %}
+    {% if nav_mobile and nav %}
+        {% include "shared/page-nav-mobile.html" %}
+    {% endif %}
+
+    <div class="nk-main{{ (' ' + content_classname) | safe if content_classname }}">
+        {% include "shared/page-header-title.html" %}
+
+        {% block content %}{% endblock %}
+
+        {% if footer == 3 %}
+            {% include "shared/page-footer-2.html" %}
+        {% elif footer %}
+            {% include "shared/page-footer.html" %}
+        {% endif %}
+    </div>
+
+    {% block after_content %}{% endblock %}
+
+    {% include "layouts/_foot.html" %}
+
+    {% block javascript %}{% endblock %}
+</body>
+</html>

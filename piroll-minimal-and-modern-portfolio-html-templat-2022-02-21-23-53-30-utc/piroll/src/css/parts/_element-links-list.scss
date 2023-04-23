@@ -1,0 +1,13 @@
+.nk-links-list {
+    display: flex;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        + ul {
+            margin-left: 50px;
+        }
+    }
+}

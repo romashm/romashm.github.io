@@ -1,0 +1,178 @@
+{% set page_title = 'Slider Home' %}
+{% set content_classname = 'bg-white' %}
+{% set header_show = false %}
+{% set nav = false %}
+{% set nav_full = true %}
+{% set nav_sticky = true %}
+{% set footer = 2 %}
+{% set custom_styles = '
+    .nk-carousel-3 .flickity-slider > div {
+        height: 570px;
+        width: 100%;
+    }
+    .nk-carousel-3 .flickity-slider > div > div {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <!-- START: Carousel -->
+    <div class="nk-carousel-3 nk-carousel-no-margin nk-carousel-all-visible nk-carousel-arrows text-white text-center" data-size="1" data-autoplay="18000" data-arrows="true">
+        <div class="nk-carousel-inner">
+            <div><div style="background-image: url('assets/images/home-5-1.jpg');">
+                <div class="nk-vertical-center"><div>
+                    <h1 class="nk-title text-white mb-25">Creative Branding Agency</h1>
+                    <div class="lead-sm">We have over 20 years of combined experience, and know a thing or two <br> about designing websites and mobile apps.</div>
+                    <div class="nk-gap-1"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Contact Us</a>
+                </div></div>
+            </div></div>
+            <div><div style="background-image: url('assets/images/home-5-2.jpg');">
+                <div class="nk-vertical-center"><div>
+                    <h1 class="nk-title text-white mb-25">We Design and Develop</h1>
+                    <div class="lead-sm">We are digital agencygency, based in USA.  We are specialized in design, <br> branding, marketing and development.</div>
+                    <div class="nk-gap-1"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Contact Us</a>
+                </div></div>
+            </div></div>
+            <div><div style="background-image: url('assets/images/home-5-3.jpg');">
+                <div class="nk-vertical-center"><div>
+                    <h1 class="nk-title text-white mb-25">Digital Branding Experience</h1>
+                    <div class="lead-sm">We're experts in branding, marketing, web visual content and truly <br> collaborative in our approach.</div>
+                    <div class="nk-gap-1"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Contact Us</a>
+                </div></div>
+            </div></div>
+        </div>
+    </div>
+    <!-- END: Carousel -->
+
+    <!-- START: Portfolio -->
+    <div class="container-fluid">
+        <!-- START: Filter -->
+        <ul class="nk-isotope-filter">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter="Branding">Branding</li>
+            <li data-filter="Print">Print</li>
+            <li data-filter="Photography">Photography</li>
+            <li data-filter="Design">Design</li>
+        </ul>
+        <!-- END: Filter -->
+
+        <div class="nk-portfolio-list nk-isotope nk-isotope-2-cols">
+            {% for i in [0, 1, 4, 3, 6, 8] %}
+                {% set item = portfolio[i] %}
+                <div class="nk-isotope-item" data-filter="{{ item.category }}">
+                    <div class="nk-portfolio-item nk-portfolio-item-info-style-3 {{ 'nk-portfolio-item-sm' if i == 0 or i == 8 else 'nk-portfolio-item-square' }}">
+                        <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                        <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}')"></div></div>
+                        <div class="nk-portfolio-item-info">
+                            <div>
+                                <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                                <div class="portfolio-item-category">{{ item.category }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- END: Portfolio -->
+
+    <!-- START: Partners -->
+    <div class="bg-white">
+        <div class="container">
+            <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
+                <div class="nk-carousel-inner">
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-1-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-3-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-4-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-5-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-6-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-7-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                    <div><div>
+                            <div class="nk-box-1">
+                                <img src="assets/images/partner-logo-8-dark.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Partners -->
+
+    <!-- START: Reviews -->
+    <div class="nk-box bg-main">
+        <div class="nk-gap-5 mnt-6"></div>
+        <div class="nk-gap-3"></div>
+        <div class="container-fluid">
+            <!-- START: Carousel -->
+            <div class="nk-carousel nk-carousel-all-visible text-white" data-autoplay="18000" data-dots="true">
+                <div class="nk-carousel-inner">
+                    <div><div>
+                            <blockquote class="nk-blockquote-style-1 text-white">
+                                <p>Outstanding job and exceeded all expectations. It was a pleasure
+                                    to work with them on a sizable first project and am looking
+                                    forward to start the next one asap.</p>
+                                <cite>Michael Hopkins</cite>
+                            </blockquote>
+                            <div class="nk-gap-2"></div>
+                        </div></div>
+                    <div><div>
+                            <blockquote class="nk-blockquote-style-1 text-white">
+                                <p>Outstanding job and exceeded all expectations. It was a pleasure
+                                    to work with them on a sizable first project and am looking
+                                    forward to start the next one asap.</p>
+                                <cite>Michael Hopkins</cite>
+                            </blockquote>
+                            <div class="nk-gap-2"></div>
+                        </div></div>
+                    <div><div>
+                            <blockquote class="nk-blockquote-style-1 text-white">
+                                <p>Outstanding job and exceeded all expectations. It was a pleasure
+                                    to work with them on a sizable first project and am looking
+                                    forward to start the next one asap.</p>
+                                <cite>Michael Hopkins</cite>
+                            </blockquote>
+                            <div class="nk-gap-2"></div>
+                        </div></div>
+                </div>
+            </div>
+            <!-- END: Carousel -->
+        </div>
+        <div class="nk-gap-4 mt-3"></div>
+    </div>
+    <!-- END: Reviews -->
+
+{% endblock %}

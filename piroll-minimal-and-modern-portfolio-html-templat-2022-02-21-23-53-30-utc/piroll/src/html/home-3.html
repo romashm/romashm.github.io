@@ -1,0 +1,127 @@
+{% set header_title = 'Classic Portfolio' %}
+{% set content_classname = 'bg-white' %}
+{% set header_show = true %}
+{% set header_title_show = false %}
+{% set header_image = 'assets/images/home-3.jpg' %}
+{% set header_size = 'full' %}
+{% set header_text_color = 'text-left' %}
+{% set header_text = '<div class="row">
+    <div class="col-md-5 offset-md-7">
+        <h1>We Design and Develop</h1>
+        <div class="nk-gap mnt-10"></div>
+        <p class="lead">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</p>
+        <div class="nk-gap mnt-10"></div>
+        <a href="page-contact-us.html" class="nk-btn nk-btn-long">Contact Us</a>
+        <div class="nk-gap-3"></div>
+    </div>
+</div>' %}
+{% set nav = false %}
+{% set nav_full = true %}
+{% set nav_opaque = false %}
+{% set nav_transparent = true %}
+{% set nav_sticky = true %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <!-- START: Portfolio -->
+    <div class="container-fluid">
+        <!-- START: Filter -->
+        <ul class="nk-isotope-filter nk-isotope-filter-active">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter="Branding">Branding</li>
+            <li data-filter="Photography">Photography</li>
+            <li data-filter="Design">Design</li>
+        </ul>
+        <!-- END: Filter -->
+
+        <div class="nk-portfolio-list nk-isotope nk-isotope-4-cols">
+            {% for i in [0, 1, 9, 2, 4, 5, 8, 6] %}
+                {% set item = portfolio[i] %}
+                {% set size = 'nk-portfolio-item-square' %}
+                {% if i == 1 or i == 2 or i == 4 or i == 5 %}{% set size = 'nk-portfolio-item-lg' %}{% endif %}
+                <div class="nk-isotope-item" data-filter="{{ item.category }}">
+                    <div class="nk-portfolio-item nk-portfolio-item-info-style-1 {{ size }}">
+                        <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                        <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}');"></div></div>
+                        <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-center">
+                            <div>
+                                <h2 class="portfolio-item-title h3">{{ item.title }}</h2>
+                                <div class="portfolio-item-category">{{ item.category }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- END: Portfolio -->
+
+    <!-- START: Partners -->
+    <div class="container">
+        <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
+            <div class="nk-carousel-inner">
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-1-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-3-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-4-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-5-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-6-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-7-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+                <div><div>
+                        <div class="nk-box-1">
+                            <img src="assets/images/partner-logo-8-dark.png" alt="" class="nk-img-fit">
+                        </div>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Partners -->
+
+    <!-- START: Need a Project? -->
+    <div class="bg-gray-4 text-center">
+        <div class="nk-gap-5 mnb-12"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2>Need a Project?</h2>
+                    <div class="nk-gap-1 mnt-15"></div>
+                    <p>Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
+                    <div class="nk-gap mnt-9"></div>
+                    <a href="page-contact-us.html" class="nk-btn nk-btn-long">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Need a Project? -->
+
+{% endblock %}

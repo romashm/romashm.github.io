@@ -1,0 +1,222 @@
+{
+  "name": "piroll",
+  "title": "Piroll",
+  "version": "1.0.4",
+  "description": "Minimal & Clean Portfolio HTML Template",
+  "author": "robirurk, nK",
+  "website": "https://nkdev.info",
+  "purchase": "https://nkdev.info",
+  "support": "https://nk.ticksy.com",
+  "license": "You must have a valid license purchased only from ThemeForest (the above link) in order to legally use the theme for your project.",
+  "scripts": {
+    "dev": "gulp",
+    "deploy": "gulp deploy",
+    "production": "gulp production",
+    "css-lint": "stylelint --syntax scss \"src/css/**/*.scss\"",
+    "css-lint-fix": "stylelint --fix --syntax scss \"src/css/**/*.scss\"",
+    "js-lint": "eslint src/js/",
+    "js-lint-fix": "eslint --fix src/js/",
+    "lint": "npm-run-all css-lint js-lint",
+    "lint-fix": "npm-run-all css-lint-fix js-lint-fix",
+    "update:packages": "npm i -g npm-check-updates && npm-check-updates -u && npm install",
+    "precommit": "npm run lint"
+  },
+  "gulp_config": {
+    "variables": {
+      "src": "./src",
+      "dist": "./dist",
+      "deploy": "./dist/deploy",
+      "template_name": "piroll",
+      "template_title": "Piroll"
+    },
+    "browserSync": {
+      "proxy": "127.0.0.1:8000",
+      "open": true,
+      "notify": false
+    },
+    "php": {
+      "base": "{dist}/{template_name}",
+      "port": 8000,
+      "keepalive": true,
+      "stdio": "ignore"
+    },
+    "static": [
+      {
+        "from": "{src}/static/**",
+        "to": "{dist}/{template_name}"
+      }
+    ],
+    "js": {
+      "from": "{src}/js/*.js",
+      "to": "{dist}/{template_name}/assets/js"
+    },
+    "css": {
+      "from": "{src}/css/**/*.{sass,scss,css}",
+      "to": "{dist}/{template_name}/assets/css",
+      "autoprefixer": {
+        "browsers": [
+          "last 4 version",
+          "> 1%"
+        ]
+      },
+      "sass": {
+        "indentedSyntax": true,
+        "indentWidth": 4,
+        "outputStyle": "expanded"
+      }
+    },
+    "html": {
+      "from": "{src}/html/*.html",
+      "to": "{dist}/{template_name}",
+      "dataFile": "{src}/html/data/global.json",
+      "renderPath": "{src}/html",
+      "htmltidy": {
+        "doctype": "html5",
+        "hideComments": false,
+        "indent": true
+      }
+    },
+    "images": {
+      "from": "{src}/images/**/*.{jpg,jpeg,png,gif,svg}",
+      "to": "{dist}/{template_name}/assets/images"
+    },
+    "watch": [
+      {
+        "task": "static",
+        "from": "{src}/static/**/*"
+      },
+      {
+        "task": "images",
+        "from": "{src}/images/**/*.{jpg,jpeg,png,gif,svg}"
+      },
+      {
+        "task": "html",
+        "from": "{src}/html/**/*.{html,json}"
+      },
+      {
+        "task": "css",
+        "from": "{src}/css/**/*.{sass,scss,css}"
+      },
+      {
+        "task": "js",
+        "from": "{src}/js/**/*.js"
+      }
+    ],
+    "production": {
+      "google_analytics": "UA-48958097-5",
+      "protect": [
+        "html.nkdev.info",
+        "You are not permitted to use template without license!",
+        "https://nkdev.info/"
+      ]
+    },
+    "deploy": {
+      "zip": [
+        {
+          "from": [
+            [
+              "{deploy}/*{template_name}/**/*",
+              {
+                "dot": true
+              }
+            ]
+          ],
+          "to": "{dist}/{template_name}.zip"
+        }
+      ],
+      "static": [
+        {
+          "from": "{dist}/{template_name}/**/*",
+          "to": "{deploy}/{template_name}/dist"
+        },
+        {
+          "from": [
+            [
+              [
+                "{src}/*README.html",
+                "gulpfile.babel.js",
+                "babel.config.js",
+                ".eslintrc",
+                ".gitignore",
+                "package.json"
+              ]
+            ]
+          ],
+          "to": "{deploy}/{template_name}"
+        },
+        {
+          "from": [
+            [
+              [
+                "{src}/css/**/*",
+                "{src}/js/**/*",
+                "{src}/html/**/*",
+                "{src}/static/**/*",
+                "{src}/images/**/*"
+              ],
+              {
+                "base": "{src}"
+              }
+            ]
+          ],
+          "to": "{deploy}/{template_name}/src"
+        },
+        {
+          "from": "{src}/images-placeholders/**/*",
+          "to": "{deploy}/{template_name}/src/images"
+        },
+        {
+          "from": "{src}/images-placeholders/**/*",
+          "to": "{deploy}/{template_name}/dist/assets/images"
+        }
+      ]
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "del": "^6.0.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cdnizer": "^2.2.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-data": "^1.3.1",
+    "gulp-header": "^2.0.9",
+    "gulp-htmltidy": "^0.2.4",
+    "gulp-if": "^3.0.0",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "gulp-load-plugins": "^2.0.4",
+    "gulp-modify-file": "^1.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-vinyl-zip": "^2.2.1",
+    "gulp-watch": "^5.0.1",
+    "husky": "^4.3.0",
+    "merge-stream": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "string-template": "^1.0.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.0"
+  }
+}

@@ -1,0 +1,56 @@
+{% set header_title = 'Minimal Portfolio' %}
+{% set header_show = false %}
+{% set content_classname = 'bg-white' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+<!-- START: Digital. Modern. Creative -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="nk-gap-5 mnt-4"></div>
+
+            <h2 class="display-4">We Create Digital <span class="text-main">Branding</span></h2>
+            <div class="nk-gap mnt-5"></div>
+
+            <p class="lead mb-30">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</p>
+        </div>
+    </div>
+</div>
+<!-- END: Digital. Modern. Creative -->
+
+<!-- START: Portfolio -->
+<div class="container">
+    <!-- START: Filter -->
+    <ul class="nk-isotope-filter nk-isotope-filter-active text-left">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter="Branding">Branding</li>
+        <li data-filter="Print">Print</li>
+        <li data-filter="Design">Design</li>
+    </ul>
+    <!-- END: Filter -->
+
+    <div class="nk-portfolio-list nk-isotope nk-isotope-2-cols nk-isotope-gap">
+        {% for i in [1, 3, 7, 2, 6, 10] %}
+            {% set item = portfolio[i] %}
+            <div class="nk-isotope-item" data-filter="{{ item.category }}">
+                <div class="nk-portfolio-item nk-portfolio-item-info-style-4">
+                    <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                    <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb_sm }}');"></div></div>
+                    <div class="nk-portfolio-item-info">
+                        <div>
+                            <h2 class="portfolio-item-title h5">{{ item.title }}</h2>
+                            <div class="portfolio-item-category">{{ item.category }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="nk-gap-4"></div>
+</div>
+<!-- END: Portfolio -->
+
+{% endblock %}

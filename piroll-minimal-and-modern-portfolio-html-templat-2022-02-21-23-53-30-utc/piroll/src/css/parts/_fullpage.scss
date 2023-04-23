@@ -1,0 +1,123 @@
+.nk-fullpage-portfolio {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: $color_black_3;
+    z-index: 1;
+
+    .nk-fullpage-item {
+        display: none;
+    }
+
+    .nk-fullpage-bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            opacity: .5;
+        }
+    }
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: .3s opacity;
+
+        &:hover {
+            color: inherit;
+            opacity: .6;
+        }
+    }
+
+    .nk-fullpage-nav > li,
+    .nk-fullpage-item-category a {
+        font-family: $font_additional;
+        font-size: .8rem;
+        letter-spacing: .07em;
+        opacity: .5;
+        transition: .3s opacity;
+
+        &:hover,
+        &.active {
+            color: inherit;
+            opacity: 1;
+        }
+    }
+
+    .nk-fullpage-view-button {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+    }
+    .nk-fullpage-content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .nk-fullpage-item-category {
+        margin-bottom: 10px;
+        font-size: .848rem;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    .nk-fullpage-title a {
+        color: #fff;
+    }
+}
+
+// right nav
+.nk-fullpage-nav {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s visibility, .3s opacity, .3s transform;
+    transform: translateY(-50%) translateX(100%);
+    z-index: 2;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    > li {
+        position: relative;
+        width: 20px;
+        padding: 15px 0;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

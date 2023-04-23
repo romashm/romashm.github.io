@@ -1,0 +1,64 @@
+{% set header_title = 'Blog Masonry 2 Columns' %}
+{% set content_classname = 'bg-white' %}
+
+{% set header_show = true %}
+{% set header_title_show = false %}
+{% set header_text = '<h1 class="mb-25 text-white">Our Blog</h1>
+<div class="lead-sm text-white">Set be fowl living very tree spirit whose fruit moving Dominion. <br> Heaven said fourth, under creeping.</div>' %}
+{% set header_image = 'assets/images/header-blog.jpg' %}
+{% set header_image_overlay = 'rgba(20, 20, 20, 0.6)' %}
+{% set header_size = 'sm' %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <!-- START: Filter -->
+        <ul class="nk-isotope-filter">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter="Design">Design</li>
+            <li data-filter="Food">Food</li>
+            <li data-filter="Inspiration">Inspiration</li>
+            <li data-filter="Creative">Creative</li>
+        </ul>
+        <!-- END: Filter -->
+
+        <!-- START: Posts List -->
+        <div class="nk-blog-isotope nk-isotope nk-isotope-gap nk-isotope-2-cols">
+
+            {% for post in posts %}
+                <!-- START: Post -->
+                <div class="nk-isotope-item" data-filter="{{ post.cat_text }}">
+                    <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                            <a href="{{ post.url }}">
+                                <img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch">
+                            </a>
+                        </div>
+                        <h2 class="nk-post-title h5"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                        <div class="nk-post-meta">
+                            {{ post.date }} / {{ post.cat | safe }}
+                        </div>
+
+                        <div class="nk-post-text">
+                            {{ post.excerpt_sm | safe }}
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Post -->
+            {% endfor %}
+
+        </div>
+        <!-- END: Posts List -->
+
+        <div class="nk-gap-5"></div>
+
+    </div>
+
+    <!-- START: Pagination -->
+    <div class="nk-pagination nk-pagination-center bg-gray-2">
+        <a href="#">Load More Posts</a>
+    </div>
+    <!-- END: Pagination -->
+{% endblock %}

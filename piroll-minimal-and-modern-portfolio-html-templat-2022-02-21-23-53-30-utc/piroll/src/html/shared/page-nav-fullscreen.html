@@ -1,0 +1,74 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav %}
+        <li{% if isActiveMenuItem(file, item, filename) or item.sub %} class="{{ 'active' if isActiveMenuItem(file, item, filename) }}{{ ' nk-drop-item' if item.sub }}"{% endif %}>
+            <a href="{{file | safe}}"{{ ' target="' + item.target + '"' if item.target }}>
+                {{item.name | safe}}
+                {% if item.description -%}
+                    <span class="nk-item-descr">{{item.description | safe}}</span>
+                {%- endif %}
+            </a>
+            {%- if item.sub -%}
+                <ul class="dropdown">
+                    {{ submenu(item.sub) }}
+                </ul>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+{% if navigation_full == 'from navigation' %}
+    {% set navigation_full = navigation %}
+{% endif %}
+<!--
+    START: Fullscreen Navbar
+
+    Additional Classes:
+        .nk-navbar-align-center
+        .nk-navbar-align-right
+-->
+<nav class="nk-navbar nk-navbar-full nk-navbar-align-center{{ ' nk-navbar-light' if nav_full_light }}" id="nk-full">
+    <div class="nk-nav-table">
+        <div class="nk-nav-row">
+            <div class="container{{ '-fluid' if nav_in_container == false }}">
+                <div class="nk-nav-header">
+                    {% if nav_logo %}
+                    <div class="nk-nav-logo">
+                        <a href="{{ nav_logo_url }}" class="nk-nav-logo">
+                            <img src="{{ nav_logo_light }}" alt="" width="{{ nav_logo_size }}">
+                        </a>
+                    </div>
+                    {% endif %}
+                    <div class="nk-nav-close nk-navbar-full-toggle">
+                        <span class="nk-icon-close"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-nav-row-full nk-nav-row">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="nk-nav-table">
+                        <div class="nk-nav-row nk-nav-row-full nk-nav-row-center">
+                            <ul class="nk-nav">
+                                {{ submenu(navigation_full) }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-nav-row">
+            <div class="container">
+                <div class="nk-nav-social">
+                    <ul>
+                        <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END: Fullscreen Navbar -->

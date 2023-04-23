@@ -1,0 +1,72 @@
+// main colors
+$color_main: #10c9c3 !default;
+
+$color_text: #5f5f5f !default;
+$color_text_blog: #787878 !default;
+$color_titles: #171717 !default;
+$color_bg: #f6f6f6 !default;
+$color_bg_footer: #141414 !default;
+$color_text_footer: #bcbcbc !default;
+$color_titles_footer: #fff !default;
+
+// dark colors
+$color_dark_1: #252525 !default;
+$color_dark_2: lighten($color_dark_1, 4%) !default;
+$color_dark_3: lighten($color_dark_1, 8%) !default;
+$color_dark_4: lighten($color_dark_1, 12%) !default;
+
+// black colors
+$color_black_1: #000 !default;
+$color_black_2: #0e0e0e !default;
+$color_black_3: #141414 !default;
+
+// gray colors
+$color_gray_1: #fafafa !default;
+$color_gray_2: darken($color_gray_1, 1%) !default;
+$color_gray_3: darken($color_gray_1, 2%) !default;
+$color_gray_4: darken($color_gray_1, 3%) !default;
+$color_gray_5: darken($color_gray_1, 20%) !default;
+
+// main colors list
+$colors: (
+    "main"  : $color_main,
+    "white"   : #fff,
+    "black"   : $color_black_1,
+    "black-2" : $color_black_2,
+    "black-3" : $color_black_3,
+    "dark-1"  : $color_dark_1,
+    "dark-2"  : $color_dark_2,
+    "dark-3"  : $color_dark_3,
+    "dark-4"  : $color_dark_4,
+    "gray-1"  : $color_gray_1,
+    "gray-2"  : $color_gray_2,
+    "gray-3"  : $color_gray_3,
+    "gray-4"  : $color_gray_4,
+    "gray-5"  : $color_gray_5
+) !default;
+
+// fonts
+$font_headings: "Montserrat", sans-serif !default;
+$font_buttons: "Montserrat", sans-serif !default;
+$font_body: "Nunito Sans", sans-serif !default;
+$font_additional: "Montserrat", sans-serif !default;
+$font_blockquote: "PT Sans", serif !default;
+$html_font_size: 15px !default;
+$body_line_height: 1.65 !default;
+$body_letter_spacing: .004em !default;
+
+// media variables
+$media_xxs:           "(max-width: 575px)" !default;
+$media_xs:            "(max-width: 767px)" !default;
+$media_sm:            "(min-width: 767px) and (max-width: 991px)" !default;
+$media_md:            "(min-width: 992px) and (max-width: 1199px)" !default;
+$media_lg:            "(min-width: 1200)" !default;
+
+// additional variables
+$media_smaller_xs:    "(max-width: 767px)" !default;
+$media_smaller_sm:    "(max-width: 991px)" !default;
+$media_smaller_md:    "(max-width: 1199px)" !default;
+$media_larger_xs:     "(min-width: 576px)" !default;
+$media_larger_sm:     "(min-width: 768px)" !default;
+$media_larger_md:     "(min-width: 992px)" !default;
+$media_larger_lg:     "(min-width: 1200px)" !default;

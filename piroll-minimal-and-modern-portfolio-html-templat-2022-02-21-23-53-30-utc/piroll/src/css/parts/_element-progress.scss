@@ -1,0 +1,58 @@
+.nk-progress {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+
+    .nk-progress-line {
+        width: 100%;
+        height: 5px;
+        background-color: #d8d8d8;
+
+        > div {
+            height: 100%;
+            text-align: right;
+            background-color: $color_main;
+        }
+    }
+
+    .nk-progress-title {
+        margin-bottom: 13px;
+        font-family: $font_additional;
+        font-size: .8rem;
+        font-weight: 500;
+        color: $color_titles;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+
+        .nk-progress-percent {
+            margin-left: 14px;
+        }
+    }
+
+    // sizes
+    &.nk-progress-xs {
+        .nk-progress-line {
+            height: 1px;
+        }
+    }
+    &.nk-progress-sm {
+        .nk-progress-line {
+            height: 3px;
+        }
+    }
+    &.nk-progress-md {
+        .nk-progress-line {
+            height: 8px;
+        }
+    }
+    &.nk-progress-lg {
+        .nk-progress-line {
+            height: 12px;
+        }
+    }
+    &.nk-progress-xlg {
+        .nk-progress-line {
+            height: 16px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.nk-header-title {
+    position: relative;
+    display: flex; // fix for IE. All other browsers works fine with display: block.
+    overflow: hidden;
+    text-align: center;
+    z-index: 0;
+
+    // size default
+    .nk-header-table {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 470px;
+        padding-top: 75px;
+    }
+
+    // size small
+    &.nk-header-title-sm .nk-header-table {
+        min-height: 370px;
+    }
+
+    // size mid
+    &.nk-header-title-md .nk-header-table {
+        min-height: 460px;
+    }
+
+    // size extra mid
+    &.nk-header-title-xmd .nk-header-table {
+        min-height: 570px;
+    }
+
+    // size large
+    &.nk-header-title-lg .nk-header-table {
+        min-height: 670px;
+    }
+
+    // size x-large
+    &.nk-header-title-xl .nk-header-table {
+        min-height: 770px;
+    }
+
+    // size full
+    &.nk-header-title-full .nk-header-table {
+        min-height: 100vh;
+    }
+
+    .nk-header-table-cell {
+        flex: 1;
+        width: 100%;
+        padding: 80px 0;
+    }
+
+    // text bottom
+    .nk-header-text-bottom {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: rgba($color_dark_1, .4);
+    }
+    &.nk-header-title-full .nk-header-text-bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    // scroll down button
+    .nk-header-title-scroll-down {
+        position: absolute;
+        display: block;
+        bottom: 65px;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        font-size: 2rem;
+        line-height: 54px;
+        color: inherit;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid;
+        border-radius: 50%;
+        opacity: .6;
+        transition: .5s opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    // title
+    h1.nk-title {
+        margin-bottom: 0;
+        line-height: 1.18;
+    }
+}

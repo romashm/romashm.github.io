@@ -1,0 +1,119 @@
+{% set page_title = 'Creative Dark' %}
+{% set content_classname = 'bg-black-3 text-white' %}
+{% set nav = false %}
+{% set nav_full = true %}
+{% set nav_opaque = false %}
+{% set nav_transparent = true %}
+{% set nav_white_text_on_top = true %}
+{% set header_show = false %}
+{% set portfolio = [
+    {
+        "title": "Look Closely",
+        "thumb": "assets/images/portfolio-1-alt.jpg",
+        "url": "work-single-1.html",
+        "category": "Branding"
+    }, {
+        "title": "Take My Hand",
+        "thumb": "assets/images/portfolio-2-alt.jpg",
+        "url": "work-single-2.html",
+        "category": "Design"
+    }, {
+        "title": "Internal Power",
+        "thumb": "assets/images/portfolio-3-alt.jpg",
+        "url": "work-single-3.html",
+        "category": "Branding"
+    }, {
+        "title": "Boycott of Slovenliness",
+        "thumb": "assets/images/portfolio-4-alt.jpg",
+        "url": "work-single-4.html",
+        "category": "Photography"
+    }, {
+        "title": "Fresh Start",
+        "thumb": "assets/images/portfolio-5-alt.jpg",
+        "url": "work-single-5.html",
+        "category": "Print"
+    }, {
+        "title": "Step Forward",
+        "thumb": "assets/images/portfolio-6-alt.jpg",
+        "url": "work-single-1.html",
+        "category": "Photography"
+    }, {
+        "title": "Time is Money",
+        "thumb": "assets/images/portfolio-7-alt.jpg",
+        "url": "work-single-3.html",
+        "category": "Design"
+    }, {
+        "title": "Far Perspective",
+        "thumb": "assets/images/portfolio-8-alt.jpg",
+        "url": "work-single-3.html",
+        "category": "Branding"
+    }, {
+        "title": "Catch Your Luck",
+        "thumb": "assets/images/portfolio-9-alt.jpg",
+        "url": "work-single-3.html",
+        "category": "Print"
+    }, {
+        "title": "Cosiness and Serenity",
+        "thumb": "assets/images/portfolio-10-alt.jpg",
+        "url": "work-single-3.html",
+        "category": "Photography"
+    }
+] %}
+
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-gap-5"></div>
+
+    <!-- START: About Piroll -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-gap-5 mnt-10"></div>
+                <h1 class="text-white lh-55">We are independed design & development agency</h1>
+                <div class="nk-gap-5 mb-10"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: About Piroll -->
+
+    <!-- START: Portfolio -->
+    <div class="nk-portfolio-list nk-isotope nk-isotope-4-cols">
+        {% for item in portfolio %}
+            <div class="nk-isotope-item{{ ' nk-isotope-item-x2' if loop.index0 == 2 or loop.index0 == 5 }}" data-filter="{{ item.category }}">
+                <div class="nk-portfolio-item nk-portfolio-item-info-style-1 nk-portfolio-item-square">
+                    <a href="{{ item.url }}" class="nk-portfolio-item-link"></a>
+                    <div class="nk-portfolio-item-image"><div style="background-image: url('{{ item.thumb }}');"></div></div>
+                    <div class="nk-portfolio-item-info bg-main-9">
+                        <div>
+                            <h2 class="portfolio-item-title h3">{{ item.title }}</h2>
+                            <div class="portfolio-item-category">{{ item.category }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- END: Portfolio -->
+
+
+    <!-- START: About Piroll -->
+    <div class="bg-black-2">
+        <div class="container">
+            <div class="nk-gap-5"></div>
+            <div class="row vertical-gap">
+                <div class="col-lg-6">
+                    <h2 class="text-white lh-45">We are brand strategy and digital design agency
+                    </h2>
+                </div>
+                <div class="col-lg-6 text-gray-5">
+                    <p>Firmament first without, in it also lesser brought. Can't green from firmament unto shall i. Beginning living together light blessed sixth place behold without make had upon for dry, made rule Second. Given one won't us said open divided night the life.</p>
+                    <p>Own won't said every gathered herb third replenish face seas days moved. Form over rule light created they're.</p>
+                </div>
+            </div>
+            <div class="nk-gap-5 "></div>
+        </div>
+    </div>
+    <!-- END: About Piroll -->
+
+{% endblock %}
