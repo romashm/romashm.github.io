@@ -1,0 +1,44 @@
+
+// Font Family
+
+$body-font: 'Roboto', sans-serif;
+
+$heading-font: 'Montserrat', sans-serif;
+
+
+// Font Size
+
+$h1-font: 85px;
+$h2-font: 45px;
+$h3-font: 24px;
+$h4-font: 22px;
+$h5-font: 20px;
+$h6-font: 18px;
+
+// Colors
+
+$black-color: #000000;
+
+$text-color: #2F2F2F;
+
+$primary-color: #0B3D2C;
+
+$secondary-color: #2A7D2E;
+
+$golden-color: #F1D2A9;
+
+$gray-color:#FCFAF7;
+
+$white: #fff;
+
+// Responsive Variables
+
+$xl: 'only screen and (min-width: 1200px)';
+$lp: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$lm : '(max-width: 1199px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$xm:'(max-width: 991px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs:'(max-width: 767px)';
+$xss:'(max-width: 575px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';

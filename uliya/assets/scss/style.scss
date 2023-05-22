@@ -1,0 +1,92 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Gadden - Garden & Landscaping HTML Template
+    Template URI: site.com
+    Description: Gadden is a creative & unique HTML template for Landscaping, Gardening, Groundskeeping, Lawn Services, Florists, Flower Shops and companies that offer related services.
+    Author: WebTend 
+    Author URI: https://webtend.net/
+    Version: 1.0
+
+--------------------------
+    CSS INDEX
+--------------------------
+
+    01. Common css 
+    02. Header css
+    03. Hero css
+    04. About css
+    05. Features css
+    06. Service css
+    07. Project css
+    08. Gallery css
+    09. Team css
+    10. Testimonial css
+    11. Faqs css
+    12. Pricing css
+    13. Shop css
+    14. Blog css
+    15. Contact css
+    16. Footer css
+    17. Sections css
+    
+-----------------------------------------------------------------------------------*/
+
+// global variables
+@import 'variables';
+
+// global Mixins
+@import 'mixin';
+
+// global Mixins
+@import 'extend';
+
+// common
+@import 'common';
+
+// Header
+@import 'sections/header';
+
+// Hero
+@import 'sections/hero';
+
+// About
+@import 'sections/about';
+
+// Features
+@import 'sections/features';
+
+// Service
+@import 'sections/service';
+
+// Project
+@import 'sections/project';
+
+// Gallery
+@import 'sections/gallery';
+
+// team
+@import 'sections/team';
+
+// testimonial
+@import 'sections/testimonial';
+
+// Faq
+@import 'sections/faqs';
+
+// Pricing
+@import 'sections/pricing';
+
+// Shop
+@import 'sections/shop';
+
+// Blog
+@import 'sections/blog';
+
+// contact
+@import 'sections/contact';
+
+// Footer
+@import 'sections/footer';
+
+// Sections
+@import 'sections/sections';

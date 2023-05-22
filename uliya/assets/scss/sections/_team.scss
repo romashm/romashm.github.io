@@ -1,0 +1,389 @@
+
+
+/*---========================
+        09. Team css 
+=======================----*/
+
+/*--==== Team Style ====--*/
+
+.single-team-item{
+    &:hover{
+        & .member-img{
+            & .icon-btn{
+                @extend %secondary-bg;
+                @extend %white-color;
+                box-shadow: 0px 10px 60px rgba(11, 61, 44, 0.85);
+            }
+        }
+    }
+    & .member-img{
+        position: relative;
+        & img{
+            width: 100%;
+            @include border-radius(20px);
+        }
+        & svg.member-shape{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        & .icon-btn{
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            @include border-radius(50%);
+            @extend %black-color;
+            @extend %white-bg;
+            @extend %flex-center;
+            box-shadow: 0px 10px 60px rgba(11, 61, 44, 0.5);
+            @include transition(.3s);
+        }
+    }
+    & .member-info{
+        padding-top: 40px;
+        & h3.title{
+            margin-bottom: 5px;
+            @media #{$xs}{
+                font-size: 20px;
+            }
+            &:hover{
+                @extend %secondary-color;
+            }
+        }
+    }
+}
+
+.single-team-item-two{
+    &:hover{
+        & .member-img{
+            & .social-box{
+                bottom: 20px;
+            }
+        }
+    }
+    & .member-img{
+        position: relative;
+        overflow: hidden;
+        & img{
+            width: 100%;
+            @include border-radius(29px);
+        }
+        & .social-box{
+            position: absolute;
+            bottom: -50%;
+            left: 50%;
+            @include transform(translateX(-50%));
+            @include transition(.3s);
+        }
+    }
+    & .member-info{
+        padding-top: 30px;
+        & h4.title{
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+    }
+}
+
+/*--==== Skill Bar ====--*/
+
+.single-skill-bar{
+    @include border-radius(20px);
+    background-color: #fff;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    @media #{$lg}{
+        flex-wrap: wrap;
+    }
+    @media #{$xss}{
+        flex-wrap: wrap;
+    }
+    & h5.title{
+        flex: 0 0 auto;
+        width: 27%;
+        margin-inline-end: 30px;
+        @media #{$lg}{
+            width: 70%;
+        }
+        @media #{$xss}{
+            width: 70%;
+        }
+    }
+    & .progress-bar{
+        width: 100%;
+        background-color: transparent;
+        height: 5px;
+        margin-inline-end: 20px;
+        @media #{$lg}{
+            order: 3;
+            margin-top: 15px;
+            margin-inline-end: 0;
+        }
+        @media #{$xss}{
+            order: 3;
+            margin-top: 15px;
+            margin-inline-end: 0;
+        }
+        & .progress{
+            @extend %secondary-bg;
+        }
+    }
+    & span.number{
+        font: 600 20px $heading-font;
+    }
+}
+
+.single-skill-bar-two{
+    & h6.title{
+        margin-bottom: 17px;
+        & span.number{
+            float: right;
+        }
+    }
+    & .progress-bar{
+        height: 7px;
+        background-color: rgba(255, 255, 255, 0.1);
+        & .progress{
+            @extend %white-bg;
+            @include border-radius(0px);
+        }
+    }
+}
+
+/*--==== Skill Image Box ====--*/
+
+.skill-image-box{
+    min-height: 565px;
+    max-width: 565px;
+    & .skill-img-one{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        @include border-radius(20px);
+    }
+    & .skill-img-two{
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        @include border-radius(20px);
+        @media #{$lg}{
+            right: 0;
+        }
+        @media #{$xss}{
+            right: 0;
+        }
+        @media #{$sm}{
+            right: 20px;
+        }
+    }
+    & .skill-img-three{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include border-radius(20px);
+    }
+    & .circle-logo{
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        width: 185px;
+        height: 185px;
+        @extend %secondary-bg;
+        box-shadow: 0px 10px 60px rgba(42, 125, 46, 0.5);
+        padding: 13px;
+        @media #{$xs}{
+            left: 0;
+        }
+        & .inner-circle{
+            border: 2px dashed #FFFFFF;
+            & i{
+                font-size: 55px;
+                @extend %white-color;
+            }
+            & h5{
+                @extend %white-color;
+            }
+        }
+    }
+    & .shape{
+        position: absolute;
+        &.shape-one{
+            top: 0;
+            right: -40px;
+            @media #{$lg}{
+                right: 0;
+            }
+            @media #{$xss}{
+                right: 0;
+            }
+            & span{
+                width: 460px;
+                height: 460px;
+                @include border-radius(50%);
+                background-color: rgba(42, 125, 46, 0.07);
+                @media #{$xss}{
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+    }
+}
+
+.skill-two_image-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-inline-end: -130px;
+    @media #{$lp}{
+        margin-inline-end: 0;
+    }
+    @media #{$lm}{
+        margin-inline-end: 0;
+    }
+    @media #{$xs}{
+        gap: 15px;
+    }
+    & .skill-img-one{
+        width: 53%;
+        margin-bottom: 30px;
+        @media #{$lp}{
+            width: 50%;
+        }
+        @media #{$lm}{
+            width: 50%;
+        }
+    }
+    & .skill-img-two{
+        width: 42%;
+        margin-bottom: 30px;
+        @media #{$lp}{
+            width: 40%;
+        }
+        @media #{$lm}{
+            width: 40%;
+        }
+    }
+    & .circle-logo{
+        position: absolute;
+        width: 225px;
+        height: 225px;
+        left: 57%;
+        top: 50%;
+        @include transform(translate(-57%,-50%));
+        @media #{$lp}{
+            width: 180px;
+            height: 180px;
+        }
+        @media #{$xss}{
+            display: none;
+        }
+    }
+}
+
+/*--==== Team Details ====--*/
+
+.team-details-wrapper{
+    & .member-img{
+        & img{
+            @include border-radius(20px);
+        }
+    }
+    & .member-info{
+        & h3.title{
+            font-size: 35px;
+            font-weight: 700;
+        }
+        & p.position{
+            margin-bottom: 25px;
+        }
+        & > p{
+            margin-bottom: 28px;
+        }
+        & .member-meta{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border-top: 1px solid  rgba(11, 61, 44, 0.1);
+            padding-top: 55px;
+            & .member-contact-info,
+            & ul.check-style-one{
+                width: 50%;
+                @media #{$xss}{
+                    margin-bottom: 50px;
+                    width: 100%;
+                }
+            }
+            & ul.check-style-one{
+                & li{
+                    font: 600 16px $heading-font;
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                    & i{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            & .member-contact-info{
+                position: relative;
+                padding: 45px 20px 30px;
+                @extend %white-bg;
+                @include border-radius(13px);
+                box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                & .icon{
+                    position: absolute;
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                    top: -27.5px;
+                    width: 55px;
+                    height: 55px;
+                    @include border-radius(12px);
+                    @extend %secondary-bg;
+                    @extend %flex-center;
+                    display: inline-flex;
+                    @extend %white-color;
+                }
+                & p{
+                    @extend %primary-color;
+                    font-weight: 500;
+                    & a{
+                        &:hover{
+                            @extend %secondary-color;
+                        }
+                    }
+                }
+                & ul.social-link{
+                    margin-top: 10px;
+                    & li{
+                        margin-left: 2.5px;
+                        margin-right: 2.5px;
+                        & a{
+                            width: 35px;
+                            height: 35px;
+                            @include border-radius(50%);
+                            @extend %primary-color;
+                            font-size: 14px;
+                            @extend %flex-center;
+                            background-color: rgba(11, 61, 44, 0.1);
+                            &:hover{
+                                @extend %primary-bg;
+                                @extend %white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

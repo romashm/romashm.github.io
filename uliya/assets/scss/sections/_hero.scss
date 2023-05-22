@@ -1,0 +1,369 @@
+
+/*---=============================
+            03. Header css 
+===========================----*/
+
+/*--==== Hero Slider ====--*/
+
+.hero-slider-two{
+    & .slick-arrow{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        width: 65px;
+        height: 65px;
+        @include border-radius(50%);
+        @extend %flex-center;
+        border: 1px solid #fff;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 20px;
+        @extend %white-color;
+        @include transition(.3s);
+        &.prev{
+            left: 12.5%;
+            @media #{$lm}{
+                left: 5%;
+            }
+        }
+        &.next{
+            right: 12.5%;
+            @media #{$lm}{
+                right: 5%;
+            }
+        }
+        &:hover{
+            @extend %golden-bg;
+            border-color: transparent;
+            @extend %heading;
+        }
+    }
+}
+
+
+.single-slider{
+    & .image-layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1.4s cubic-bezier(0.7, 0, 0.3, 1);
+        transform: scale(1.2);
+        z-index: -1;
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            mix-blend-mode: multiply;
+            opacity: 0.7;
+            z-index: -1;
+        }
+    }
+    &.slick-current{
+        & .image-layer{
+            transform: scale(1);
+        }
+    }
+}
+
+/*--==== hero Content ====--*/
+
+.hero-content{
+    & .sub-title{
+        @extend %h3;
+        font-family: $heading-font;
+        margin-bottom: 22px;
+        &:before{
+            display: inline-block;
+            content: '';
+            width: 55px;
+            height: 3px;
+            @extend %white-bg;
+            vertical-align: middle;
+            margin-inline-end: 30px;
+        }
+    }
+    &.text-center{
+        & .sub-title{
+            &:after{
+                display: inline-block;
+                content: '';
+                width: 55px;
+                height: 3px;
+                @extend %white-bg;
+                vertical-align: middle;
+                margin-inline-start: 30px;
+            }
+        }
+    }
+    & h1{
+        margin-bottom: 33px;
+        @media #{$xs}{
+            font-size: 52px;
+            line-height: 1.2;
+        }
+    }
+    & p{
+        font: 500 24px $body-font;
+        line-height: 26.4px;
+        margin-bottom: 43px;
+        @media #{$xs}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    & .hero-button{
+        & a{
+            &:first-child{
+                margin-inline-end: 15px;
+                @media #{$xss}{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*--==== Hero Play ====--*/
+
+.hero-play{
+    & .video-popup{
+        width: 85px;
+        height: 85px;
+        background-color: #fff;
+        @extend %secondary-color;
+    }
+}
+
+/*--==== Hero Waves ====--*/
+
+.hero-waves{
+    position: absolute;
+    bottom: -1px;
+    left: -100px;
+    width: calc(100% + 100px);
+    z-index: 1;
+    & .waves{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        animation: wave 6s infinite;
+        &.two{
+            animation-delay: 3s;
+        }
+    }
+}
+
+/*--==== Hero Wrapper ====--*/
+
+.hero-wrapper-one{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 285px 0 130px;
+    @media #{$lm}{
+        padding: 200px 0;
+    }
+    & .shape{
+        position: absolute;
+        &.shape-one{
+            top: 150px;
+            left: 0;
+        }
+        &.shape-two{
+            top: 150px;
+            right: 0;
+            @media #{$lm}{
+                top: 89px;
+            }
+        }
+        &.shape-three{
+            bottom: 0;
+            right: 10px;
+        }
+    }
+    & .hero-content{
+        margin-inline-start: -80px;
+        @media #{$lp}{
+            margin-inline-start: 0px;  
+        }
+        @media #{$lm}{
+            margin-inline-start: 0px;  
+        }
+        & h1{
+            font-size: 60px;
+            letter-spacing: -0.03em;
+            @media #{$lp}{
+                font-size: 52px;
+            }
+            @media #{$lg}{
+                padding-inline-end: 20%;
+            }
+            @media #{$xs}{
+                font-size: 32px;
+            }
+        }
+    }
+    & .hero-image-box{
+        position: relative;
+        z-index: 1;
+        & .shape{
+            position: absolute;
+            z-index: -1;
+            &.hero-svg{
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                right: -30%;
+                @media #{$lp}{
+                    right: -15%;
+                }
+            }
+        }
+        & img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.hero-wrapper-two{
+    & .hero-content{
+        @media #{$xm}{
+            margin-bottom: 60px;
+        }
+        & span.sub-title{
+            @extend %white-color;
+        }
+        & h1{
+            @extend %white-color;
+        }
+        & p{
+            @extend %white-color;
+        }
+    }
+    & .single-slider{
+        padding: 275px 0 100px;
+        overflow: hidden;
+        @media #{$lm}{
+            padding: 100px 0;
+        }
+        & .bgc-circle{
+            position: absolute;
+            bottom: -140px;
+            left: 200px;
+            width: 835px;
+            height: 835px;
+            @include border-radius(50%);
+            background-color: rgba(42, 125, 46, 0.65);
+            @media #{$lp}{
+                left: 0;
+            }
+            @media #{$lm}{
+                display: none;
+            }
+        }
+    }
+}
+
+
+.hero-wrapper-three{
+    position: relative;
+    overflow: hidden;
+    & .single-slider{
+        padding: 193px 0 290px;
+        @media #{$xm}{
+            padding: 193px 0 230px;
+        }
+    }
+    & .hero-content{
+        & span.sub-title{
+            @extend %white-color;
+            @media #{$xss}{
+                font-size: 16px;
+            }
+        }
+        & h1{
+            @extend %white-color;
+        }
+        & p{
+            @extend %white-color;
+        }
+    }
+}
+
+
+/*--==== Page Title ====--*/
+
+.page-title-area{
+    position: relative;
+    z-index: 1;
+    padding-top: 225px;
+    @media #{$xs}{
+        padding-top: 150px;
+    }
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        @extend %black-bg;
+        opacity: .7;
+        z-index: -1;
+        mix-blend-mode: multiply;
+    }
+    & .page-title-inner{
+        & h1.page-title{
+            font-size: 65px;
+            @media #{$xs}{
+                font-size: 34px;
+            }
+        }
+    }
+    & .gd-breadcrumb{
+        padding: 23px 30px;
+        background-color: rgba(11, 61, 44, 0.85);
+        border-radius: 20px 20px 0px 0px;
+        max-width: 775px;
+        margin: 0 auto;
+        margin-top: 135px;
+        @media #{$xss}{
+            padding: 23px 15px;
+        }
+        & span.breadcrumb-entry{
+            &.active{
+                text-decoration: underline;
+            }
+        }
+        & span.separator{
+            position: relative;
+            width: 21px;
+            height: 21px;
+            @include border-radius(50%);
+            border: 1px solid #FFFFFF;
+            vertical-align: middle;
+            margin-left: 35px;
+            margin-right: 35px;
+            &:after{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%,-50%));
+                content: '';
+                width: 5px;
+                height: 5px;
+                @include border-radius(50%);
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}

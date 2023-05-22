@@ -1,0 +1,267 @@
+
+/*---=========================
+        15. Contact css 
+=========================----*/
+
+/*-=== Contact Info Wrapper ====-*/
+
+.contact-info-wrapper{
+    @extend %gray-bg;
+    border: 1px solid rgba(11, 61, 44, 0.1);
+    border-radius: 20px;
+    & > .row{
+        & > .col-lg-4{
+            &:not(:last-child){
+                border-right: 1px solid rgba(11, 61, 44, 0.1);
+                @media #{$xm}{
+                    border-right: none;
+                    border-bottom: 1px solid rgba(11, 61, 44, 0.1);
+                }
+            }
+        }
+    }
+}
+
+
+.contact-form-wrapper{
+    background-color: #fff;
+    box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    padding: 60px 70px;
+    @media #{$xs}{
+        padding: 60px 30px;
+    }
+}
+
+.contact-wrapper{
+    & .map-box{
+        min-width: 670px;
+        @media #{$lp}{
+            min-width: 600px;
+        }
+        @media #{$lm}{
+            min-width: 100%;
+        }
+        & iframe{
+            width: 100%;
+            height: 545px;
+        }
+    }
+    & .contact-form-wrapper{
+        min-width: 670px;
+        margin-top: -210px;
+        margin-inline-start: -105px;
+        @media #{$lp}{
+            min-width: 600px;
+        }
+        @media #{$lm}{
+            min-width: 100%;
+        }
+        @media #{$xm}{
+            margin-inline-start: 0px;
+        }
+    }
+}
+
+/*-=== Contact Information Item ====-*/ 
+
+.contact-info-item{
+    padding: 60px 75px 52px;
+    @media #{$lg}{
+        padding: 60px 35px;
+    }
+    @media #{$xss}{
+        padding: 60px 30px;
+    }
+    & .icon{
+        width: 120px;
+        height: 120px;
+        @include border-radius(50%);
+        background-color: #fff;
+        box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
+        @extend %flex-center;
+        display: inline-flex;
+        margin-bottom: 25px;
+    }
+    & .info{
+        & span.title{
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        & h6{
+            letter-spacing: -0.02em;
+            line-height: 1.47;
+            &:hover{
+                & a{
+                    @extend %secondary-color;
+                }
+            }
+        }
+    }
+}
+
+.contact-info-item-two{
+    max-width: 190px;
+    & h6.title{
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px;
+        @extend %white-color;
+        & i{
+            @extend %secondary-color;
+            font-size: 24px;
+            margin-inline-end: 10px;
+        }
+    }
+}
+
+
+.single-information-item{
+    display: flex;
+    align-items: center;
+    & .icon{
+        flex: 0 0 auto;
+        width: 45px;
+        height: 45px;
+        @include border-radius(50%);
+        @extend %flex-center;
+        @extend %golden-bg;
+        @extend %primary-color;
+        margin-inline-end: 15px;
+    }
+    & .info{
+        line-height: 1;
+        & span{
+            font: 400 16px $heading-font;
+            @extend %black-color;
+            line-height: 16.5px;
+            margin-bottom: 11.5px;
+            @media #{$lp}{
+                font-size: 14px;
+            }
+        }
+        & h5{
+            line-height: 17px;
+            &:hover{
+                & a{
+                    @extend %secondary-color;
+                }
+            }
+            @media #{$lp}{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.single-info-item{
+    position: relative;
+    padding: 35px 40px 40px;
+    overflow: hidden;
+    z-index: 1;
+    @include border-radius(20px);
+    @media #{$xs}{
+        padding: 35px 30px 40px;
+    }
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            bottom: 30px;
+            right: -70px;
+        }
+    }
+    & .info{
+        & span{
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+        & h4.title{
+            margin-bottom: 20px;
+        }
+        & .main-btn{
+            font: 600 16px $heading-font;
+            padding: 15px 30px;
+            line-height: 20px;
+        }
+    }
+    &.style-one{
+        @extend %secondary-bg;
+        & .info{
+            & span{
+                color: #fff;
+            }
+            & h4.title{
+                color: #fff;
+            }
+            & .main-btn{
+                &.golden-btn{
+                    &:hover{
+                        @extend %primary-bg;
+                        @extend %white-color;
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        @extend %primary-bg;
+        & .info{
+            & span{
+                @extend %golden-color;
+            }
+            & h4.title{
+                color: #fff;
+            }
+            & .main-btn{
+                &.golden-btn{
+                    &:hover{
+                        @extend %white-color;
+                    }
+                }
+            }
+        }
+    }
+    &.style-three{
+        @extend %golden-bg;
+        & .info{
+            & span{
+                @extend %primary-color;
+            }
+            & h4.title{
+                @extend %primary-color;
+            }
+        }
+    }
+}
+
+
+/*-=== Contact Form ====-*/ 
+
+.contact-form{
+    & label{
+        position: absolute;
+        top: -4px;
+        left: 0;
+    }
+    & .form_control{
+        font: 600 16px $heading-font;
+        height: auto;
+        padding-inline-start: 30px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(11, 61, 44, 0.1);
+        margin-bottom: 25px;
+        color: $primary-color;
+        @include transition(.3s);
+        @include placeholder{
+            color: $primary-color;
+            opacity: 1;
+        }
+        &:focus{
+            border-color: $secondary-color;
+        }
+    }
+    & textarea.form_control{
+        padding-top: 0;
+    }
+}

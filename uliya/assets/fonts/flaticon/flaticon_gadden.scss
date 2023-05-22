@@ -1,0 +1,173 @@
+$flaticon_gadden-font: "flaticon_gadden";
+
+@font-face {
+    font-family: $flaticon_gadden-font;
+    src: url("./flaticon_gadden.ttf?3d06d778ac5c423806f51e542af33f69") format("truetype"),
+url("./flaticon_gadden.woff?3d06d778ac5c423806f51e542af33f69") format("woff"),
+url("./flaticon_gadden.woff2?3d06d778ac5c423806f51e542af33f69") format("woff2"),
+url("./flaticon_gadden.eot?3d06d778ac5c423806f51e542af33f69#iefix") format("embedded-opentype"),
+url("./flaticon_gadden.svg?3d06d778ac5c423806f51e542af33f69#flaticon_gadden") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_gadden !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_gadden-map: (
+    "carnivorous-plant": "\f101",
+    "watering-plants": "\f102",
+    "shovels": "\f103",
+    "gardening": "\f104",
+    "plant": "\f105",
+    "landscape": "\f106",
+    "sea-waves": "\f107",
+    "industry": "\f108",
+    "microscope": "\f109",
+    "bus-stop": "\f10a",
+    "pruning-shears": "\f10b",
+    "gardening-1": "\f10c",
+    "growth": "\f10d",
+    "village": "\f10e",
+    "farm": "\f10f",
+    "gardener": "\f110",
+    "field": "\f111",
+    "gardening-tools": "\f112",
+    "agriculture": "\f113",
+    "field-1": "\f114",
+    "farming": "\f115",
+    "park": "\f116",
+    "rake": "\f117",
+    "growth-1": "\f118",
+    "landscape-1": "\f119",
+    "watering-can": "\f11a",
+    "lawnmower": "\f11b",
+    "spider-plant": "\f11c",
+    "quote-1": "\f11d",
+    "target": "\f11e",
+    "vision": "\f11f",
+    "management": "\f120",
+    "scissors": "\f121",
+    "watering": "\f122",
+    "yard": "\f123",
+    "growing": "\f124",
+    "quote-2": "\f125",
+);
+
+.flaticon-carnivorous-plant:before {
+    content: map-get($flaticon_gadden-map, "carnivorous-plant");
+}
+.flaticon-watering-plants:before {
+    content: map-get($flaticon_gadden-map, "watering-plants");
+}
+.flaticon-shovels:before {
+    content: map-get($flaticon_gadden-map, "shovels");
+}
+.flaticon-gardening:before {
+    content: map-get($flaticon_gadden-map, "gardening");
+}
+.flaticon-plant:before {
+    content: map-get($flaticon_gadden-map, "plant");
+}
+.flaticon-landscape:before {
+    content: map-get($flaticon_gadden-map, "landscape");
+}
+.flaticon-sea-waves:before {
+    content: map-get($flaticon_gadden-map, "sea-waves");
+}
+.flaticon-industry:before {
+    content: map-get($flaticon_gadden-map, "industry");
+}
+.flaticon-microscope:before {
+    content: map-get($flaticon_gadden-map, "microscope");
+}
+.flaticon-bus-stop:before {
+    content: map-get($flaticon_gadden-map, "bus-stop");
+}
+.flaticon-pruning-shears:before {
+    content: map-get($flaticon_gadden-map, "pruning-shears");
+}
+.flaticon-gardening-1:before {
+    content: map-get($flaticon_gadden-map, "gardening-1");
+}
+.flaticon-growth:before {
+    content: map-get($flaticon_gadden-map, "growth");
+}
+.flaticon-village:before {
+    content: map-get($flaticon_gadden-map, "village");
+}
+.flaticon-farm:before {
+    content: map-get($flaticon_gadden-map, "farm");
+}
+.flaticon-gardener:before {
+    content: map-get($flaticon_gadden-map, "gardener");
+}
+.flaticon-field:before {
+    content: map-get($flaticon_gadden-map, "field");
+}
+.flaticon-gardening-tools:before {
+    content: map-get($flaticon_gadden-map, "gardening-tools");
+}
+.flaticon-agriculture:before {
+    content: map-get($flaticon_gadden-map, "agriculture");
+}
+.flaticon-field-1:before {
+    content: map-get($flaticon_gadden-map, "field-1");
+}
+.flaticon-farming:before {
+    content: map-get($flaticon_gadden-map, "farming");
+}
+.flaticon-park:before {
+    content: map-get($flaticon_gadden-map, "park");
+}
+.flaticon-rake:before {
+    content: map-get($flaticon_gadden-map, "rake");
+}
+.flaticon-growth-1:before {
+    content: map-get($flaticon_gadden-map, "growth-1");
+}
+.flaticon-landscape-1:before {
+    content: map-get($flaticon_gadden-map, "landscape-1");
+}
+.flaticon-watering-can:before {
+    content: map-get($flaticon_gadden-map, "watering-can");
+}
+.flaticon-lawnmower:before {
+    content: map-get($flaticon_gadden-map, "lawnmower");
+}
+.flaticon-spider-plant:before {
+    content: map-get($flaticon_gadden-map, "spider-plant");
+}
+.flaticon-quote-1:before {
+    content: map-get($flaticon_gadden-map, "quote-1");
+}
+.flaticon-target:before {
+    content: map-get($flaticon_gadden-map, "target");
+}
+.flaticon-vision:before {
+    content: map-get($flaticon_gadden-map, "vision");
+}
+.flaticon-management:before {
+    content: map-get($flaticon_gadden-map, "management");
+}
+.flaticon-scissors:before {
+    content: map-get($flaticon_gadden-map, "scissors");
+}
+.flaticon-watering:before {
+    content: map-get($flaticon_gadden-map, "watering");
+}
+.flaticon-yard:before {
+    content: map-get($flaticon_gadden-map, "yard");
+}
+.flaticon-growing:before {
+    content: map-get($flaticon_gadden-map, "growing");
+}
+.flaticon-quote-2:before {
+    content: map-get($flaticon_gadden-map, "quote-2");
+}

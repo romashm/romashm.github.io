@@ -1,0 +1,203 @@
+
+/*---==========================
+        12. Pricing css 
+=========================----*/
+
+
+.single-pricing-item{
+    background-color: #fff;
+    @include border-radius(20px);
+    box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
+    @include transition(.3s);
+    &:hover{
+        @extend %primary-bg;
+        & .pricing-body{
+            & .shape{
+                visibility: visible;
+                opacity: 1;
+            }
+            & .pricing-title{
+                & h3.title{
+                    @extend %white-color;
+                    border-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+            & ul{
+                & li{
+                    @extend %white-color;
+                    & {
+                        @extend %white-color;
+                    }
+                }
+            }
+            & h2.price{
+                @extend %white-color;
+                & span{
+                    &.duration{
+                        @extend %white-color;
+                    }
+                }
+            }
+            & .pricing-button{
+                & .main-btn{
+                    @extend %golden-bg;
+                    @extend %primary-color;
+                }
+                & p{
+                    @extend %white-color;
+                }
+            }
+        }
+    }
+    & .pricing-img{
+        padding: 10px;
+        & img{
+            width: 100%;
+            @include border-radius(20px);  
+        }
+    }
+    & .pricing-body{
+        position: relative;
+        padding: 23px 40px 25px;
+        @media #{$lm}{
+            padding: 23px 20px 25px; 
+        }
+        @media #{$sm}{
+            padding: 23px 40px 25px;
+        }
+        & .shape{
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            @include transition(.4s);
+            &.shape-one{
+                top: 45%;
+                left: 50%;
+                @include transform(translate(-50%,-45%));
+            }
+        }
+        & .pricing-title{
+            & h3.title{
+                padding-bottom: 29px;
+                border-bottom: 1px solid rgba(11, 61, 44, 0.1);
+                @media #{$lm}{
+                    font-size: 20px;
+                }
+                @media #{$sm}{
+                    font-size: 24px;
+                }
+            }
+        }
+        & ul{
+            & li{
+                font-size: 20px;
+                @media #{$lm}{
+                    font-size: 18px;
+                }
+                @media #{$sm}{
+                    font-size: 20px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                & i{
+                    @extend %secondary-color;
+                    margin-inline-end: 12px;
+                }
+            }
+        }
+        & h2.price{
+            margin-bottom: 40px;
+            @media #{$lm}{
+                font-size: 36px;
+            }
+            & span{
+                &.duration{
+                    font: 400 16px $body-font;
+                    @extend %black-color;
+                }
+            }
+        }
+        & .pricing-button{
+            & .main-btn{
+                margin-bottom: 9px;
+            }
+        }
+    }
+}
+
+.single-pricing-item-two{
+    padding: 30px 40px 25px;
+    background-color: #fff;
+    box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
+    @include border-radius(20px);
+    @include transition(.3s);
+    border: 2px solid transparent;
+    @media #{$lm}{
+        padding: 30px 20px 25px;
+    }
+    @media #{$sm}{
+        padding: 30px 40px 25px;
+    }
+    &:hover{
+        border-color: $primary-color;
+        & .pricing-body{
+            & .pricing-button{
+                & .main-btn{
+                    @extend %primary-bg;
+                    @extend %white-color;
+                }
+            }
+        }
+    }
+    & .pricing-body{
+        & .pricing-title{
+            padding-bottom: 29px;
+            border-bottom: 1px solid rgba(11, 61, 44, 0.1);
+            & h3.title{
+                margin-bottom: 17px;
+                @media #{$lm}{
+                    font-size: 20px;
+                }
+                @media #{$sm}{
+                    font-size: 24px;
+                }
+            }
+            & h2.price{
+                & span{
+                    &.duration{
+                        font: 400 16px $body-font;
+                        @extend %black-color;
+                    }
+                }
+            }
+        }
+        & ul{
+            & li{
+                display: flex;
+                align-items: flex-start;
+                font-size: 20px;
+                @media #{$lm}{
+                    font-size: 18px;
+                }
+                @media #{$sm}{
+                    font-size: 20px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                & i{
+                    margin-top: 5px;
+                    @extend %secondary-color;
+                    margin-inline-end: 12px;
+                }
+            }
+        }
+        & .pricing-button{
+            & .main-btn{
+                margin-bottom: 9px;
+                width: 100%;
+            }
+        }
+    }
+}

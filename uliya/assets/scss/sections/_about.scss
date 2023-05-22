@@ -1,0 +1,285 @@
+
+/*---==========================
+        04. About css 
+=========================----*/
+
+/*-=== About Content Box ====-*/ 
+
+.about-two_content-box{
+    position: relative;
+    padding-top: 112px;
+    & .about-inner-content {
+        @media #{$xm}{
+            max-width: 525px;
+        }
+        @media #{$xss}{
+            flex-wrap: wrap;
+        }
+        & .inner-content{
+            @media #{$xss}{
+                margin-bottom: 30px;
+            }
+            & .check-style-one{
+                max-width: 250px;
+            }
+        }
+        & .experience-box-two{
+            padding: 25px 50px 35px;
+            & h2.number{
+                @extend %secondary-color;
+            }
+            & h6{
+                @extend %primary-color;
+            }
+        }
+    }
+}
+
+/*-=== About Image Box ====-*/ 
+
+.about-one_image-box{
+    min-height: 550px;
+    max-width: 630px;
+    & .about-img-one{
+        @include border-radius(20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media #{$lm}{
+            left: 20px;
+        }
+        @media #{$xss}{
+            display: none;
+        }
+    }
+    & .about-img-two{
+        position: absolute;
+        right: 35px;
+        bottom: 0;
+        z-index: 1;
+        @include border-radius(20px);
+        @media #{$xss}{
+            right: auto;
+            position: relative;
+            bottom: auto;
+        }
+    }
+    & .about-img-three{
+        position: absolute;
+        left: -50px;
+        bottom: 15px;
+        @media #{$lm}{
+            left: 20px;
+        }
+        @media #{$xss}{
+            display: none;
+        }
+    }
+    & .shape{
+        position: absolute;
+        @media #{$xss}{
+            display: none;
+        }
+        &.shape{
+            left: -80px;
+            bottom: 60px;
+            @media #{$lm}{
+                left: 0;
+            }
+            & span{
+                width: 293px;
+                height: 293px;
+                background-color: rgba(42, 125, 46, 0.12);
+                @include border-radius(50%);
+            }
+        }
+    }
+    & .experience-item{
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        right: 60px;
+        top: 40px;
+        max-width: 265px;
+        @media #{$xss}{
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-top: 40px;
+        }
+        & h2.number{
+            font-weight: 600;
+            font-size: 65px;
+            line-height: 79px;
+        }
+        & h4{
+            flex-basis: min-content;
+            margin-inline-start: 20px;
+        }
+    }
+}
+
+.about-two_image-box{
+    margin-inline-start: -175px;
+    @media #{$lp}{
+        margin-inline-start: 0;
+    }
+    @media #{$lm}{
+        margin-inline-start: 0;
+    }
+}
+
+/*-=== About Features Item ====-*/ 
+
+.about-features-item{
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+    z-index: 2;
+    @include border-radius(20px);
+    &.item-active{
+        & .hover-bg{
+            visibility: visible;
+            opacity: 1;
+        }
+        & .text{
+            & .btn-link,
+            & h3.title,
+            & p{
+                @extend %white-color;
+            }
+        }
+    }
+    & .hover-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.3s);
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 61, 44, 0.9);
+        }
+    }
+    & .icon{
+        width: 120px;
+        height: 120px;
+        @include border-radius(50%);
+        @extend %white-bg;
+        @extend %flex-center;
+        display: inline-flex;
+        @extend %primary-color;
+        font-size: 60px;
+        margin-bottom: 33px;
+    }
+    & h3.title{
+        margin-bottom: 12px;
+    }
+    & p{
+        margin-bottom: 16px;
+    }
+}
+
+.fancy-about-item{
+    & .text{
+        & h5 {
+            margin-bottom: 10px;
+            & i{
+                @extend %secondary-color;
+                margin-inline-end: 10px;
+            }
+        }
+    }
+}
+
+/*-=== Choose Nav Tab ====-*/ 
+
+.choose-nav-tab{
+    margin-bottom: 33px;
+    & .nav-item{
+        &:not(:last-child){
+            & .nav-link{
+                padding-left: 0;
+            }
+        }
+    }
+    & .nav-link{
+        position: relative;
+        padding: 0 30px 30px;
+        background-color: transparent;
+        font: 600 24px $heading-font;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        @media #{$xss}{
+            font-size: 16px;
+            padding: 0 15px 30px;
+        }
+        &.active{
+            &:after{
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 3px;
+                @extend %secondary-bg;
+            }
+        }
+    }
+}
+
+/*-=== Choose Content Box ====-*/ 
+
+.choose-content-box{
+    & > p{
+        margin-bottom: 35px;
+    }
+    & .thumb-content{
+        display: flex;
+        align-items: center;
+        @media #{$md}{
+            margin-bottom: 40px;
+        }
+        @media #{$xss}{
+            align-items: flex-start;
+            flex-direction: column;
+            
+        }
+        & img{
+            flex: 0 0 auto;
+            margin-inline-end: 35px;
+            @media #{$xss}{
+                margin-inline-end: 0;
+                margin-bottom: 20px;
+            }
+        }
+        & .check-style-one{
+            @media #{$xss}{
+                margin-bottom: 20px;
+            }
+            & li{
+                font: 600 16px $heading-font;
+                @extend %black-color;
+                @media #{$lg}{
+                    font-size: 15px;
+                }
+                @media #{$xs}{
+                    font-size: 15px;
+                }
+                & i{
+                    width: 25px;
+                    height: 25px;
+                    @extend %secondary-bg;
+                }
+            }
+        }
+    }
+}

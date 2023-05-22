@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "flaticon_gadden";
+    src: url("./flaticon_gadden.ttf?3d06d778ac5c423806f51e542af33f69") format("truetype"),
+url("./flaticon_gadden.woff?3d06d778ac5c423806f51e542af33f69") format("woff"),
+url("./flaticon_gadden.woff2?3d06d778ac5c423806f51e542af33f69") format("woff2"),
+url("./flaticon_gadden.eot?3d06d778ac5c423806f51e542af33f69#iefix") format("embedded-opentype"),
+url("./flaticon_gadden.svg?3d06d778ac5c423806f51e542af33f69#flaticon_gadden") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_gadden !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-carnivorous-plant:before {
+    content: "\f101";
+}
+.flaticon-watering-plants:before {
+    content: "\f102";
+}
+.flaticon-shovels:before {
+    content: "\f103";
+}
+.flaticon-gardening:before {
+    content: "\f104";
+}
+.flaticon-plant:before {
+    content: "\f105";
+}
+.flaticon-landscape:before {
+    content: "\f106";
+}
+.flaticon-sea-waves:before {
+    content: "\f107";
+}
+.flaticon-industry:before {
+    content: "\f108";
+}
+.flaticon-microscope:before {
+    content: "\f109";
+}
+.flaticon-bus-stop:before {
+    content: "\f10a";
+}
+.flaticon-pruning-shears:before {
+    content: "\f10b";
+}
+.flaticon-gardening-1:before {
+    content: "\f10c";
+}
+.flaticon-growth:before {
+    content: "\f10d";
+}
+.flaticon-village:before {
+    content: "\f10e";
+}
+.flaticon-farm:before {
+    content: "\f10f";
+}
+.flaticon-gardener:before {
+    content: "\f110";
+}
+.flaticon-field:before {
+    content: "\f111";
+}
+.flaticon-gardening-tools:before {
+    content: "\f112";
+}
+.flaticon-agriculture:before {
+    content: "\f113";
+}
+.flaticon-field-1:before {
+    content: "\f114";
+}
+.flaticon-farming:before {
+    content: "\f115";
+}
+.flaticon-park:before {
+    content: "\f116";
+}
+.flaticon-rake:before {
+    content: "\f117";
+}
+.flaticon-growth-1:before {
+    content: "\f118";
+}
+.flaticon-landscape-1:before {
+    content: "\f119";
+}
+.flaticon-watering-can:before {
+    content: "\f11a";
+}
+.flaticon-lawnmower:before {
+    content: "\f11b";
+}
+.flaticon-spider-plant:before {
+    content: "\f11c";
+}
+.flaticon-quote-1:before {
+    content: "\f11d";
+}
+.flaticon-target:before {
+    content: "\f11e";
+}
+.flaticon-vision:before {
+    content: "\f11f";
+}
+.flaticon-management:before {
+    content: "\f120";
+}
+.flaticon-scissors:before {
+    content: "\f121";
+}
+.flaticon-watering:before {
+    content: "\f122";
+}
+.flaticon-yard:before {
+    content: "\f123";
+}
+.flaticon-growing:before {
+    content: "\f124";
+}
+.flaticon-quote-2:before {
+    content: "\f125";
+}
