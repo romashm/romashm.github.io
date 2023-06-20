@@ -1,0 +1,11 @@
+Model Information:
+* title:	Female Head Base Mesh
+* source:	https://sketchfab.com/3d-models/female-head-base-mesh-24a9f520b6e2403b9114e41895b38224
+* author:	AaronJOlson (https://sketchfab.com/aaolson817)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Female Head Base Mesh" (https://sketchfab.com/3d-models/female-head-base-mesh-24a9f520b6e2403b9114e41895b38224) by AaronJOlson (https://sketchfab.com/aaolson817) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
