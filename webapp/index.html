@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>WebApp Telegram</title>
+      <!-- Favicon icon -->
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.jpg" />
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body class="@@dashboard"></body>
+</html>
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+<div id="main-wrapper">
+   <div class="authincation section-padding">
+      <div class="container h-100">
+         <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-xl-5 col-md-6">
+               <div class="mini-logo text-center my-4">
+                  <a href="./index.html" style="color: #111; font-weight: bolder;">
+                    Другой клуб
+                  </a>
+                  <h4 class="card-title mt-5">Дорогой друг! Поблагодари своего товарища, если он помог тебе!</h4>
+               </div>
+               <div class="auth-form card">
+                  <div class="card-body">
+                     <form
+                        name="myform"
+                        class="signin_validate row g-3"
+                        action="verify-email.html"
+                        >
+                        <div class="col-12">
+                           <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Введите пользователя"
+                              name="name"
+                              />
+                        </div>
+                        <div class="col-12">
+                            <select
+                                class="form-select"
+                            >
+                                <option selected>
+                                    Все пользователи
+                                </option>
+                            </select>
+                        </div>
+                        <div class="d-grid gap-2">
+                           <button type="submit" class="btn btn-primary">
+                                Подарить
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
