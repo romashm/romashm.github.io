@@ -13,7 +13,7 @@
    <body class="@@dashboard"></body>
 </html>
 <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
-<div id="main-wrapper" style="margin-top: 0px;">
+<!-- <div id="main-wrapper" style="margin-top: 0px;">
    <div class="authincation">
       <div class="container h-100">
          <div class="row justify-content-center h-100 align-items-center">
@@ -73,6 +73,159 @@
             </div>
          </div>
       </div>
+   </div>
+</div> -->
+
+<div id="main-wrapper">
+   <div class="header bg-light">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="header-content">
+                  <div class="header-left">
+                     <div class="search">
+                        <div class="input-group">
+                            <div class="row">
+                                <div class="col">
+                                   <h4 style="margin: 0;">
+                                      ❤️ 0
+                                   </h4>
+                                </div>
+                                <div class="col">
+                                   <h4 style="margin: 0;">
+                                      👍 0
+                                   </h4>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header-right">
+                     <div class="dark-light-toggle" onclick="themeToggle()">
+                        <span class="dark"><i class="bi bi-moon"></i></span>
+                        <span class="light"><i class="bi bi-brightness-high"></i></span>
+                     </div>
+                     <div class="notification dropdown">
+                        <div class="notify-bell" data-toggle="dropdown">
+                           <span><i class="bi bi-bell"></i></span>
+                        </div>
+                     </div>
+                     <div class="profile_log dropdown">
+                        <div class="user" data-toggle="dropdown">
+                           <span class="thumb"
+                              ><img src="{% static './images/profile/2.png' %}" alt=""
+                              /></span>
+                           <span class="arrow"><i class="icofont-angle-down"></i></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="sidebar">
+      <div class="menu">
+         <ul>
+            <li>
+               <a
+                  href="index.html"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Home"
+                  >
+               <span><i class="bi bi-house"></i></span>
+               </a>
+            </li>
+            <li>
+               <a
+                  href="{% url 'Home' %}"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Trade"
+                  >
+               <span><i class="bi bi-gift"></i></span>
+               </a>
+            </li>
+            <li>
+               <a
+                  class="setting_"
+                  href="{% url 'Settings' %}"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Settings"
+                  >
+               <span><i class="bi bi-gear"></i></span>
+               </a>
+            </li>
+            <li class="logout">
+               <a
+                  href="signin.html"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Signout"
+                  >
+               <span><i class="bi bi-power"></i></span>
+               </a>
+            </li>
+         </ul>
+         <p class="copyright">&#169; <a href="#">Qkit</a></p>
+      </div>
+   </div>
+   <div class="content-body">
+    <div class="col-xl-5 col-md-6">
+        <div class="mini-logo text-center my-4">
+           <a href="./index.html" style="color: #111; font-weight: bolder;">
+           Другой клуб
+           </a>
+           <h4 class="card-title mt-5">Дорогой друг! Поблагодари своего товарища, если он помог тебе!</h4>
+        </div>
+        <div class="auth-form card">
+           <div class="card-body">
+              <form
+                 name="myform"
+                 method="GET"
+                 class="signin_validate row g-3"
+                 >
+                 <div class="col-12">
+                    <div class="col-md-4">
+                       <label for="validationServer01" class="form-label">Введите имя пользователя</label>
+                       <input type="text" class="form-control is-valid" id="validationServer01" value="Иван Иванов" required>
+                       <div class="valid-feedback">
+                         Пользователь существует!
+                       </div>
+                     </div>                          
+                    <ul class="balance-widget">
+                       <button type="submit" class="no-btn mb-3" style="display: block;">
+                          <li>
+                             <div class="icon-title">
+                                <i class="cc BTC"></i>
+                                <span>Иван Иванов</span>
+                             </div>
+                          </li>
+                       </button>
+                       <button type="submit" class="no-btn mb-3">
+                          <li>
+                             <div class="icon-title">
+                                <i class="cc BTC"></i>
+                                <span>Иван Иванов</span>
+                             </div>
+                          </li>
+                       </button>
+                       <button type="submit" class="no-btn mb-3">
+                          <li>
+                             <div class="icon-title">
+                                <i class="cc BTC"></i>
+                                <span>Иван Иванов</span>
+                             </div>
+                          </li>
+                       </button>
+                    </ul>
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
    </div>
 </div>
 <script src="./vendor/jquery/jquery.min.js"></script>
