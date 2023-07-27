@@ -24,7 +24,7 @@
  */
 @import url(../vendor/perfect-scrollbar/perfect-scrollbar.css);
 @import url(../vendor/basic-table/basictable.css);
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url("../icons/font-awesome/css/all.css");
 @import url("../icons/icofont/icofont.min.css");
 @import url("../icons/bootstrap-icons/bootstrap-icons.css");
@@ -85,7 +85,7 @@
 
 body {
   margin: 0;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5937,7 +5937,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6022,7 +6022,7 @@ textarea.form-control-lg {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;

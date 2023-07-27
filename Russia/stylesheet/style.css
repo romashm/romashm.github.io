@@ -37,6 +37,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: 'Raleway', sans-serif;
      -ms-text-size-adjust: 100%;
+    background-color: #dadad9;
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, caption, canvas, center, cite, code,
@@ -177,8 +178,8 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus { 
   outline: none;
-  border-color: #192bc2;
-  box-shadow: 0 0 2px #192bc2;
+  border-color: #00005a;
+  box-shadow: 0 0 2px #00005a;
 }
 
 body {
@@ -193,7 +194,7 @@ body {
 a,
 a:hover,
 a:focus {
-  color: #192bc2;
+  color: #00005a;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
@@ -268,7 +269,7 @@ strong {
 
 .logo {
   float: left;
-  height:24px;
+  height: 24px;
 }
 
 .logo-top {
@@ -301,16 +302,16 @@ strong {
 }
 
 .color-default {
-  color: #192bc2;
+  color: #00005a;
 }
 
 .bg-default {
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .btn-hover:hover{
   color: #fff;
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .button {
@@ -322,7 +323,7 @@ strong {
   position: relative;
   bottom: 0;
   color: #fff;
-  background-color: #192bc2;
+  background-color: #00005a;
   text-align: center;
 }
 
@@ -346,7 +347,7 @@ strong {
 .big-feature {
   width: 100%;
   height: 900px;
-  background: url(../images/ttrtreterewrwer82.jpg) center/cover no-repeat;
+  background: url(../images/Group\ 1171274718.png) center/cover no-repeat;
 }
 
 .gradient {
@@ -379,7 +380,7 @@ strong {
 
 .header.header-fixed #mainnav ul.main-menu li a:hover,
 .header.header-fixed #mainnav ul.main-menu li > a.active {
-    color: #192bc2;
+    color: #00005a;
 } 
 
 .nav-wrap {
@@ -413,7 +414,7 @@ strong {
 
 #mainnav ul.main-menu li:hover a,
 #mainnav ul.main-menu li a.active {
-  color:#192bc2;
+  color:#00005a;
 }
 
 #mainnav .main-menu ul.sub-menu {
@@ -460,7 +461,7 @@ strong {
 #mainnav .sub-menu > li > a:hover,
 #mainnav .sub-menu > li > a.active {
   color:#fff !important;
-  background-color: #192bc2;
+  background-color: #00005a;
   opacity: 0.9;
 }
 
@@ -468,9 +469,9 @@ strong {
   height: 40px;
   line-height: 40px;
   width: 160px;
-  border: 1px solid #192bc2;
+  border: 1px solid #00005a;
   border-radius: 20px;
-  color: #192bc2 ;
+  color: #00005a ;
   font-size: 15px;  
   float: right;
   display: inline-block;  
@@ -483,7 +484,7 @@ strong {
 
 .button-menu:hover {
   color:#fff;
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .button-menu.style1 {
@@ -492,7 +493,7 @@ strong {
 }
 
 .button-menu.style1:hover {
-  border-color: #192bc2;
+  border-color: #00005a;
 }
 
 /* Header Fix */
@@ -595,12 +596,12 @@ strong {
 
 #mainnav-mobi ul.sub-menu > li > a:hover,
 #mainnav-mobi > ul > li > ul > li.active > a {
- color: #192bc2;
+ color: #00005a;
 }
 
 #mainnav-mobi ul.sub-menu > li > a.active,
 #mainnav-mobi ul > li > a.active {
-    color: #192bc2;
+    color: #00005a;
 }
 
 /* Button menu mobile */
@@ -747,7 +748,7 @@ display: none
 
 .home-1 .title-box .icon-title {
   font-size: 50px;
-  color: #192bc2;
+  color: #00005a;
   margin-bottom: 26px;
 }
 
@@ -778,7 +779,7 @@ display: none
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: #192bc2;      
+  background-color: #00005a;      
 }
 
 .iconbox-wrap .iconbox .iconbox-content:hover:before {
@@ -792,7 +793,7 @@ display: none
 }
 
 .iconbox-wrap .icon {
-  color: #192bc2;
+  color: #00005a;
 }
 
 .iconbox-wrap .iconbox-content {
@@ -815,7 +816,7 @@ display: none
 
 #learn-more {
   text-decoration: underline;
-  color: #192bc2;            
+  color: #00005a;            
 }
 
 #get-app {
@@ -1041,7 +1042,7 @@ display: none
 }
 
 #setting-box {
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .feature .row {
@@ -1079,7 +1080,7 @@ display: none
 }
 
 .testimonial-section.style2 {
-  background: url(../images/logo-social.jpg) center/cover no-repeat;
+  background: url(../images/Group\ 2.png) center/cover no-repeat;
   padding-top: 185px;
   height: 709px;
   width: 100%;
@@ -1154,7 +1155,7 @@ display: none
 }
 
 .blog-posts a:hover{
-  color: #192bc2;
+  color: #00005a;
 }
 
 .post-wrap.style1 .post {
@@ -1269,16 +1270,16 @@ transform:scale(1.1);
   display: inline-block;
   letter-spacing: -0.1px;
   margin-bottom: 0px;
-  border: 1px solid #192bc2 ;
+  border: 1px solid #00005a ;
   padding:11px 40px 10px;
   border-radius: 24px;  
   background-color: #fff;
-  color: #192bc2;
+  color: #00005a;
 }
 
 .post-read-more:hover {
   color:#fff !important;
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .blog-pagination {
@@ -1445,7 +1446,7 @@ transform:scale(1.1);
 } 
 
 .social-icon i:hover {
-  color:#192bc2 ;
+  color:#00005a ;
 }
 
 .wrap-social .social-content {
@@ -1502,7 +1503,7 @@ transform:scale(1.1);
 }
 
 .comment-form textarea:focus {
-    border-color: #192bc2;
+    border-color: #00005a;
 }
 
 input[name="name"],
@@ -1533,7 +1534,7 @@ input[name="website"] {
 }
 
 .btn-submit-comment:hover {
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 /* Sidebar
@@ -1671,8 +1672,8 @@ p.thumb-post-day i{
 }
 
 .post-tag li:hover {
-  background-color: #192bc2;
-  border-color: #192bc2 !important;
+  background-color: #00005a;
+  border-color: #00005a !important;
 }
 
 .post-tag li:hover a{
@@ -1683,7 +1684,7 @@ p.thumb-post-day i{
 -------------------------------------------------------------- */
 .flat-call-back {
   padding: 111px 0 96px;
-  background: #192bc2;
+  background: url(../images/Hero\ v1.png) no-repeat center; 
   position: relative;
   z-index: 99;
 }
@@ -1696,7 +1697,8 @@ p.thumb-post-day i{
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-color: #192bc2;
+  background: url(../images/Hero\ v1.png) no-repeat center; 
+
 }
 
 .flat-call-back .title {
@@ -1730,7 +1732,7 @@ p.thumb-post-day i{
 }
 
 .flat-call-back .button-call-back a {
-  color:#192bc2;
+  color:#00005a;
   font-size: 16px;
   font-weight: 300;
   line-height: 54px;
@@ -1770,7 +1772,7 @@ p.thumb-post-day i{
 }
 
 .bottom .copyright a {
-  color: #192bc2;
+  color: #00005a;
 }
 
 .bottom .widget.widget_text img {
@@ -1792,7 +1794,7 @@ p.thumb-post-day i{
 }
 
 .bottom .flat-socials li a:hover{
-  color: #192bc2;
+  color: #00005a;
   -webkit-transition: all 0.1s ease-in-out;
      -moz-transition: all 0.1s ease-in-out;
       -ms-transition: all 0.1s ease-in-out;
@@ -1844,7 +1846,7 @@ p.thumb-post-day i{
 
 .go-top i {
     font-size: 18px;
-    color: #192bc2;
+    color: #00005a;
     padding-bottom: 3px;
 }
 
@@ -2144,7 +2146,7 @@ p.thumb-post-day i{
   top: 0;
   content: "\f105";
   font-family: "FontAwesome";
-  color: #192bc2;
+  color: #00005a;
   font-size: 22px;
 }
 
@@ -2160,7 +2162,7 @@ p.thumb-post-day i{
 .switcher-container h2 i {
     margin-top: 10px;
     font-size: 25px;
-    color: #192bc2;
+    color: #00005a;
     -webkit-animation: fa-spin 2s infinite linear;
             animation: fa-spin 2s infinite linear; 
     -webkit-transition: all 0.3s ease-in-out;
@@ -2305,7 +2307,7 @@ p.thumb-post-day i{
 
 
 .sw-odd .ws-colors #color1 {
-  background-color: #192bc2;
+  background-color: #00005a;
 }
 
 .sw-odd .ws-colors #color2 {
@@ -2435,11 +2437,15 @@ p.thumb-post-day i{
     padding: 16px 0px 14px;
     color: #fff;
     width: 100%;
-    background: #192bc2;
+    background: #00005a;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 .sw-odd .sw-image .sw-buy:hover {
     background: #2e363a;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
 }

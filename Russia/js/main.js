@@ -312,8 +312,8 @@
     var retinaLogos = function() {
        var retina = window.devicePixelRatio > 1 ? true : false;
          if(retina) {
-            $('.header .logo').find('img').attr({src:'./images/logo@2x.png',width:'90',height:'24'});   
-            $('.logo-ft').find('img').attr({src:'./images/logo-black@2x.png',width:'90',height:'24'});
+            $('.header .logo').find('img').attr({src:'./images/Group 2.png',width:'90',height:'24'});   
+            $('.logo-ft').find('img').attr({src:'./images/Group 2.png',width:'90',height:'24'});
          }
     };  
  
