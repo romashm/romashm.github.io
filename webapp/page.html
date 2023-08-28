@@ -4,11 +4,12 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>WebApp Telegram</title>
-      <!-- Favicon icon -->
-      <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.jpg" />
+      <title>
+         Спасибки 🤩
+      </title>
       <!-- Custom Stylesheet -->
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="icon" href="./bot_images/icon.png" />
    </head>
    <body class="dashboard"></body>
 </html>
@@ -21,16 +22,16 @@
                <div class="header-content">
                   <div class="header-left">
                      <div class="search">
-                        <div class="container text-left">
+                        <div class="input-group">
                            <div class="row">
-                              <div class="col">
+                              <div class="col" style="width: 110px;">
                                  <h4 style="margin: 0;">
-                                    ❤️ 0
+                                    ❤️ {{ Data.reward_type_heart }}
                                  </h4>
                               </div>
-                              <div class="col">
+                              <div class="col" style="width: 110px;">
                                  <h4 style="margin: 0;">
-                                    👍 0
+                                    👍 {{ Data.reward_type_like }}
                                  </h4>
                               </div>
                            </div>
@@ -38,6 +39,15 @@
                      </div>
                   </div>
                   <div class="header-right">
+                     <div class="dark-light-toggle" onclick="themeToggle()">
+                        <span class="dark"><i class="bi bi-moon"></i></span>
+                        <span class="light"><i class="bi bi-brightness-high"></i></span>
+                     </div>
+                     <div class="notification dropdown">
+                        <div class="notify-bell" data-toggle="dropdown">
+                           <span><i class="bi bi-bell"></i></span>
+                        </div>
+                     </div>
                      <div class="profile_log dropdown">
                         <div class="user" data-toggle="dropdown">
                            <span class="thumb"
@@ -52,6 +62,54 @@
          </div>
       </div>
    </div>
+   <div class="sidebar">
+      <div class="menu">
+         <ul>
+            <li>
+               <a
+                  href="{% url 'Home"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Home"
+                  >
+               <span><i class="bi bi-house"></i></span>
+               </a>
+            </li>
+            <li>
+               <a
+                  {% comment %} href="{% url 'Gift" {% endcomment %}
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Trade"
+                  >
+               <span><i class="bi bi-gift"></i></span>
+               </a>
+            </li>
+            <li>
+               <a
+               class="setting_"
+               {% comment %} href="{% url 'Settings" {% endcomment %}
+               data-toggle="tooltip"
+               data-placement="right"
+               title="Settings"
+               >
+               <span><i class="bi bi-gear"></i></span>
+               </a>
+            </li>
+            <li class="logout">
+               <a
+                  href="signin.html"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Signout"
+                  >
+               <span><i class="bi bi-power"></i></span>
+               </a>
+            </li>
+         </ul>
+         <p class="copyright">&#169; <a href="#">Qkit</a></p>
+      </div>
+   </div>
    <div class="content-body">
       <div class="container-fluid">
          <div class="row">
@@ -63,17 +121,27 @@
                   <div class="card-body">
                      <div class="price-deposit">
                         <p>
-                           Вы отправили пользователю Сергей 10 👍<br/>
+                           Вы отправили пользователю {{ User }} 1 ❤️<br/>
                            Добавьте комментарий, чтобы Сергей узнал об этом
                         </p>
-                           <label class="form-label">
-                           Введите комментарий
-                           </label>
-                           <textarea class="form-textarea" aria-label="With textarea" rows="2"></textarea>
+                        <p>
+                           Вы отправили пользователю {{ User }} 1 👍<br/>
+                           Добавьте комментарий, чтобы Сергей узнал об этом
+                        </p>
+                        <label class="form-label">
+                        Введите комментарий
+                        </label>
+                     <form
+                        name="myform"
+                        method="POST"
+                        class="signin_validate row g-3"
+                     >
+                        <textarea class="form-textarea" aria-label="With textarea" rows="2"></textarea>
                      </div>
                      <div class="mt-4">
-                        <a href="#" class="btn btn-primary btn-block"> Записать </a>
+                        <button class="btn btn-primary btn-block"> Записать </button>
                      </div>
+                  </form>
                   </div>
                </div>
             </div>
@@ -81,15 +149,8 @@
       </div>
    </div>
 </div>
+<script src="./js/main.js"></script>
 <script src="./vendor/jquery/jquery.min.js"></script>
-<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="./vendor/apexchart/apexcharts.min.js"></script>
-<script src="./js/plugins/apex-price.js"></script>
-<script src="./vendor/basic-table/jquery.basictable.min.js"></script>
-<script src="./js/plugins/basic-table-init.js"></script>
-<script src="./vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="./js/plugins/perfect-scrollbar-init.js"></script>
-<script src="./js/dashboard.js"></script>
 <script src="./js/scripts.js"></script>
 </body>
 </html>
