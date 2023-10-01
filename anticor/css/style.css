@@ -1757,7 +1757,7 @@ header .user-basket .cart-num {
     height: 1px;
     left: 0px;
     width: 50px;
-    background: #6c6c6c;
+    /* background: #6c6c6c; */
     content: "";
 }
 
@@ -1767,7 +1767,7 @@ header .user-basket .cart-num {
     height: 1px;
     left: 0px;
     width: 30px;
-    background: #6c6c6c;
+    /* background: #6c6c6c; */
     content: "";
 }
 

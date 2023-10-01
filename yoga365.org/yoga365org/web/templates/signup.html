@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Йога 365 | Регистрация</title>
+      <meta name="author" content="romashmlc">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-32x32.jpg" sizes="32x32">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-192x192.jpg" sizes="192x192">
+      <link rel="apple-touch-icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-180x180.jpg">
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+   </head>
+   <body class="@@dashboard"></body>
+</html>
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+<div id="main-wrapper">
+</div>
+{% for message in messages %}
+<div class="container-fluid p-0">
+   {% include 'base.html' %}
+</div>
+{% endfor %}
+<div class="authincation">
+   <div class="container h-100">
+      <div class="row justify-content-center h-100 align-items-center">
+         <div class="col-xl-5 col-md-6">
+            <div class="mini-logo text-center my-4">
+               <a href="{% url 'Begin' %}">
+               <img src="https://yoga365.ru/wp-content/uploads/2023/03/cropped-cropped-Yoga365-logo-01-1.jpg" />
+               </a>
+               <h4 class="card-title mt-3">Регистрация в систему</h4>
+            </div>
+            <div class="auth-form card">
+               <div class="card-body">
+                  <form
+                     name="myform"
+                     class="signin_validate row g-3"
+                     method="POST"
+                     autocomplete="off"
+                     >
+                     {% csrf_token %}
+                     <div class="col-12">
+                        {{form.username}}
+                     </div>
+                     <div class="col-12">
+                        {{form.password1}}
+                     </div>
+                     <div class="col-12">
+                        {{form.password2}}
+                     </div>
+                     <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-outline-success">Регистрация</button>
+                     </div>
+                     <p class="mt-3 mb-0 text-center">
+                        Уже с нами? Тогда вам -
+                        <a class="text-primary" href="{% url 'signin' %}" style="color: #00AFAD;">Вход</a>
+                     </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<script type="text/javascript">
+   [document.getElementById("id_username").className, document.getElementById("id_username").placeholder] = ["form-control", "Email"];
+   document.getElementById("id_username").addEventListener("focus", (event) => {
+       document.getElementById("id_username").style.borderColor = "#00AFAD";
+   });
+   document.getElementById("id_username").addEventListener("blur", (event) => {
+       document.getElementById("id_username").style.borderColor = "";
+   });  
+</script>
+<script type="text/javascript">
+   [document.getElementById("id_password1").className, document.getElementById("id_password1").placeholder] = ["form-control", "Пароль"];
+   document.getElementById("id_password1").addEventListener("focus", (event) => {
+       document.getElementById("id_password1").style.borderColor = "#00AFAD";
+   });
+   document.getElementById("id_password1").addEventListener("blur", (event) => {
+       document.getElementById("id_password1").style.borderColor = "";
+   });
+</script>
+<script type="text/javascript">
+   [document.getElementById("id_password2").className, document.getElementById("id_password2").placeholder] = ["form-control", "Подтвердите пароль"];
+   document.getElementById("id_password2").addEventListener("focus", (event) => {
+       document.getElementById("id_password2").style.borderColor = "#00AFAD";
+   });
+   document.getElementById("id_password2").addEventListener("blur", (event) => {
+       document.getElementById("id_password2").style.borderColor = "";
+   });
+</script>
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

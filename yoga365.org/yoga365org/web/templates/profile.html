@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Йога 365 | Добавление курсов</title>
+      <meta name="author" content="romashmlc">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-32x32.jpg" sizes="32x32">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-192x192.jpg" sizes="192x192">
+      <link rel="apple-touch-icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-180x180.jpg">
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+   </head>
+   <body class="dashboard"></body>
+</html>
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+<div id="main-wrapper">
+   <div class="content-body">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12 col-xl-12">
+               <div class="page-title">
+                  <h4>Личный кабинет</h4>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6">
+                           <div class="card">
+                              <div class="card-header">
+                                 <h4 class="card-title">Ваш профиль</h4>
+                              </div>
+                              <div class="card-body">
+                                 <form action="#">
+                                    <div class="row g-3">
+                                       <div class="col-xxl-12">
+                                          <label class="form-label">Email</label>
+                                          <input
+                                             type="email"
+                                             class="form-control"
+                                             placeholder="Email"
+                                             />
+                                       </div>
+                                       <div class="col-xxl-12">
+                                        <label class="form-label">Пароль</label>
+                                        <input
+                                           type="password"
+                                           class="form-control"
+                                           placeholder="*******"
+                                           />
+                                     </div>
+                                       <div class="col-xxl-12">
+                                          <button class="btn btn-success waves-effect">
+                                          Сохранить изменения
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6">
+                           <div class="card">
+                              <div class="card-header">
+                                 <h4 class="card-title">User Profile</h4>
+                              </div>
+                              <div class="card-body">
+                                 <form action="#">
+                                    <div class="row g-3">
+                                       <div class="col-xxl-12">
+                                          <label class="form-label">New Email</label>
+                                          <input
+                                             type="email"
+                                             class="form-control"
+                                             placeholder="Email"
+                                             />
+                                       </div>
+                                       <div class="col-xxl-12">
+                                          <label class="form-label">New Password</label>
+                                          <input
+                                             type="password"
+                                             class="form-control"
+                                             placeholder="**********"
+                                             />
+                                          <small class="mt-2 mb-0 d-block"
+                                             >Enable two factor authencation on the security
+                                          page
+                                          </small>
+                                       </div>
+                                       <div class="col-12">
+                                          <button class="btn btn-success waves-effect">
+                                          Save
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

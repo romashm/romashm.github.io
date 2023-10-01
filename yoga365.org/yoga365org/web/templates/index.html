@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Йога 365 | Курсы</title>
+      <meta name="author" content="romashmlc">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-32x32.jpg" sizes="32x32">
+      <link rel="icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-192x192.jpg" sizes="192x192">
+      <link rel="apple-touch-icon" href="https://yoga365.ru/wp-content/uploads/2023/03/cropped-Yoga365-logo-01-180x180.jpg">
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/slick.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/vegas.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/fontawesome/all.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700%7COpen+Sans:400,700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div id="preloader" class="preloader preloader-dark">
+         <div class="loader-status">
+            <div class="circle-side"></div>
+         </div>
+      </div>
+      <div class="site-container">
+         <div id="top"></div>
+         <!-- Site header -->
+         <header class="site-header header-classic-navigation header-classic-mobile-fixed">
+            <div class="header-base style-light">
+               <div class="header-brand">
+                  <!-- Site logo -->
+                  <a href="#" class="site-logo flex">
+                     <h2 class="text-black bold">
+                        Yoga365
+                     </h2>
+                  </a>
+                  <!-- Nav toggle -->
+                  <button type="button" id="navigation-toggle" class="nav-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+               </div>
+               <div class="classic-navigation site-navigation header-collapse">
+                  <nav>
+                     <ul>
+                        <li>
+                           <a href="https://yoga365.ru/о-школе/">О Школе</a>
+                        </li>
+                        <li>
+                           <a href="https://yoga365.ru/занятия-йогой/">Занятия йогой</a>
+                        </li>
+                        <li>
+                           <a href="https://yoga365.ru/курс-инструкторов/">Курс инструкторов йоги</a>
+                        </li>
+                        <li>
+                           <a href="https://yoga365.ru/преподаватели/">Преподаватели</a>
+                        </li>
+                        <li>
+                           <a href="https://yoga365.ru/отзывы/">Отзывы</a>
+                        </li>
+                        <li>
+                           <a href="https://yoga365.ru/контакты/">Контакты</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
+         <div id="home-block">
+            <section id="home" class="d-md-flex fullscreen-md">
+               <div class="overlay">
+                  <div class="overlay-inner bg-image-holder bg-cover bg-bottom-left">
+                  </div>
+                  <div class="overlay-inner bg-primary opacity-85"></div>
+               </div>
+               <div class="container align-self-md-center text-center">
+                  <h1 class="text-white mb-3">
+                     Зарегистрируйтесь в йога-конструкторе, чтобы создать свою тренировочную последовательность 🙏
+                  </h1>
+                  <p class="lead text-white mb-5">
+                     
+                  </p>
+                  <a href="{% url 'signup' %}" class="btn btn-white btn-norounded">Регистрация</a>
+                  <a href="{% url 'signin' %}" class="btn btn-outline-white btn-norounded">Войти</a>
+               </div>
+            </section>
+         </div>
+         <footer class="site-footer">
+            <div class="container socials-container style-light">
+               <nav class="socials-icons">
+                  <ul class="mx-auto">
+                     <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                     <li><a href="https://www.youtube.com/@yoga365"><i class="fab fa-youtube"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="container copyright-container">
+               <p>© 2023 Yoga365 - All Rights Reserved</p>
+            </div>
+         </footer>
+      </div>
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/jquery.smooth-scroll.min.js' %}"></script>
+      <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+      <script src="{% static 'js/jquery.form.min.js' %}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+      <script src="{% static 'js/granim.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script>
+      <script src="{% static 'js/vegas.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>
